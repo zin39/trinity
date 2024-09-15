@@ -1,0 +1,24 @@
+
+<div class="">
+	<div class="page-header page-header-dark  mb-0" style="background-color: #002060">
+		@if (Request::is('admin/dashboard'))
+			<div class="page-header-content header-elements-inline px-3">
+				<div class="page-title">
+					<h5>
+						<span class="font-weight-semibold">Welcome To {{ $setting->company_name }} Dashboard</span>
+					</h5>
+				</div>
+
+			</div>
+        @endif
+
+		<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline px-3">
+			<div class="d-flex">
+				<div class="breadcrumb">
+					<a href="{{url('admin/dashboard')}}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Dashboard</a>
+					<span class="breadcrumb-item active">@yield('breadcrum')</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
