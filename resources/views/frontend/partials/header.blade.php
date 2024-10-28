@@ -9,19 +9,19 @@
     <title>Trnty</title>
 
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="{{ asset('frontend-assets/img/favicon.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon" />
 
     <!-- ========== Start Stylesheet ========== -->
-    <link href="{{ asset('frontend-assets/css/bootstrap.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/font-awesome.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/magnific-popup.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/swiper-bundle.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/animate.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/validnavs.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/helper.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/unit-test.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/custom_css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/swiper-bundle.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/validnavs.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/helper.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/unit-test.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/custom_css/style.css') }}" rel="stylesheet" />
 
     <!-- ========== End Stylesheet ========== -->
 
