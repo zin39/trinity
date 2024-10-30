@@ -1,7 +1,6 @@
 @extends('frontend.layouts.main')
 
 @section('content')
-
   <!-- Start Banner Area
     ============================================= -->
   <div class=""
@@ -22,7 +21,7 @@
     </div> -->
     <!-- Single Item -->
     <div style="background: #0000003d; height:40%">
-      <div class="registered_nurse_banner_div h-100 d-flex justify-content-center align-center"  >
+      <div class="apply_now_banner_div h-100 d-flex justify-content-center align-center "  >
               <div class="banner-four-info d-flex justify-content-center align-center flex-column">
                 <h1 class="registered_nurse_h1">
                    Apply
@@ -88,7 +87,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="form-group text-left">
-              <label for="phone">Phone <span style="color:red">*</span></label>
+              <label for="phone" class="phone">Phone <span style="color:red">*</span></label>
               <input type="tel" id="phone" class="form-control w-100" style="" />
           </div>
 
@@ -374,7 +373,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="name"> Privacy Statement </label>
-                      <p class="text-sm text-primary mb-0">
+                      <p class="text-sm text-primary mb-0" style="line-height:20px;font-weight:300">
                         <b>Karini</b>Step respects the privacy of applicants and prospective employees and is committed to complying with the privacy laws in every country in
                          which we recruit and hire applicants, including the General Data Protection Regulation in the European Union.  <b>KariniStep's</b> Applicant and Prospective
                           Employee Privacy Policy is intended to inform both applicants and prospective employees about how the personal information  <b>Karini</b>Step processes
@@ -493,4 +492,6 @@
       <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Contact Us</a>
     </div>
   </div>
+
+
 @endsection

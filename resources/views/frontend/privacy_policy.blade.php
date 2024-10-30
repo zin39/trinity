@@ -8,7 +8,7 @@
     style="background-image: url(assets/img/privacy-policy/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 
     <div style="background: #0000003d; height:30%">
-      <div class="registered_nurse_banner_div h-100 d-flex justify-content-center align-center"  >
+      <div class="privacy_policy_banner_div h-100 d-flex justify-content-center align-center"  >
               <div class="banner-four-info d-flex justify-content-center align-center flex-column">
                 <h1 class="registered_nurse_h1">
                     Applicant and Prospective Employee Privacy Policy

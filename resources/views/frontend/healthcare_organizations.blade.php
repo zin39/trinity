@@ -44,18 +44,18 @@
   <div class="container-xxl text-center p-6 " style="padding: 3rem 2rem;">
     <h3 class="mb-3 text_primary registered_nurse_h3"><b>Karini</b>Step <b>Partnership</b></h3>
     <div class="container p-0">
-      <p class="text_primary registered_nurse_p">
+      <p class="text_primary registered_nurse_p" style="line-height:30px">
         The <b>Karini</b>Step's <b>Academy</b>is a turnkey international staffing partnership delivering stability and reliability to Australian Healthcare Providers.
       </p>
-      <p class="text_primary registered_nurse_p">
+      <p class="text_primary registered_nurse_p" style="line-height:30px">
         Our mission is to help you <b>reduce</b> short-term <b>contingent overspend</b> and move to <b>long-term workforce</b> <b>planning</b> and <b>sustainability. </b>
         We're committed to improving patient outcomes by <b>building</b> and <b>stabilizing expert core staff.</b>
       </p>
-      <p class="text_primary registered_nurse_p">
+      <p class="text_primary registered_nurse_p"  style="line-height:30px">
         Our team manages every aspect of the <b>STEP</b> process to deliver qualified healthcare professionals to fill on-going staffing needs.
       </p>
 
-      <p class="text_primary registered_nurse_p">
+      <p class="text_primary registered_nurse_p"  style="line-height:30px">
         We offer a <b>strategic partnership</b> for long-term workforce planning to <b>fill on-going staffing needs, reduce costs</b> and <b>deliver patient outcomes.</b>
       </p>
     </div>
@@ -90,7 +90,7 @@
 
           </p>
           <p class="step_sub_desc text-center mb-0">
-            <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Request a Consultation </a>
+            <a class="btn btn-theme animation rounded-md btn-md  bg-primary" style="padding:0.2rem 0.3rem;" href="/apply-now.html">Request a Consultation </a>
           </p>
         </div>
       </div>

@@ -1,7 +1,6 @@
 @extends('frontend.layouts.main')
 
 @section('content')
-
   <!-- Start Banner Area
     ============================================= -->
   <div class=""
@@ -346,7 +345,7 @@
         </div>
       </div>
       <p class="title text-center step-title mb-2">
-        <b>1. T</b>raining <br>
+        <b>2. T</b>raining <br>
       </p>
       <p class="title text-center step-title">
         <b>COMPLETE!</b>

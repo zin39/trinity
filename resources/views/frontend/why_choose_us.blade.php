@@ -57,6 +57,58 @@
     </div>
   </div>
 
+  <!--- Caraousel Start !----->
+<div class="testimonial-carousel">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Testimonial 1 -->
+            <div class="carousel-item active mb-4">
+                <div class="testimonial-item" data-bs-toggle="modal" data-bs-target="#teamMemberModal">
+                    <div class="circular-image">
+                        <img src="assets/img/team/karissa.png" alt="Testimonial 1">
+                    </div>
+                    <h4 class="testimonial-name">Nick Lee, MBA</h4>
+                    <p class="testimonial-position">CEO & Founder</p>
+                    <p class="testimonial-text">"Unlike other agencies, looking to exploit the situation, our mission is to create lasting solutions."</p>
+                </div>
+            </div>
+
+            <!-- Add more testimonials as needed -->
+            <div class="carousel-item">
+                <div class="testimonial-item mb-4">
+                    <div class="circular-image">
+                        <img src="path-to-your-image-2.jpg" alt="Testimonial 2">
+                    </div>
+                    <h4 class="testimonial-name">Another Person</h4>
+                    <p class="testimonial-position">Position Title</p>
+                    <p class="testimonial-text">"Your testimonial text here."</p>
+                </div>
+            </div>
+        </div>
+<!-- Modal for Person 1 -->
+<!-- Modal -->
+<div class="modal fade" id="teamMemberModal" tabindex="-1" aria-labelledby="teamMemberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="circular-image">
+                    <img src="assets/img/team/karissa.png" alt="Team Member">
+                </div>
+                <h4 class="team-name">Nick Lee, MBA</h4>
+                <p class="team-position">CEO & Founder</p>
+                <p class="team-bio">
+                    Nick has over 15 years of CEO experience leading Business Units and Country Teams in Philips and Adecco across Europe, Asia and Australasia. As a Lean advanced practitioner, Nick is passionate about Value, Quality, and Continuous Improvement. He has always been passionate about healthcare - his mother was a nurse - and during his career he launched global innovations like the Philips Airfryer, promoting healthy eating at home.
+                </p>
+                <p class="modal-email">Nick@KariniStep.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!---- Caraousel End -----!>
+
 
 
   <div class="card bg_primary_card ">
@@ -260,24 +312,24 @@
   </div>
 
 
-  <div class="container mb-40">
-    <h3 class="color-primary text-center mb-4" style="font-weight: 300;"><b>Karini</b>Step</h3>
-    <p class="color-primary text-center registered_nurse_p">Offering a <b>strategic partnership</b> for long-term workforce planning to <b>fill on-going staffing needs, reduce costs </b> and <b> deliver patient outcomes.</b></p>
+  <div class="container mb-30">
+    <h3 class="color-primary text-center m-5" style="font-weight: 300;"><b>Karini</b>Step</h3>
+    <p class="color-primary text-center registered_nurse_p" style="line-height:28px">Offering a <b>strategic partnership</b> for long-term workforce planning to <b>fill on-going staffing needs, reduce costs </b> and <b> deliver patient outcomes.</b></p>
   </div>
 
-  <div class="container mb-40">
-    <h3 class="color-primary text-center">Registered Nurses</h3>
-    <p class="color-primary text-center registered_nurse_p mb-0">Are you ready to Take the <b>STEP</b> towards your <b>Australian</b> dream?</p>
+  <div class="container mb-30">
+    <h3 class="color-primary text-center mt-5">Registered Nurses</h3>
+    <p class="color-primary text-center registered_nurse_p mb-0" style="line-height:28px">Are you ready to Take the <b>STEP</b> towards your <b>Australian</b> dream?</p>
     <p class="color-primary text-center registered_nurse_p">Apply Now!</p>
-    <div class="button mt-4 mt-lg-0 apply-btn text-center">
+    <div class="button m-4 mt-lg-0 apply-btn text-center">
       <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now!</a>
     </div>
   </div>
 
 
-  <div class="container mb-40">
-    <h3 class="color-primary text-center">How To Get Started</h3>
-    <p class="color-primary text-center registered_nurse_p">Healthcare <b>Organizations</b>
+  <div class="container mb-30">
+    <h3 class="color-primary text-center m-3">How To Get Started</h3>
+    <p class="color-primary text-center registered_nurse_p" style="line-height:28px">Healthcare <b>Organizations</b>
         Does your organization need registered nurses? We can help!
         Contact us today!</p>
     <div class="button mt-4 mt-lg-0 apply-btn text-center">
