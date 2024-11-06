@@ -5,7 +5,7 @@
   <!-- Start Banner Area
     ============================================= -->
   <div class=""
-    style="background-image: url(assets/img/privacy-policy/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    style="background-image: url(frontend-assets/img/privacy-policy/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
 
     <div style="background: #0000003d; height:30%">
       <div class="privacy_policy_banner_div h-100 d-flex justify-content-center align-center"  >

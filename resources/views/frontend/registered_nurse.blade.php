@@ -4,9 +4,9 @@
   <!-- Start Banner Area
     ============================================= -->
   <div class=""
-    style="background-image: url(assets/img/registered_nurses/registered_nurse_banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    style="background-image: url(frontend-assets/img/registered_nurses/registered_nurse_banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
     <!-- <div class="banner-style-four-thumb"
-      style="background-image: url(assets/img/banner/banner.png); background-position: center center;"> -->
+      style="background-image: url(frontend-assets/img/banner/banner.png); background-position: center center;"> -->
     <!-- <div class="video-btn">
         <a href="https://www.youtube.com/watch?v=3ctoSEQsY54" class="popup-youtube">
           <i class="fas fa-play"></i>
@@ -14,17 +14,17 @@
       </div> -->
     <!-- </div> -->
     <!-- <div class="banner-move-animation">
-      <img src="assets/img/shape/56.png" alt="Image Not Found" />
-      <img src="assets/img/shape/16.png" alt="Image Not Found" />
-      <img src="assets/img/shape/57.png" alt="Image Not Found" />
-      <img src="assets/img/shape/18.png" alt="Image Not Found" />
+      <img src="frontend-assets/img/shape/56.png" alt="Image Not Found" />
+      <img src="frontend-assets/img/shape/16.png" alt="Image Not Found" />
+      <img src="frontend-assets/img/shape/57.png" alt="Image Not Found" />
+      <img src="frontend-assets/img/shape/18.png" alt="Image Not Found" />
     </div> -->
     <!-- Single Item -->
     <div style="background: #0000003d;">
       <div class="registered_nurse_banner_div">
         <div class="container">
           <div class="row align-center">
-            <div class="col-lg-8 pr-50 pr-md-15 pr-xs-15">
+            <div class="col-lg-12 pr-50 pr-md-15 pr-xs-15">
               <div class="banner-four-info">
                 <h1 class="registered_nurse_h1">
                     <b>Karini</b>Step's
@@ -92,7 +92,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                      <img src="/assets/img/icon/nursing_licence.png" style="height:4rem"/>
+                      <img src="/frontend-assets/img/icon/nursing_licence.png" style="height:4rem"/>
 
                     </div>
                     <div class="">
@@ -115,7 +115,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                        <img src="/assets/img/icon/nursing_exp.png" style="height:4rem" />
+                        <img src="/frontend-assets/img/icon/nursing_exp.png" style="height:4rem" />
                     </div>
                     <div>
                         Registered Nurse currently working, ideally with 5-10 years experience
@@ -138,8 +138,8 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                        <img src="/assets/img/icon/ielts.png" style="height:4rem"/>
-                        <img src="/assets/img/icon/nclex.png" style="height:4rem"/>
+                        <img src="/frontend-assets/img/icon/ielts.png" style="height:4rem"/>
+                        <img src="/frontend-assets/img/icon/nclex.png" style="height:4rem"/>
                     </div>
                     <div >
                       Have passed IELTS (or equivalent) 7.0 and NCLEX, or intend to qualify
@@ -161,7 +161,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                      <img src="/assets/img/icon/australia.png" style="height:4rem"/>
+                      <img src="/frontend-assets/img/icon/australia.png" style="height:4rem"/>
 
                     </div>
                     <div class="">
@@ -202,7 +202,7 @@
       </p>
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/1_1.png" alt="selection_1_1" />
+          <img src="/frontend-assets/img/registered_nurses/1_1.png" alt="selection_1_1" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -221,7 +221,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/1_2.png" alt="selection_1_2" />
+          <img src="/frontend-assets/img/registered_nurses/1_2.png" alt="selection_1_2" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -235,7 +235,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/1_3.png" alt="selection_1_3" />
+          <img src="/frontend-assets/img/registered_nurses/1_3.png" alt="selection_1_3" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -249,7 +249,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/1_4.png" alt="selection_1_4" />
+          <img src="/frontend-assets/img/registered_nurses/1_4.png" alt="selection_1_4" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -267,7 +267,7 @@
         <b>COMPLETE!</b>
       </p>
       <div class="d-flex justify-content-center mb-4">
-        <img src="/assets/img/registered_nurses/1S.png" alt="Selection Complete" style="width: 50%;" />
+        <img class="r_triangle_img_sm" src="/frontend-assets/img/registered_nurses/1S.png" alt="Selection Complete" />
       </div>
       <p class="step_sub_desc text-center mb-1">
         Welcome to our <b>Karini</b>Step <b>Academy!</b>
@@ -277,7 +277,7 @@
   <div style="position:relative">
     <div  class="connecting_arrow_div" >
       <div>
-        <img src="/assets/img/icon/white_arrow_down.png" alt="arrow" />
+        <img src="/frontend-assets/img/icon/white_arrow_down.png" alt="arrow" />
       </div>
     </div>
   </div>
@@ -289,7 +289,7 @@
       </p>
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/2_1.png" alt="selection_2_1" />
+          <img src="/frontend-assets/img/registered_nurses/2_1.png" alt="selection_2_1" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -304,7 +304,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/2_2.png" alt="selection_2_2" />
+          <img src="/frontend-assets/img/registered_nurses/2_2.png" alt="selection_2_2" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -318,7 +318,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/2_3.png" alt="selection_2_3" />
+          <img src="/frontend-assets/img/registered_nurses/2_3.png" alt="selection_2_3" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -333,7 +333,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/2_4.png" alt="selection_2_4" />
+          <img src="/frontend-assets/img/registered_nurses/2_4.png" alt="selection_2_4" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -351,7 +351,7 @@
         <b>COMPLETE!</b>
       </p>
       <div class="d-flex justify-content-center mb-4">
-        <img src="/assets/img/registered_nurses/2T.png" alt="Training Complete" style="width: 50%;" />
+        <img  class="r_triangle_img_sm" src="/frontend-assets/img/registered_nurses/2T.png" alt="Training Complete"  />
       </div>
       <p class="step_sub_desc text-center mb-1">
         You're ready for Your <b>STEP</b> into <b>Employment</b>
@@ -362,7 +362,7 @@
   <div style="position:relative">
     <div  class="connecting_arrow_div" >
       <div>
-        <img src="/assets/img/icon/white_arrow_down.png" alt="arrow" />
+        <img src="/frontend-assets/img/icon/white_arrow_down.png" alt="arrow" />
       </div>
     </div>
   </div>
@@ -374,7 +374,7 @@
       </p>
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/3_1.png" alt="selection_3_1" />
+          <img src="/frontend-assets/img/registered_nurses/3_1.png" alt="selection_3_1" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -389,7 +389,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/3_2.png" alt="selection_3_2" />
+          <img src="/frontend-assets/img/registered_nurses/3_2.png" alt="selection_3_2" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -403,7 +403,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/3_3.png" alt="selection_3_3" />
+          <img src="/frontend-assets/img/registered_nurses/3_3.png" alt="selection_3_3" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -417,7 +417,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/3_4.png" alt="selection_3_4" />
+          <img src="/frontend-assets/img/registered_nurses/3_4.png" alt="selection_3_4" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -435,7 +435,7 @@
         <b>COMPLETE!</b>
       </p>
       <div class="d-flex justify-content-center mb-4">
-        <img src="/assets/img/registered_nurses/3E.png" alt="Employment Complete" style="width: 50%;" />
+        <img  class="r_triangle_img_sm" src="/frontend-assets/img/registered_nurses/3E.png" alt="Employment Complete" />
       </div>
       <div class="d-flex justify-content-center mb-4">
         <div class="card how-it-works-card" style="width:50%">
@@ -452,7 +452,7 @@
   <div style="position:relative">
     <div  class="connecting_arrow_div" >
       <div>
-        <img src="/assets/img/icon/white_arrow_down.png" alt="arrow" />
+        <img src="/frontend-assets/img/icon/white_arrow_down.png" alt="arrow" />
       </div>
     </div>
   </div>
@@ -464,7 +464,7 @@
       </p>
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/4_1.png" alt="selection_4_1" />
+          <img src="/frontend-assets/img/registered_nurses/4_1.png" alt="selection_4_1" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -479,7 +479,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/4_2.png" alt="selection_4_2" />
+          <img src="/frontend-assets/img/registered_nurses/4_2.png" alt="selection_4_2" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -493,7 +493,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/4_3.png" alt="selection_4_3" />
+          <img src="/frontend-assets/img/registered_nurses/4_3.png" alt="selection_4_3" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -507,7 +507,7 @@
 
       <div class="row mb-40">
         <div class="col-md-6 col-sm-6" style="width: 48%;">
-          <img src="/assets/img/registered_nurses/4_4.png" alt="selection_4_4" />
+          <img src="/frontend-assets/img/registered_nurses/4_4.png" alt="selection_4_4" />
         </div>
         <div class="col-md-2 col-sm-6" style="width: 50%;">
           <p class="step_sub_title text-center mb-1 ">
@@ -525,7 +525,7 @@
         <b>LAUNCHED!</b>
       </p>
       <div class="d-flex justify-content-center mb-4">
-        <img src="/assets/img/registered_nurses/4P.png" alt="Pathway Launched" style="width: 50%;" />
+        <img  class="r_triangle_img_sm" src="/frontend-assets/img/registered_nurses/4P.png" alt="Pathway Launched"  />
       </div>
       <div class="d-flex justify-content-center mb-4">
         <div class="card how-it-works-card" style="width:50%">
@@ -546,8 +546,8 @@
     line-height: 28px;">
       Offering you a fast, streamlined, supported and cost efficient way to start your dream life as a Nurse in Australia.
     </p>
-    <div>
-      <img src="/assets/img/home/steps.png" alt="KariniStep Academy pathways">
+    <div class="d-flex justify-content-center" >
+      <img src="/frontend-assets/img/home/steps.png" alt="KariniStep Academy pathways">
     </div>
   </div>
   <br><br>
@@ -563,7 +563,7 @@
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="assets/img/icon/save-money.png" alt="icon" width="50" height="50" />
+                    <img src="frontend-assets/img/icon/save-money.png" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
                     <h6 class="color-primary mt-3"><b>Zero Immigration advisor cost</b></h6>
@@ -585,7 +585,7 @@
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="assets/img/icon/ledger.png" alt="icon" width="50" height="50" />
+                    <img src="frontend-assets/img/icon/ledger.png" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
                     <h6 class="color-primary mt-3"><b>Zero OSCE Training Course costs</b></h6>
@@ -606,7 +606,7 @@
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="assets/img/icon/exam.png" alt="icon" width="50" height="50" />
+                    <img src="frontend-assets/img/icon/exam.png" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
                     <h6 class="color-primary mt-3"><b>Fly Now, Pay Later for OSCE exam</b></h6>
@@ -628,7 +628,7 @@
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="assets/img/icon/support.png" alt="icon" width="50" height="50" />
+                    <img src="frontend-assets/img/icon/support.png" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
                     <h6 class="color-primary mt-3"><b>24/7 Carrer-Mentoring Support</b></h6>

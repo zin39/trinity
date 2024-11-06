@@ -1,7 +1,7 @@
 /* ===================================================================
     
     Author          : Valid Theme
-    Template Name   : Trnty - Nursing Carrer
+    Template Name   : Urane - Insurance Company HTML Template 
     Version         : 1.0
     
 * ================================================================= */
@@ -325,7 +325,7 @@
           spaceBetween: 30,
         },
         1367: {
-          slidesPerView: 3.1,
+          slidesPerView: 3.6,
           spaceBetween: 50,
         },
       },
@@ -416,8 +416,6 @@
         },
       },
     });
-
-    
 
     /* ==================================================
 		    Range Slider

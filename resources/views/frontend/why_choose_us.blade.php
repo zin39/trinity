@@ -5,9 +5,9 @@
   <!-- Start Banner Area
     ============================================= -->
   <div class=""
-    style="background-image: url(assets/img/healthcare_organizations/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    style="background-image: url(frontend-assets/img/healthcare_organizations/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
     <!-- <div class="banner-style-four-thumb"
-      style="background-image: url(assets/img/banner/banner.png); background-position: center center;"> -->
+      style="background-image: url(frontend-assets/img/banner/banner.png); background-position: center center;"> -->
     <!-- <div class="video-btn">
         <a href="https://www.youtube.com/watch?v=3ctoSEQsY54" class="popup-youtube">
           <i class="fas fa-play"></i>
@@ -15,17 +15,17 @@
       </div> -->
     <!-- </div> -->
     <!-- <div class="banner-move-animation">
-      <img src="assets/img/shape/56.png" alt="Image Not Found" />
-      <img src="assets/img/shape/16.png" alt="Image Not Found" />
-      <img src="assets/img/shape/57.png" alt="Image Not Found" />
-      <img src="assets/img/shape/18.png" alt="Image Not Found" />
+      <img src="/frontend-assets/img/shape/56.png" alt="Image Not Found" />
+      <img src="/frontend-assets/img/shape/16.png" alt="Image Not Found" />
+      <img src="/frontend-assets/img/shape/57.png" alt="Image Not Found" />
+      <img src="/frontend-assets/img/shape/18.png" alt="Image Not Found" />
     </div> -->
     <!-- Single Item -->
     <div style="background: #0000003d;">
       <div class="registered_nurse_banner_div">
         <div class="container">
           <div class="row align-center">
-            <div class="col-lg-8 pr-50 pr-md-15 pr-xs-15">
+            <div class="col-lg-12 pr-50 pr-md-15 pr-xs-15">
               <div class="banner-four-info">
                 <h1 class="registered_nurse_h1">
                     <b>Karini</b>Step's<br>
@@ -65,7 +65,7 @@
             <div class="carousel-item active mb-4">
                 <div class="testimonial-item" data-bs-toggle="modal" data-bs-target="#teamMemberModal">
                     <div class="circular-image">
-                        <img src="assets/img/team/karissa.png" alt="Testimonial 1">
+                        <img src="/frontend-assets/img/team/karissa.png" alt="Testimonial 1">
                     </div>
                     <h4 class="testimonial-name">Nick Lee, MBA</h4>
                     <p class="testimonial-position">CEO & Founder</p>
@@ -85,8 +85,10 @@
                 </div>
             </div>
         </div>
-<!-- Modal for Person 1 -->
-<!-- Modal -->
+    </div>
+</div>
+
+
 <div class="modal fade" id="teamMemberModal" tabindex="-1" aria-labelledby="teamMemberModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -95,7 +97,7 @@
             </div>
             <div class="modal-body">
                 <div class="circular-image">
-                    <img src="assets/img/team/karissa.png" alt="Team Member">
+                    <img src="/frontend-assets/img/team/karissa.png" alt="Team Member">
                 </div>
                 <h4 class="team-name">Nick Lee, MBA</h4>
                 <p class="team-position">CEO & Founder</p>
@@ -107,22 +109,19 @@
         </div>
     </div>
 </div>
-<!---- Caraousel End -----!>
-
-
 
   <div class="card bg_primary_card ">
     <div class="container p-4">
       <h3 class="mb-4" style="font-weight: 300;">With <b>Karini</b>Step, <b>Partnership</b> has its privileges. </h3>
 
-        <div class="row">
+        <div class="row" style="    row-gap: 22px;">
           <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                      <img src="/assets/img/icon/turnkey.png" style="height:4rem"/>
+                      <img src="/frontend-assets/img/icon/turnkey.png" style="height:4rem"/>
 
                     </div>
                     <div class="">
@@ -146,7 +145,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                        <img src="/assets/img/icon/spend.png" style="height:4rem" />
+                        <img src="/frontend-assets/img/icon/spend.png" style="height:4rem" />
                     </div>
                     <div>
                       Reduce agency Nursing Spend
@@ -170,7 +169,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                        <img src="/assets/img/icon/nurse_avatar.png" style="height:4rem"/>
+                        <img src="/frontend-assets/img/icon/nurse_avatar.png" style="height:4rem"/>
                     </div>
                     <div >
                       12-months Quality Guarantee
@@ -193,7 +192,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                      <img src="/assets/img/icon/callsupport.png" style="height:4rem"/>
+                      <img src="/frontend-assets/img/icon/callsupport.png" style="height:4rem"/>
 
                     </div>
                     <div class="">
@@ -217,7 +216,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                        <img src="/assets/img/icon/spend.png" style="height:4rem" />
+                        <img src="/frontend-assets/img/icon/spend.png" style="height:4rem" />
                     </div>
                     <div>
                         Zero Immigration Advisor costs
@@ -240,7 +239,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                      <img src="/assets/img/icon/training_course.png" style="height:4rem"/>
+                      <img src="/frontend-assets/img/icon/training_course.png" style="height:4rem"/>
 
                     </div>
                     <div class="">
@@ -263,7 +262,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                      <img src="/assets/img/icon/certification.png" style="height:4rem"/>
+                      <img src="/frontend-assets/img/icon/certification.png" style="height:4rem"/>
 
                     </div>
                     <div class="">
@@ -287,7 +286,7 @@
                 <div class="flip-card-front">
                   <div class=" px-4 py-3 membership-card">
                     <div class="d-flex justify-content-center">
-                      <img src="/assets/img/icon/callsupport.png" style="height:4rem"/>
+                      <img src="/frontend-assets/img/icon/callsupport.png" style="height:4rem"/>
 
                     </div>
                     <div class="">

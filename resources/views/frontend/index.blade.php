@@ -4,9 +4,9 @@
   <!-- Start Banner Area
     ============================================= -->
   <div class=""
-    style="background-image: url(assets/img/banner/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    style="background-image: url(frontend-assets/img/banner/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
     <!-- <div class="banner-style-four-thumb"
-      style="background-image: url(assets/img/banner/banner.png); background-position: center center;"> -->
+      style="background-image: url(frontend-assets/img/banner/banner.png); background-position: center center;"> -->
     <!-- <div class="video-btn">
         <a href="https://www.youtube.com/watch?v=3ctoSEQsY54" class="popup-youtube">
           <i class="fas fa-play"></i>
@@ -14,30 +14,30 @@
       </div> -->
     <!-- </div> -->
     <!-- <div class="banner-move-animation">
-      <img src="assets/img/shape/56.png" alt="Image Not Found" />
-      <img src="assets/img/shape/16.png" alt="Image Not Found" />
-      <img src="assets/img/shape/57.png" alt="Image Not Found" />
-      <img src="assets/img/shape/18.png" alt="Image Not Found" />
+      <img src="/frontend-assets/img/shape/56.png" alt="Image Not Found" />
+      <img src="/frontend-assets/img/shape/16.png" alt="Image Not Found" />
+      <img src="/frontend-assets/img/shape/57.png" alt="Image Not Found" />
+      <img src="/frontend-assets/img/shape/18.png" alt="Image Not Found" />
     </div> -->
     <!-- Single Item -->
     <div class="overlay">
       <div class="banner-style-four">
         <div class="container">
-          <div class="row align-center">
+          <div class="row align-center justify-content-center">
             <div class="col-lg-8 pr-50 pr-md-15 pr-xs-15">
-              <div class="banner-four-info">
+              <div class="banner-four-info text-center">
                 <h2 >
                   Caring for those who care
                 </h2>
 
                 <div class="button mt-40 banner-button">
-                  <p class="mb-1 text-center">
+                  <p class="mb-1 text-center p-0">
                     Registered Nurses
                   </p>
                   <a class="btn btn-theme animation" href="shop.html">I want to work as a nurse in australia</a>
                 </div>
                 <div class="button mt-15 banner-button">
-                  <p class="mb-1 text-center">
+                  <p class="mb-1 text-center p-0">
                     Healthcare Organizations
                   </p>
                   <a class="btn btn-theme btn-md animation" href="shop.html">I WANT TO EMPLOY OVERSEAS NURSES
@@ -60,20 +60,20 @@
         <div class="awards-carousel swiper">
           <div class="swiper-wrapper">
             <!-- Single Item -->
-            <div class="swiper-slide">
-              <img src="assets/img/awards/award1.png" alt="awards" />
+            <div class="swiper-slide d-flex align-items-center" style="height:9rem">
+              <img src="/frontend-assets/img/awards/award1.png" alt="awards"/>
             </div>
             <!-- End Single Item -->
             <!-- Single Item -->
-            <div class="swiper-slide">
-              <img src="assets/img/awards/award2.png" alt="awards" />
+            <div class="swiper-slide d-flex align-items-center" style="height:9rem">
+              <img src="/frontend-assets/img/awards/award2.png" alt="awards"  />
             </div>
             <!-- End Single Item -->
           </div>
           <!-- Add Arrows -->
         </div>
 
-        <div class="swiper-button-prev swiper-button-prev-award" style="top:50%">
+        <div class="swiper-button-prev swiper-button-prev-award" style="top:50%" >
           <i class="fa fa-caret-left text-primary" style="font-size:30px"></i>
         </div>
         <div class="swiper-button-next swiper-button-next-award" style="top:50%">
@@ -90,7 +90,7 @@
     ============================================= -->
   <div class="default-padding">
     <div class="text-center">
-      <!-- <h4 class="sub-title"><img src="assets/img/icon/home-3.png" alt="Image Not Found"> Our Features</h4> -->
+      <!-- <h4 class="sub-title"><img src="/frontend-assets/img/icon/home-3.png" alt="Image Not Found"> Our Features</h4> -->
       <h2 class="title">What Our International Nurses Are Saying</h2>
     </div>
     <!-- Start Testimonial
@@ -104,7 +104,7 @@
                 <!-- Single Item -->
                 <div class="swiper-slide">
                   <div class="circle-avatar">
-                    <img src="assets/img/team/team_1.png" alt="testimonial" />
+                    <img src="/frontend-assets/img/team/team_1.png" alt="testimonial" />
                   </div>
                   <div class="testimonial-card mt-85">
                     <p class="mb-0 text-left text-primary text-lg">
@@ -119,7 +119,7 @@
                 <!-- Single Item -->
                 <div class="swiper-slide">
                   <div class="circle-avatar">
-                    <img src="assets/img/team/team_1.png" alt="testimonial" />
+                    <img src="/frontend-assets/img/team/team_1.png" alt="testimonial" />
                   </div>
                   <div class="testimonial-card mt-85">
                     <p class="mb-0 text-left text-primary text-lg">
@@ -133,7 +133,7 @@
                 <!-- Single Item -->
                 <div class="swiper-slide">
                   <div class="circle-avatar">
-                    <img src="assets/img/team/team_1.png" alt="testimonial" />
+                    <img src="/frontend-assets/img/team/team_1.png" alt="testimonial" />
                   </div>
                   <div class="testimonial-card mt-85">
                     <p class="mb-0 text-left text-primary text-lg">
@@ -147,7 +147,7 @@
                 <!-- Single Item -->
                 <div class="swiper-slide">
                   <div class="circle-avatar">
-                    <img src="assets/img/team/team_1.png" alt="testimonial" />
+                    <img src="/frontend-assets/img/team/team_1.png" alt="testimonial" />
                   </div>
                   <div class="testimonial-card mt-85">
                     <p class="mb-0 text-left text-primary">
@@ -168,7 +168,7 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="swiper-bullet-item">
-                      <img src="assets/img/team/v1.jpg" alt="Image Not Found">
+                      <img src="/frontend-assets/img/team/v1.jpg" alt="Image Not Found">
                       <div class="rev-author">
                         <h4>Nicholas Natteau</h4>
                         <span>Founder & CEO</span>
@@ -177,7 +177,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="swiper-bullet-item">
-                      <img src="assets/img/team/v2.jpg" alt="Image Not Found">
+                      <img src="/frontend-assets/img/team/v2.jpg" alt="Image Not Found">
                       <div class="rev-author">
                         <h4>Kevin Martin</h4>
                         <span>Product Manager</span>
@@ -186,7 +186,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="swiper-bullet-item">
-                      <img src="assets/img/team/v3.jpg" alt="Image Not Found">
+                      <img src="/frontend-assets/img/team/v3.jpg" alt="Image Not Found">
                       <div class="rev-author">
                         <h4>Aleesha Brown</h4>
                         <span>Developer</span>
@@ -197,10 +197,10 @@
               </div>
             </div> -->
             <div class="swiper-button-prev swiper-button-prev-testimonial">
-              <img src="/assets/img/icon/arrow-left.png"/>
+              <img src="/frontend-assets/img/icon/arrow-left.png"/>
             </div>
             <div class="swiper-button-next swiper-button-next-testimonial">
-              <img src="/assets/img/icon/arrow-right.png"/>
+              <img src="/frontend-assets/img/icon/arrow-right.png"/>
             </div>
           </div>
         </div>
@@ -219,7 +219,7 @@
     <p class="text-center default-paragraph pb-4 text-primary">Start your Australia Carrer journey by completing our online
       application form today. You could be <b>working in
         Australia</b> in as little as <b> 9 months. </b></p>
-    <div class="button mt-4 mt-lg-0 apply-btn text-center">
+    <div class="button mt-4  apply-btn text-center">
       <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now</a>
     </div>
   </div>
@@ -230,17 +230,17 @@
     </div>
     <p class="text-center default-paragraph pb-4 text-primary">We're here to support, guide and assist you through the <b>STEP</b> to
       Registered Nurse in Australia</p>
-    <div>
-          <img src="/assets/img/home/steps.png" alt="arrow" />
+    <div class="d-flex justify-content-center">
+          <img src="/frontend-assets/img/home/steps.png" alt="arrow" />
     </div>
-    <div  class="image_arrow_div">
-      <img src="/assets/img/icon/white_arrow_down.png" alt="arrow" height="80" />
+    <div  class="image_arrow_div d-flex justify-content-center ">
+      <img src="/frontend-assets/img/icon/white_arrow_down.png" alt="arrow" height="80" />
     </div>
     <div class="container">
-      <div class="d-flex flex-column flex-lg-row justify-content-between">
         <div class="d-flex justify-content-center mb-4">
-          <img src="/assets/img/home/step_selection.png" alt="arrow" height="160" />
+          <img src="/frontend-assets/img/home/step_selection.png" alt="arrow" height="160" />
         </div>
+      <div class="d-flex justify-content-center mb-4">
         <div>
           <div class="card how-it-works-card">
             <p class="mb-0 p-4 text-primary font-weight-light text-center"><span class="color-green">APPLY</span> and complete your profile. We'll organize an
@@ -249,37 +249,43 @@
                 class="color-primary">Karini</b>Step <b class="color-primary">Academy</b></p>
           </div>
           <div class="oval-container">
-            <img src="assets/img/services/service_1.png" alt="img" />
+            <img src="/frontend-assets/img/services/service_1.png" alt="img" />
           </div>
         </div>
       </div>
-      <div class="d-flex flex-column flex-lg-row justify-content-between mt-5">
+      <div class="">
         <div  class="d-flex justify-content-center mb-2">
-          <img src="/assets/img/icon/white_arrow_down.png" alt="arrow" height="80" />
+          <img src="/frontend-assets/img/icon/white_arrow_down.png" alt="arrow" height="80" />
         </div>
         <div class="d-flex justify-content-center mb-4">
-          <img src="/assets/img/home/step_training.png" alt="arrow" />
+          <img src="/frontend-assets/img/home/step_training.png" alt="arrow" />
         </div>
-        <div>
-          <div class="card how-it-works-card">
+        <div class="d-flex justify-content-center mb-4">
+          <div class="card how-it-works-card " >
             <p class="mb-0 p-4 text-primary font-weight-light text-center">Our <span class="color-green">TRAINING</span> at the <b
                 class="color-primary">Karini</b>Step <b class="color-primary">Academy</b> is your path to passing the
               online MCQ and
               in-person OBA exams. Our expert team will prepare you to add our <b class="color-primary">95% pass
                 rate</b>, first time!</p>
           </div>
+          
+        </div>
+      </div>
+       
+        <div class="d-flex flex-column align-itenms-center">
           <div class="oval-container-vertical img-container">
-            <img src="assets/img/services/service_2.png" alt="img" />
+            <img src="/frontend-assets/img/services/service_2.png" alt="img" />
           </div>
         </div>
       </div>
-      <div class="d-flex flex-column flex-lg-row justify-content-between mt-5">
-        <div  class="d-flex justify-content-center mb-2">
-          <img src="/assets/img/icon/white_arrow_down.png" alt="arrow" height="80" />
+      <div  class="d-flex justify-content-center mb-2">
+          <img src="/frontend-assets/img/icon/white_arrow_down.png" alt="arrow" height="80" />
         </div>
         <div class="d-flex justify-content-center mb-4">
-          <img src="/assets/img/home/step_employment.png" alt="arrow" />
+          <img src="/frontend-assets/img/home/step_employment.png" style="height:25rem" alt="arrow" />
         </div>
+      <div class="d-flex flex-column flex-lg-row justify-content-center mt-5">
+       
         <div>
           <div class="card how-it-works-card">
             <p class="mb-0 p-4 text-primary font-weight-light text-center">Once you're Registered, we secure your <span class="color-green">EMPLOYMENT</span> and help
@@ -287,13 +293,13 @@
                 Australian nursing carrer</b> ! All this <b class="color-primary">in less than 9 months</b>.</p>
           </div>
           <div class="oval-container img-container">
-            <img src="assets/img/services/service_3.png" alt="img" />
+            <img src="/frontend-assets/img/services/service_3.png" alt="img" />
           </div>
           <div  class="d-flex justify-content-center mb-2">
-            <img src="/assets/img/icon/white_arrow_down.png" alt="arrow" height="80" />
+            <img src="/frontend-assets/img/icon/white_arrow_down.png" alt="arrow" height="80" />
           </div>
           <div class="d-flex justify-content-center mb-4">
-            <img src="/assets/img/home/step_pathways.png" alt="arrow" />
+            <img src="/frontend-assets/img/home/step_pathways.png" alt="arrow" />
           </div>
           <div class="card how-it-works-card">
             <p class="mb-0 p-4 text-primary font-weight-light text-center">
@@ -302,7 +308,7 @@
               </p>
           </div>
           <div class="oval-container img-container mt-4">
-            <img src="assets/img/services/service_4.png" alt="img" />
+            <img src="/frontend-assets/img/services/service_4.png" alt="img" />
           </div>
         </div>
       </div>
@@ -326,7 +332,7 @@
 
                     <div class="testimonial-card-our-team mt-8 bg-primary ml-4 mr-4 d-flex flex-column justify-content-between gap-4" style="border:10px solid #1b4991">
                       <div class="">
-                        <img src="assets/img/team/karissa.png" alt="testimonial"  style="height: 7rem;"/>
+                        <img src="/frontend-assets/img/team/karissa.png" alt="testimonial"  style="height: 7rem;"/>
                       </div>
                       <div>
                         <h3 >Karissa Subedi</h3>
@@ -344,7 +350,7 @@
 
                     <div class="testimonial-card-our-team mt-8 bg-primary ml-4 mr-4 d-flex flex-column justify-content-between gap-4" style="border:10px solid #1b4991">
                       <div class="">
-                        <img src="assets/img/team/karissa.png" alt="testimonial"  style="height: 7rem;"/>
+                        <img src="/frontend-assets/img/team/karissa.png" alt="testimonial"  style="height: 7rem;"/>
                       </div>
                       <div>
                         <h3 >Karissa Subedi</h3>
@@ -386,13 +392,13 @@
       <h4 class="text-center"><b>With our <br> Karini</b>Step <b>Academy <sup style="font-size:10px;top: -12px; left:-3px">TM</sup></b>, membership has its privileges.</h4>
 
       <div class="row">
-        <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
+        <div class="col-xl-3 col-md-6 col-12 mt-4 ">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="assets/img/icon/save-money.png" alt="icon" width="50" height="50" />
+                    <img src="/frontend-assets/img/icon/save-money.png" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
                     <h6 class="color-primary mt-3"><b>Zero Immigration advisor cost</b></h6>
@@ -408,13 +414,13 @@
           </div>
 
         </div>
-        <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
+        <div class="col-xl-3 col-md-6 col-12 mt-4 ">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="assets/img/icon/ledger.png" alt="icon" width="50" height="50" />
+                    <img src="/frontend-assets/img/icon/ledger.png" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
                     <h6 class="color-primary mt-3"><b>Zero OSCE Training Course costs</b></h6>
@@ -429,13 +435,13 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
+        <div class="col-xl-3 col-md-6 col-12 mt-4 ">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="assets/img/icon/exam.png" alt="icon" width="50" height="50" />
+                    <img src="/frontend-assets/img/icon/exam.png" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
                     <h6 class="color-primary mt-3"><b>Fly Now, Pay Later for OSCE exam</b></h6>
@@ -451,13 +457,13 @@
           </div>
 
         </div>
-        <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
+        <div class="col-xl-3 col-md-6 col-12 mt-4 ">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="assets/img/icon/support.png" alt="icon" width="50" height="50" />
+                    <img src="/frontend-assets/img/icon/support.png" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
                     <h6 class="color-primary mt-3"><b>24/7 Carrer-Mentoring Support</b></h6>
@@ -477,7 +483,7 @@
     </div>
   </div>
 
-  <div class="get-started-area" style="background-image: url(assets/img/blog/blog5.jpg);">
+  <div class="get-started-area" style="background-image: url(frontend-assets/img/blog/blog5.jpg);">
     <div class="overlay default-padding">
       <div class="container">
         <!-- <div class="card get-started-card"> -->
@@ -485,7 +491,7 @@
         <p class="text-center color-primary">Subscribe to our Blog to get the latest industry news, meet fellow
           <b>Karini</b>Nurses and get an inside look at our team.
         </p>
-        <div class="button mt-4 mt-lg-0 text-center">
+        <div class="button mt-4  text-center">
           <a class="btn outline-btn animation rounded-md btn-md color-primary" href="/blog.html"><b>Visit the
               Blog</b></a>
         </div>
@@ -507,13 +513,13 @@
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-  <!-- <img src="assets/img/shape/22.png" alt="Image Not Found" />
-              <img src="assets/img/icon/41.png" alt="Image Not Found" />
-              <img src="assets/img/illustration/4.png" alt="Image Not Found" /> -->
+  <!-- <img src="/frontend-assets/img/shape/22.png" alt="Image Not Found" />
+              <img src="/frontend-assets/img/icon/41.png" alt="Image Not Found" />
+              <img src="/frontend-assets/img/illustration/4.png" alt="Image Not Found" /> -->
   <!-- </div>
         </div>
         <div class="col-lg-6 pl-80 pl-md-15 pl-xs-15"> -->
-  <!-- <h4 class="sub-title"><img src="assets/img/icon/home-3.png" alt="Image Not Found"> Award Winning</h4> -->
+  <!-- <h4 class="sub-title"><img src="/frontend-assets/img/icon/home-3.png" alt="Image Not Found"> Award Winning</h4> -->
   <!-- <h2 class="title split-text">Achieve Your Australian Dream</h2>
           <p class="split-text">
             Since 2003, we have made thousands of dreams come true for
@@ -530,7 +536,7 @@
       <div class="row align-center">
 
         <div class="col-lg-6 order-2 order-lg-1"> -->
-  <!-- <h4 class="sub-title"><img src="assets/img/icon/home-3.png" alt="Image Not Found"> Award Winning</h4> -->
+  <!-- <h4 class="sub-title"><img src="/frontend-assets/img/icon/home-3.png" alt="Image Not Found"> Award Winning</h4> -->
   <!-- <h2 class="title split-text">Changing Lives
             Together</h2>
           <p class="split-text">
@@ -560,12 +566,12 @@
 
   <!-- Start Choose Us
     ============================================= -->
-  <!-- <div class="choose-us-style-three-area default-padding" style="background-image: url(assets/img/shape/28.png)">
+  <!-- <div class="choose-us-style-three-area default-padding" style="background-image: url(frontend-assets/img/shape/28.png)">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="choose-us-style-three-info"> -->
-  <!-- <h4 class="sub-title"><img src="assets/img/icon/home-3.png" alt="Image Not Found"> Why Choose Us</h4> -->
+  <!-- <h4 class="sub-title"><img src="/frontend-assets/img/icon/home-3.png" alt="Image Not Found"> Why Choose Us</h4> -->
   <!-- <h2 class="title split-text">
               Hire Registered Nurses & Therapists Now
             </h2>
@@ -598,10 +604,10 @@
         <div class="col-lg-5 offset-lg-1">
           <div class="choose-us-style-three-thumb">
             <div class="img-container">
-              <img class="animate" data-animate="fadeInUp" src="assets/img/home/img10.jpg" alt="Image Not Found" />
+              <img class="animate" data-animate="fadeInUp" src="/frontend-assets/img/home/img10.jpg" alt="Image Not Found" />
             </div>
             <div class="card-style-two bg-theme text-light animate" data-animate="fadeInRight" data-delay="300ms">
-              <img src="assets/img/icon/44.png" alt="Image Not Found" />
+              <img src="/frontend-assets/img/icon/44.png" alt="Image Not Found" />
               <h4>
                 We’ve more than 1000 expectionally trained internatonal nurses
               </h4>
@@ -620,7 +626,7 @@
       <!-- <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="site-heading text-center"> -->
-      <!-- <h4 class="sub-title"><img src="assets/img/icon/home-3.png" alt="Image Not Found">News & Blog</h4> -->
+      <!-- <h4 class="sub-title"><img src="/frontend-assets/img/icon/home-3.png" alt="Image Not Found">News & Blog</h4> -->
       <!-- <h2 class="title split-text">Recent Blog Posts</h2>
             <p class="text-center default-paragraph">
               Stay up-to-date with our latest news and announcements on the
@@ -634,7 +640,7 @@
         <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
           <div class="home-blog-style-one-item animate" data-animate="fadeInUp">
             <div class="img-container">
-              <img src="assets/img/blog/blog_2.png" alt="Image not Found" />
+              <img src="/frontend-assets/img/blog/blog_2.png" alt="Image not Found" />
             </div>
             <div class="content">
               <div class="info">
@@ -654,7 +660,7 @@
         <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
           <div class="home-blog-style-one-item animate" data-animate="fadeInUp" data-delay="100ms">
             <div class="img-container">
-              <img src="assets/img/blog/blog_2.png" alt="Image not Found" />
+              <img src="/frontend-assets/img/blog/blog_2.png" alt="Image not Found" />
             </div>
             <div class="content">
               <div class="info">
@@ -676,7 +682,7 @@
         <div class="col-xl-4 col-md-6 col-lg-6 mb-30">
           <div class="home-blog-style-one-item animate" data-animate="fadeInUp" data-delay="200ms">
             <div class="img-container">
-              <img src="assets/img/blog/blog_2.png" alt="Image not Found" />
+              <img src="/frontend-assets/img/blog/blog_2.png" alt="Image not Found" />
             </div>
             <div class="content">
               <div class="info">
@@ -702,7 +708,7 @@
   <div class="container default-padding">
     <h3 class="title text-center">How To Get Started</h3>
     <p class="text-center default-paragraph mb-0 text-primary" style="line-height: 27px;">Are you ready to Take the <b>STEP</b> to your Australian dream? Apply Now!</p>
-    <div class="button mt-4 mt-lg-0 apply-btn text-center">
+    <div class="button mt-4 apply-btn text-center">
       <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now</a>
     </div>
   </div>

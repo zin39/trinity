@@ -4,9 +4,9 @@
   <!-- Start Banner Area
     ============================================= -->
   <div class=""
-    style="background-image: url(assets/img/apply-now/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    style="background-image: url(frontend-assets/img/apply-now/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
     <!-- <div class="banner-style-four-thumb"
-      style="background-image: url(assets/img/banner/banner.png); background-position: center center;"> -->
+      style="background-image: url(frontend-assets/img/banner/banner.png); background-position: center center;"> -->
     <!-- <div class="video-btn">
         <a href="https://www.youtube.com/watch?v=3ctoSEQsY54" class="popup-youtube">
           <i class="fas fa-play"></i>
@@ -14,10 +14,10 @@
       </div> -->
     <!-- </div> -->
     <!-- <div class="banner-move-animation">
-      <img src="assets/img/shape/56.png" alt="Image Not Found" />
-      <img src="assets/img/shape/16.png" alt="Image Not Found" />
-      <img src="assets/img/shape/57.png" alt="Image Not Found" />
-      <img src="assets/img/shape/18.png" alt="Image Not Found" />
+      <img src="frontend-assets/img/shape/56.png" alt="Image Not Found" />
+      <img src="frontend-assets/img/shape/16.png" alt="Image Not Found" />
+      <img src="frontend-assets/img/shape/57.png" alt="Image Not Found" />
+      <img src="frontend-assets/img/shape/18.png" alt="Image Not Found" />
     </div> -->
     <!-- Single Item -->
     <div style="background: #0000003d; height:40%">
@@ -461,7 +461,7 @@
               <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group text-left">
-                        <img src="/assets/img/captcha.png" />
+                        <img src="/frontend-assets/img/captcha.png" />
                     </div>
                 </div>
               </div>
@@ -473,24 +473,6 @@
       </div>
 
     </form>
-  </div>
-
-  <div class="container default-padding">
-    <h3 class="color-primary text-center">Registered Nurses</h3>
-    <p class="color-primary text-center">Are you ready to Take the <b>STEP</b> towards your <b>Australian</b> dream?</p>
-    <p>Apply Now!</p>
-    <div class="button mt-4 mt-lg-0 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now!</a>
-    </div>
-  </div>
-
-
-  <div class="container default-padding">
-    <h3 class="color-primary text-center">How To Get Started</h3>
-    <p class="color-primary text-center">Are you ready to Take the <b>STEP</b> to create your dream team? Request a Consultation!</p>
-    <div class="button mt-4 mt-lg-0 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Contact Us</a>
-    </div>
   </div>
 
 
