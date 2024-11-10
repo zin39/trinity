@@ -57,22 +57,22 @@
                         <i class="icon-stars"></i><span>Awards</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="{{route('admin.partners.index')}}" class="nav-link @if($Route[1]=='partners') active @endif" data-popup="tooltip" data-original-title="Partners" data-placement="right" data-container=".card-sidebar-mobile">
                         <i class="icon-users"></i><span>Partners</span>
                     </a>
-                </li>
+                </li> -->
                 @php
                     $menu_active = in_array($Route[1], ['event-categories', 'events']);
                 @endphp
-                <li class="nav-item nav-item-submenu {{ $menu_active ? 'nav-item-open' : '' }}">
+                <!-- <li class="nav-item nav-item-submenu {{ $menu_active ? 'nav-item-open' : '' }}">
                     <a href="#" class="nav-link" data-popup="tooltip" data-original-title="Event Management" data-placement="right" data-container=".card-sidebar-mobile"><i class="icon-graduation2"></i> <span>Event Management</span></a>
 
                     <ul class="nav nav-group-sub" data-submenu-title="Event Management" style="{{ $menu_active ? 'display: block' : '' }}">
                         <li class="nav-item"><a href="{{ route('admin.event-categories.index') }}" class="nav-link @if($Route[1]=='event-categories') active @endif" data-popup="tooltip" data-original-title="Categories" data-placement="right" data-container=".card-sidebar-mobile">Event Categories</a></li>
                         <li class="nav-item"><a href="{{ route('admin.events.index') }}" class="nav-link @if($Route[1]=='events') active @endif" data-popup="tooltip" data-original-title="Event" data-placement="right" data-container=".card-sidebar-mobile">Event</a></li>
                     </ul>
-                </li>
+                </li> -->
 
                 @php
                     $menu_active = in_array($Route[1], ['blog-categories', 'blogs']);
@@ -92,7 +92,7 @@
                     </a>
                 </li>
 
-                @php
+                <!-- @php
                     $menu_active = in_array($Route[1], ['faq-categories', 'faqs']);
                 @endphp
                 <li class="nav-item nav-item-submenu {{ $menu_active ? 'nav-item-open' : '' }}">
@@ -102,7 +102,7 @@
                         <li class="nav-item"><a href="{{ route('admin.faq-categories.index') }}" class="nav-link @if($Route[1]=='faq-categories') active @endif" data-popup="tooltip" data-original-title="Categories" data-placement="right" data-container=".card-sidebar-mobile">FAQ Categories</a></li>
                         <li class="nav-item"><a href="{{ route('admin.faqs.index') }}" class="nav-link @if($Route[1]=='faqs') active @endif" data-popup="tooltip" data-original-title="FAQ" data-placement="right" data-container=".card-sidebar-mobile">FAQs</a></li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li class="nav-item-header">
                     <div class="text-uppercase font-size-xs line-height-xs">Page Management & Settings
@@ -110,11 +110,23 @@
                     <i class="icon-menu" title="Page Management"></i>
                 </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('admin.pages.homepage') }}" class="nav-link @if(($Route[2] ?? '')=='homepage') active @endif" data-popup="tooltip" data-original-title="Homepage" data-placement="right" data-container=".card-sidebar-mobile">
-                        <i class="icon-home"></i><span>Homepage</span>
-                    </a>
+                @php
+                    $menu_active = $Route[1] == 'pages';
+                @endphp
+                <li class="nav-item nav-item-submenu {{ $menu_active ? 'nav-item-open' : '' }}">
+                    <a href="#" class="nav-link" data-popup="tooltip" data-original-title="Healthcare Professionals" data-placement="right" data-container=".card-sidebar-mobile"><i class="icon-user-tie"></i> <span>Page Management</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Home Page" style="{{ $menu_active ? 'display: block' : '' }}">
+                        <li class="nav-item"><a href="{{ route('admin.pages.homepage') }}" class="nav-link @if($Route[2]=='homepage') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Home Page</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.registered_nurses') }}" class="nav-link @if($Route[2]=='registered_nurses') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Registered Nurses</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.healthcare_organizations') }}" class="nav-link @if($Route[2]=='healthcare_organizations') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Healthcare Organizations</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.why_choose_us') }}" class="nav-link @if($Route[2]=='why_choose_us') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Why Choose Us</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.privacy_policy') }}" class="nav-link @if($Route[2]=='privacy_policy') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Privacy Policy</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.apply_now') }}" class="nav-link @if($Route[2]=='apply_now') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Apply Now</a></li>
+                        
+                    </ul>
                 </li>
+                
+             
                 @php
                     $menu_active = $Route[1] == 'settings' || in_array($Route[2] ?? '', ['footer', 'common-sections']);
                 @endphp
@@ -127,43 +139,9 @@
                         <li class="nav-item"><a href="{{ route('admin.pages.common-sections') }}" class="nav-link @if(($Route[2] ?? '')=='common-sections') active @endif" data-popup="tooltip" data-original-title="Common Sections" data-placement="right" data-container=".card-sidebar-mobile">Common Sections</a></li>
                     </ul>
                 </li>
-                @php
-                    $menu_active = $Route[1] == 'pages' && in_array(request('id'), $pages['healthcare-professionals']->pluck('id')->toArray());
-                @endphp
-                <li class="nav-item nav-item-submenu {{ $menu_active ? 'nav-item-open' : '' }}">
-                    <a href="#" class="nav-link" data-popup="tooltip" data-original-title="Healthcare Professionals" data-placement="right" data-container=".card-sidebar-mobile"><i class="icon-user-tie"></i> <span>Healthcare Professionals</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Healthcare Professionals" style="{{ $menu_active ? 'display: block' : '' }}">
-                        @foreach($pages['healthcare-professionals'] as $page)
-                            <li class="nav-item"><a href="{{ route('admin.pages.edit', $page->id) }}" class="nav-link @if($menu_active && request('id') == $page->id) active @endif" data-popup="tooltip" data-original-title="{{ $page->title }}" data-placement="right" data-container=".card-sidebar-mobile">{{ $page->title }}</a></li>
-                        @endforeach
-                    </ul>
-                </li>
+             
 
-                @php
-                    $menu_active = $Route[1] == 'pages' && in_array(request('id'), $pages['healthcare-organizations']->pluck('id')->toArray());
-                @endphp
-                <li class="nav-item nav-item-submenu {{ $menu_active ? 'nav-item-open' : '' }}">
-                    <a href="#" class="nav-link" data-popup="tooltip" data-original-title="Healthcare Organizations" data-placement="right" data-container=".card-sidebar-mobile"><i class="icon-library2"></i> <span>Healthcare Organizations</span></a>
 
-                    <ul class="nav nav-group-sub" data-submenu-title="Healthcare Organizations" style="{{ $menu_active ? 'display: block' : '' }}">
-                        @foreach($pages['healthcare-organizations'] as $page)
-                            <li class="nav-item"><a href="{{ route('admin.pages.edit', $page->id) }}" class="nav-link @if($menu_active && request('id') == $page->id) active @endif" data-popup="tooltip" data-original-title="{{ $page->title }}" data-placement="right" data-container=".card-sidebar-mobile">{{ $page->title }}</a></li>
-                        @endforeach
-                    </ul>
-                </li>
-
-                @php
-                    $menu_active = $Route[1] == 'pages' && in_array($Route[1], $pages['other']->pluck('id')->toArray());
-                @endphp
-                <li class="nav-item nav-item-submenu {{ $menu_active ? 'nav-item-open' : '' }}">
-                    <a href="#" class="nav-link" data-popup="tooltip" data-original-title="Other Pages" data-placement="right" data-container=".card-sidebar-mobile"><i class="icon-files-empty"></i> <span>Other Pages</span></a>
-
-                    <ul class="nav nav-group-sub" data-submenu-title="Other Pages" style="{{ $menu_active ? 'display: block' : '' }}">
-                        @foreach($pages['other'] as $page)
-                            <li class="nav-item"><a href="{{ route('admin.pages.edit', $page->id) }}" class="nav-link @if($menu_active && $Route[1] == $page->id) active @endif" data-popup="tooltip" data-original-title="{{ $page->title }}" data-placement="right" data-container=".card-sidebar-mobile">{{ $page->title }}</a></li>
-                        @endforeach    
-                    </ul>
-                </li>
             </ul>
         </div>
         <!-- /main navigation -->

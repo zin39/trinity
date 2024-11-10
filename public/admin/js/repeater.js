@@ -3,6 +3,7 @@ angular.module("ui.tinymce",[]).value("uiTinymceConfig",{}).directive("uiTinymce
 var l = angular.module('Repeater', ['ui.tinymce']);
 l.controller('RepeaterController',function($scope){
 	$scope.list = [];
+	$scope.section;
 
     $scope.tinymceOptions = {
         theme: "modern", height: '150',
@@ -14,13 +15,27 @@ l.controller('RepeaterController',function($scope){
 			$scope.list = list;
 		}
 		else $scope.list = [];
+
+
+	}
+
+	$scope.initSection = function(section){
+		console.log(section)
+		if(section){
+			$scope.section = section;
+		}
+		else $scope.section = [];
+
+		console.log($scope.section)
+
+
 	}
 
     $scope.add = function()
 	{	
 		var k= {};
 		$scope.list.push(k);
-
+		console.log($scope.list)
         $scope.$$postDigest(function(){
             initTinyMCE('#text-description-'+($scope.list.length - 1));
         });

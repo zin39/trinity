@@ -1,138 +1,135 @@
 @php
-    $section = optional($sections['home-banner-area'] ? json_decode($sections['home-banner-area']) : null);
-    $slug = 'home-banner-area';
+    $section = optional($sections['why-choose-us-apply-section'] ? json_decode($sections['why-choose-us-apply-section']) : null);
+    $slug = 'why-choose-us-apply-section';
 @endphp
 <div class="card">
     <div class="card-body">
         <form method="POST" class="form-horizontal" enctype="multipart/form-data" action="{{route('admin.pages.savepage')}}">
             @csrf
-            
             <input type="hidden" name="slug" value="{{ $slug }}">
-            <input type="hidden" name="route" value="homepage">
+            <input type="hidden" name="route" value="why_choose_us">
+            
             <div class="row">
                 <div class="col-lg-12 mb-2">
                     <div class="row">
-                        <label class="col-form-label col-lg-3">Tagline:<span class="text-danger">*</span></label>
+                        <label class="col-form-label col-lg-3">Title:<span class="text-danger">*</span></label>
                         <div class="col-lg-9 form-group-feedback form-group-feedback-right">
                             <div class="input-group">
                                 <span class="input-group-prepend">
                                     <span class="input-group-text"><i class="icon-pencil"></i>
                                     </span>
                                 </span>
-                                <input type="text" name='{{ $slug }}[tagline]' class='form-control' value="{{ old($slug.'.tagline', $section->tagline) }}" required />
+                                <input type="text" name='{{ $slug }}[title]' class='form-control' value="{{ old($slug.'.title', $section->title) }}" required />
                             </div>
                         </div>
                     </div>
                 </div>
-             
+                <div class="col-lg-12 mb-2">
+                    <div class="row">
+                        <label class="col-form-label col-lg-3">Subtitle:<span class="text-danger">*</span></label>
+                        <div class="col-lg-9 form-group-feedback form-group-feedback-right">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text"><i class="icon-pencil"></i>
+                                    </span>
+                                </span>
+                                <input type="text" name='{{ $slug }}[subtitle]' class='form-control' value="{{ old($slug.'.subtitle', $section->subtitle) }}" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="col-lg-12 mb-2">
                     <div class="row">
-                        <label class="col-form-label col-lg-3">Image: <span class="text-danger">*</span></label>
-                        <div class="col-lg-9 form-group-feedback form-group-feedback-right">
-                            <div class="input-group">
-                                <span class="input-group-prepend">
-                                    <span class="input-group-text"><i class="icon-images3"></i></span>
-                                </span>
-                                <input type="file" accept="image/*" name='{{ $slug }}[image]' class='form-control image' />
-                            </div>
-                            
-                            @if($section && $section->image)
-                                @php
-                                    $image = asset($section->image);
-                                @endphp
-                                <a href="{{ $image }}" target="_blank">
-                                    <img id="blog_image" src="{{ $image }}" alt="your image" class="preview-image" style="height: 100px;width: auto;" />
-                                </a>
-                                <input type="hidden" name='{{ $slug }}[image]' value="{{ $section->image }}" class='form-control' />
-                            @endif
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 mb-2">
-                    <div class="row">
-                        <label class="col-form-label col-lg-3">Button 1 Title:<span class="text-danger">*</span></label>
+                        <label class="col-form-label col-lg-3">Title 2:<span class="text-danger">*</span></label>
                         <div class="col-lg-9 form-group-feedback form-group-feedback-right">
                             <div class="input-group">
                                 <span class="input-group-prepend">
                                     <span class="input-group-text"><i class="icon-pencil"></i>
                                     </span>
                                 </span>
-                                <input type="text" name='{{ $slug }}[button1_title]' class='form-control' value="{{ old($slug.'.button1_title', $section->button1_title) }}" required />
+                                <input type="text" name='{{ $slug }}[title2]' class='form-control' value="{{ old($slug.'.title2', $section->title2) }}" required />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12 mb-2">
                     <div class="row">
-                        <label class="col-form-label col-lg-3">Button 1 Text:<span class="text-danger">*</span></label>
+                        <label class="col-form-label col-lg-3">Subtitle 2:<span class="text-danger">*</span></label>
                         <div class="col-lg-9 form-group-feedback form-group-feedback-right">
                             <div class="input-group">
                                 <span class="input-group-prepend">
                                     <span class="input-group-text"><i class="icon-pencil"></i>
                                     </span>
                                 </span>
-                                <input type="text" name='{{ $slug }}[button1_text]' class='form-control' value="{{ old($slug.'.button1_text', $section->button1_text) }}" required />
+                                <input type="text" name='{{ $slug }}[subtitle2]' class='form-control' value="{{ old($slug.'.subtitle2', $section->subtitle2) }}" required />
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-12 mb-2">
                     <div class="row">
-                        <label class="col-form-label col-lg-3">Button 1 Link:<span class="text-danger">*</span></label>
-                        <div class="col-lg-9 form-group-feedback form-group-feedback-right">
-                            <div class="input-group">
-                                <span class="input-group-prepend">
-                                    <span class="input-group-text"><i class="icon-link"></i>
-                                    </span>
-                                </span>
-                                <input type="text" name='{{ $slug }}[button1_link]' class='form-control' value="{{ old($slug.'.button1_link', $section->button1_link) }}" required />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 mb-2">
-                    <div class="row">
-                        <label class="col-form-label col-lg-3">Button 2 Title:<span class="text-danger">*</span></label>
+                        <label class="col-form-label col-lg-3">Button Text 2:<span class="text-danger">*</span></label>
                         <div class="col-lg-9 form-group-feedback form-group-feedback-right">
                             <div class="input-group">
                                 <span class="input-group-prepend">
                                     <span class="input-group-text"><i class="icon-pencil"></i>
                                     </span>
                                 </span>
-                                <input type="text" name='{{ $slug }}[button2_title]' class='form-control' value="{{ old($slug.'.button2_title', $section->button2_title) }}" required />
+                                <input type="text" name='{{ $slug }}[btntext2]' class='form-control' value="{{ old($slug.'.btntext2', $section->btntext2) }}" required />
                             </div>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-lg-12 mb-2">
                     <div class="row">
-                        <label class="col-form-label col-lg-3">Button 2 Text:<span class="text-danger">*</span></label>
+                        <label class="col-form-label col-lg-3">Title 3:<span class="text-danger">*</span></label>
                         <div class="col-lg-9 form-group-feedback form-group-feedback-right">
                             <div class="input-group">
                                 <span class="input-group-prepend">
                                     <span class="input-group-text"><i class="icon-pencil"></i>
                                     </span>
                                 </span>
-                                <input type="text" name='{{ $slug }}[button2_text]' class='form-control' value="{{ old($slug.'.button2_text', $section->button2_text) }}" required />
+                                <input type="text" name='{{ $slug }}[title3]' class='form-control' value="{{ old($slug.'.title3', $section->title3) }}" required />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12 mb-2">
                     <div class="row">
-                        <label class="col-form-label col-lg-3">Button 2 Link:<span class="text-danger">*</span></label>
+                        <label class="col-form-label col-lg-3">Subtitle 3:<span class="text-danger">*</span></label>
                         <div class="col-lg-9 form-group-feedback form-group-feedback-right">
                             <div class="input-group">
                                 <span class="input-group-prepend">
-                                    <span class="input-group-text"><i class="icon-link"></i>
+                                    <span class="input-group-text"><i class="icon-pencil"></i>
                                     </span>
                                 </span>
-                                <input type="text" name='{{ $slug }}[button2_link]' class='form-control' value="{{ old($slug.'.button2_link', $section->button2_link) }}" required />
+                                <input type="text" name='{{ $slug }}[subtitle3]' class='form-control' value="{{ old($slug.'.subtitle3', $section->subtitle3) }}" required />
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-12 mb-2">
+                    <div class="row">
+                        <label class="col-form-label col-lg-3">Button Text 3:<span class="text-danger">*</span></label>
+                        <div class="col-lg-9 form-group-feedback form-group-feedback-right">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text"><i class="icon-pencil"></i>
+                                    </span>
+                                </span>
+                                <input type="text" name='{{ $slug }}[btntext3]' class='form-control' value="{{ old($slug.'.btntext3', $section->btntext3) }}" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
                 <div class="col-lg-12 text-right">
                     <button class="ml-2 btn bg-primary btn-labeled btn-labeled-left" type="submit">
                         <b><i class="icon-database-insert"></i></b> Save

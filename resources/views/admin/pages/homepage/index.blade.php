@@ -11,6 +11,7 @@
     });
 </script>
 @stop 
+
 @section('content')
 <style>
     .nav-sidebar .nav-link {
@@ -44,29 +45,36 @@
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a href="#home-3-core-values" class="nav-link {{ $active == 'home-3-core-values' ? 'active' : '' }}" data-toggle="tab" aria-selected="false" role="tab" tabindex="-1">
-                                <i class="icon-list me-2"></i>
-                                3 Core Values section
+                            <a href="#home-nurses-testimonials-area" class="nav-link {{ $active == 'home-nurses-testimonials-area' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
+                                <i class="icon-images2 me-2"></i>
+                               Testimonials Area
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a href="#home-journey" class="nav-link {{ $active == 'home-journey' ? 'active' : '' }}" data-toggle="tab" aria-selected="false" role="tab" tabindex="-1">
-                                <i class="icon-calendar me-2"></i>
-                                Start your Journey section
+                            <a href="#home-registered-nurse-take-step" class="nav-link {{ $active == 'home-registered-nurse-take-step' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
+                                <i class="icon-images2 me-2"></i>
+                               Take a step Area
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a href="#home-featured-sections" class="nav-link {{ $active == 'home-featured-sections' ? 'active' : '' }}" data-toggle="tab" aria-selected="false" role="tab" tabindex="-1">
-                                <i class="icon-youtube me-2"></i>
-                                Featured Video sections
+                            <a href="#home-membership-previllage" class="nav-link {{ $active == 'home-membership-previllage' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
+                                <i class="icon-images2 me-2"></i>
+                              Membership Previllage Area
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a href="#home-hire-now" class="nav-link {{ $active == 'home-hire-now' ? 'active' : '' }}" data-toggle="tab" aria-selected="false" role="tab" tabindex="-1">
-                                <i class="icon-users me-2"></i>
-                                Hire now section
+                            <a href="#home-latest-news" class="nav-link {{ $active == 'home-latest-news' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
+                                <i class="icon-images2 me-2"></i>
+                            Latest News area
                             </a>
                         </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#home-how-to-get-started" class="nav-link {{ $active == 'home-how-to-get-started' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
+                                <i class="icon-images2 me-2"></i>
+                              How to get Started Area
+                            </a>
+                        </li>
+                       
                     </ul>
                 </div>
             </div>
@@ -76,19 +84,35 @@
         <div class="tab-pane fade {{ $active == 'home-banner-area' ? 'active show' : '' }}" id="home-banner-area">
             @include('admin.pages.homepage.partials.banner-area')
         </div>
-        <div class="tab-pane fade {{ $active == 'home-3-core-values' ? 'active show' : '' }}" id="home-3-core-values">
-            @include('admin.pages.homepage.partials.3-core-values-section')
+
+        <div class="tab-pane fade {{ $active == 'home-nurses-testimonials-area' ? 'active show' : '' }}" id="home-nurses-testimonials-area">
+            @include('admin.pages.homepage.partials.home-nurses-testimonials-area')
         </div>
-        <div class="tab-pane fade {{ $active == 'home-journey' ? 'active show' : '' }}" id="home-journey">
-            @include('admin.pages.homepage.partials.journey-section')
+
+        <div class="tab-pane fade {{ $active == 'home-registered-nurse-take-step' ? 'active show' : '' }}" id="home-registered-nurse-take-step">
+            @include('admin.pages.homepage.partials.home-registered-nurse-take-step')
         </div>
-        <div class="tab-pane fade {{ $active == 'home-featured-sections' ? 'active show' : '' }}" id="home-featured-sections">
-            @include('admin.pages.homepage.partials.featured-sections')
+
+        <div class="tab-pane fade {{ $active == 'home-membership-previllage' ? 'active show' : '' }}" id="home-membership-previllage">
+            @include('admin.pages.homepage.partials.home-membership-previllage')
         </div>
-        <div class="tab-pane fade {{ $active == 'home-hire-now' ? 'active show' : '' }}" id="home-hire-now">
-            @include('admin.pages.homepage.partials.hire-now-section')
+
+        <div class="tab-pane fade {{ $active == 'home-latest-news' ? 'active show' : '' }}" id="home-latest-news">
+            @include('admin.pages.homepage.partials.home-latest-news')
         </div>
+
+        <div class="tab-pane fade {{ $active == 'home-how-to-get-started' ? 'active show' : '' }}" id="home-how-to-get-started">
+            @include('admin.pages.homepage.partials.home-how-to-get-started')
+        </div>
+
+                       
+                       
+
+
+      
     </div>
 </div>
 
 @stop
+
+

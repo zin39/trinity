@@ -12,115 +12,252 @@ class PageSectionSeeder extends Seeder
      */
     public function run(): void
     {
-        PageSection::insert([
+        if(!PageSection::where('slug', 'home-banner-area' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'home-banner-area',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+
+
+        if(!PageSection::where('slug', 'home-nurses-testimonials-area' )->exists())
+        {
+            PageSection::insert([
             [
-                'slug' => 'home-banner-area',
+                'slug' => 'home-nurses-testimonials-area',
                 'content' => null
             ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'home-registered-nurse-take-step' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'home-registered-nurse-take-step',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'home-membership-previllage' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'home-membership-previllage',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'home-latest-news' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'home-latest-news',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'home-how-to-get-started' )->exists())
+        {
+            PageSection::insert([
             [
-                'slug' => 'home-3-core-values',
+                'slug' => 'home-how-to-get-started',
+                'content' => null
+                ],
+            ]); 
+        }
+
+
+        if(!PageSection::where('slug', 'footer-about-text' )->exists())
+        {
+            PageSection::insert([
+            [
+                'slug' => 'footer-about-text',
                 'content' => null
             ],
-            [
-                'slug' => 'home-journey',
-                'content' => null
-            ],
-            [
-                'slug' => 'home-featured-sections',
-                'content' => null
-            ],
-            [
-                'slug' => 'home-hire-now',
-                'content' => null
-            ],
-            [
-                'slug' => 'opening-hours',
-                'content' => null
-            ],
-            [
-                'slug' => 'footer-text-1',
-                'content' => null
-            ],
-            [
-                'slug' => 'footer-text-2',
-                'content' => null
-            ],
-            [
-                'slug' => 'footer-copyright-text',
-                'content' => null
-            ], 
-            [
-                'slug' => 'start-career-journey-apply',
-                'content' => null
-            ],
-            [
-                'slug' => 'start-journey-with-trnty',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-1',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-2',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-3',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-4',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-5',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-6',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-7',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-8',
-                'content' => null
-            ],
-            [
-                'slug' => 'staffing-solutions-section-9',
-                'content' => null
-            ],
-            [
-                'slug' => 'jobs-in-australia-section-1',
-                'content' => null
-            ],
-            [
-                'slug' => 'jobs-in-australia-section-2',
-                'content' => null
-            ],
-            [
-                'slug' => 'jobs-in-australia-section-3',
-                'content' => null
-            ],
-            [
-                'slug' => 'jobs-in-australia-section-4',
-                'content' => null
-            ],
-            [
-                'slug' => 'jobs-in-australia-section-5',
-                'content' => null
-            ],
-            [
-                'slug' => 'jobs-in-australia-section-6',
-                'content' => null
-            ],
-            [
-                'slug' => 'jobs-in-australia-section-7',
-                'content' => null
-            ],
-        ]);
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'registered-nurse-banner' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'registered-nurse-banner',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'registered-nurse-main-content' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'registered-nurse-main-content',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'registered-nurse-how-to-qualify' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'registered-nurse-how-to-qualify',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+
+        if(!PageSection::where('slug', 'registered-nurse-membership-previllage' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'registered-nurse-membership-previllage',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+
+        if(!PageSection::where('slug', 'registered-nurse-how-to-get-started' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'registered-nurse-how-to-get-started',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'healthcare-organizations-banner' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'healthcare-organizations-banner',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'healthcare-organizations-main-content' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'healthcare-organizations-main-content',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'healthcare-organizations-membership-previllage' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'healthcare-organizations-membership-previllage',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'healthcare-organizations-how-to-get-started' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'healthcare-organizations-how-to-get-started',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'why-choose-us-banner' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'why-choose-us-banner',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'why-choose-us-main-content' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'why-choose-us-main-content',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'why-choose-us-apply-section' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'why-choose-us-apply-section',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'why-choose-us-membership-previllage' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'why-choose-us-membership-previllage',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'privacy-policy-banner' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'privacy-policy-banner',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'privacy-policy-main-content' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'privacy-policy-main-content',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+
+        if(!PageSection::where('slug', 'privacy-policy-apply-section' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'privacy-policy-apply-section',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+        if(!PageSection::where('slug', 'apply-now-banner' )->exists())
+        {
+            PageSection::insert([
+                [
+                    'slug' => 'apply-now-banner',
+                    'content' => null
+                ],
+            ]); 
+        }
+
+         
     }
 }

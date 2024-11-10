@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FaqCategoryController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\Pages\PageController;
-use App\Http\Controllers\Admin\Pages\HomePageController;
+use App\Http\Controllers\Admin\Pages\AllPageController;
 use App\Http\Controllers\Admin\Pages\PageSectionController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\SettingController;
@@ -56,8 +56,15 @@ Route::middleware('auth:admin')->group(function(){
     Route::resource('testimonials', TestimonialController::class);
 
     // Page Management
-    Route::get('pages/homepage', [HomePageController::class, 'index'])->name('pages.homepage');
-    Route::post('pages/homepage', [HomePageController::class, 'save']);
+    Route::get('pages/homepage', [AllPageController::class, 'homepage'])->name('pages.homepage');
+    Route::get('pages/registered_nurses', [AllPageController::class, 'registeredNurses'])->name('pages.registered_nurses');
+    Route::get('pages/healthcare_organizations', [AllPageController::class, 'healthcareOrganizations'])->name('pages.healthcare_organizations');
+    Route::get('pages/why_choose_us', [AllPageController::class, 'whyChooseUs'])->name('pages.why_choose_us');
+    Route::get('pages/privacy_policy', [AllPageController::class, 'privacyPolicy'])->name('pages.privacy_policy');
+    Route::get('pages/apply_now', [AllPageController::class, 'applyNow'])->name('pages.apply_now');
+    
+    Route::post('pages/savepage', [AllPageController::class, 'save'])->name('pages.savepage');
+    Route::post('pages/save-previllages', [AllPageController::class, 'savePrevillage'])->name('pages.save-previllages');
 
     Route::get('pages/footer', [PageSectionController::class, 'footer'])->name('pages.footer');
     Route::post('pages/footer', [PageSectionController::class, 'saveFooter']);
