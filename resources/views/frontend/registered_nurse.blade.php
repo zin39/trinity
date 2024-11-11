@@ -3,23 +3,15 @@
 @section('content')
   <!-- Start Banner Area
     ============================================= -->
+
+
+  @php
+      $item = json_decode($sections['registered-nurse-banner']);
+  @endphp
+
   <div class=""
-    style="background-image: url(frontend-assets/img/registered_nurses/registered_nurse_banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-    <!-- <div class="banner-style-four-thumb"
-      style="background-image: url(frontend-assets/img/banner/banner.png); background-position: center center;"> -->
-    <!-- <div class="video-btn">
-        <a href="https://www.youtube.com/watch?v=3ctoSEQsY54" class="popup-youtube">
-          <i class="fas fa-play"></i>
-        </a>
-      </div> -->
-    <!-- </div> -->
-    <!-- <div class="banner-move-animation">
-      <img src="frontend-assets/img/shape/56.png" alt="Image Not Found" />
-      <img src="frontend-assets/img/shape/16.png" alt="Image Not Found" />
-      <img src="frontend-assets/img/shape/57.png" alt="Image Not Found" />
-      <img src="frontend-assets/img/shape/18.png" alt="Image Not Found" />
-    </div> -->
-    <!-- Single Item -->
+    style="background-image: url({{$item->image}}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+  
     <div style="background: #0000003d;">
       <div class="registered_nurse_banner_div">
         <div class="container">
@@ -27,11 +19,8 @@
             <div class="col-lg-12 pr-50 pr-md-15 pr-xs-15">
               <div class="banner-four-info">
                 <h1 class="registered_nurse_h1">
-                    <b>Karini</b>Step's
-                    International Programme for Registered Nurses
+                   {!! $item->tagline !!}
                 </h1>
-
-
               </div>
             </div>
           </div>
@@ -40,150 +29,54 @@
     </div>
   </div>
   <!-- End Banner -->
-
+  @php
+      $item = json_decode($sections['registered-nurse-main-content']);
+  @endphp
   <!-- awards -->
   <div class="container-xxl text-center p-6 " style="padding: 3rem 2rem;">
-    <h3 class="mb-3 text_primary registered_nurse_h3"><b>Karini</b>Step <b>Academy</b></h3>
     <div class="container p-0">
-      <p class="text_primary registered_nurse_p">
-        <b>Karini</b>Step's <b>Academy</b> leads all activities necessary for foreign-educated registered nurses to qualify for and work in Australia. That includes:
-      </p>
-      <p class="text_primary registered_nurse_p mb-0">
-        <b>S</b>election
-      </p>
-      <p class="text_primary registered_nurse_p">
-        Ensuring you’ve got the pre-requisites for our <b>fast-track;</b>
-      </p>
-
-      <p class="text_primary registered_nurse_p mb-0">
-        <b>T</b>raining
-      </p>
-      <p class="text_primary registered_nurse_p">
-        Our <b>Karini</b>Step <b>Academy</b> is your 'passport' to Registration;
-      </p>
-
-
-      <p class="text_primary registered_nurse_p mb-0">
-        <b>E</b>mployment
-      </p>
-      <p class="text_primary registered_nurse_p">
-        We match you with Australia's top healthcare providers, supporting you through immigration;
-      </p>
-
-      <p class="text_primary registered_nurse_p mb-0">
-        <b>P</b>athway
-      </p>
-      <p class="text_primary registered_nurse_p">
-        Mentoring and assimilation support for your life and career in Australia.
-      </p>
+        {!! $item->description !!}
     </div>
 
 
   </div>
-  <div class="card bg_primary_card ">
-    <div class="container p-4">
-      <h3 class="mb-4">KariniStep Academy - <br>
-        How to Qualify? </h3>
+ 
 
-        <div class="row">
-          <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class=" px-4 py-3 membership-card">
-                    <div class="d-flex justify-content-center">
-                      <img src="/frontend-assets/img/icon/nursing_licence.png" style="height:4rem"/>
+  @php
+      $previllages = \App\Models\Previllage::where('section','registered-nurse-how-to-qualify')->get();
+      $item = json_decode($sections['registered-nurse-how-to-qualify']);
+  @endphp
 
-                    </div>
-                    <div class="">
-                      Hold a current registered nursing licence within your country of residence (subject to verification)
-                    </div>
+  <div class="membership-area default-padding mt-0" >
+    <div class="container">
+      <h4 class="text-center">
+        <b>{!! $item->title !!}</b>
+      </h4>
+
+      <div class="row">
+        @foreach($previllages as $prev)
+        <div class="col-xl-3 col-md-6 col-12 mt-4 ">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="card px-4 py-3 membership-card">
+                  <div class="d-flex justify-content-center">
+                    <img src="/uploads/page/{{$prev->icon1}}" alt="icon" width="50" height="50" />
+                  </div>
+                  <div class="h-20">
+                    <h6 class="color-primary mt-3"><b>{!! $prev->title !!}</b></h6>
                   </div>
                 </div>
-                <div class="flip-card-back">
-                  <p class="text-sm py-4 px-4 mb-0">
-                    We can only bring currently registered nurses into our Academy.  So, it's important that you have your nursing licence up-to-date as this will be a key qualifying document.
-                  </p>
-                </div>
+              </div>
+              <div class="flip-card-back">
+              {!! $prev->description !!}
               </div>
             </div>
-
-          </div>
-          <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class=" px-4 py-3 membership-card">
-                    <div class="d-flex justify-content-center">
-                        <img src="/frontend-assets/img/icon/nursing_exp.png" style="height:4rem" />
-                    </div>
-                    <div>
-                        Registered Nurse currently working, ideally with 5-10 years experience
-                    </div>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <p class="text-sm py-4 px-4 mb-0">
-                    Ideally, our clients are looking for nurses with 5-10 years of experience.  Nursing can be stressful, and experience counts.  Having said that, exceptional recent graduates can also apply.
-                  </p>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class=" px-4 py-3 membership-card">
-                    <div class="d-flex justify-content-center">
-                        <img src="/frontend-assets/img/icon/ielts.png" style="height:4rem"/>
-                        <img src="/frontend-assets/img/icon/nclex.png" style="height:4rem"/>
-                    </div>
-                    <div >
-                      Have passed IELTS (or equivalent) 7.0 and NCLEX, or intend to qualify
-                    </div>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <p class="text-sm py-4 px-4 mb-0">
-                    If you've already passed IELTS (or equivalent) and scored 7.0 or above, you're on the fast-track. If you've already passed NCLEX, you'll be placed in our priority cohort.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class=" px-4 py-3 membership-card">
-                    <div class="d-flex justify-content-center">
-                      <img src="/frontend-assets/img/icon/australia.png" style="height:4rem"/>
-
-                    </div>
-                    <div class="">
-                        Very interested in pursuing lifestyle & career development in Australia, and be flexible on assignment location
-
-                    </div>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <p class="text-sm py-4 px-4 mb-0">
-                    Australia is an amazing country!  If you're very interested in coming here here to work and live for the longer-term, and you're open to different locations, you're exactly the nurse we're looking for!
-                  </p>
-                </div>
-              </div>
-
-
-            </div>
-
           </div>
         </div>
-
-        <br>
+        @endforeach
+       
+      </div>
     </div>
   </div>
   <!-- awards end-->
@@ -552,108 +445,52 @@
   </div>
   <br><br>
 
-  <div class="membership-area default-padding mt-40" >
+  @php
+      $previllages = \App\Models\Previllage::where('section','registered-nurse-membership-previllage')->get();
+      $item = json_decode($sections['registered-nurse-membership-previllage']);
+  @endphp
+
+  <div class="membership-area default-padding mt-0" >
     <div class="container">
-      <h4 class="text-center"><b>With our <br> Karini</b>Step <b>Academy <sup style="font-size:10px;top: -12px; left:-3px">TM</sup></b>, membership has its privileges.</h4>
+      <h4 class="text-center">
+        <b>{!! $item->title !!}</b>
+      </h4>
 
       <div class="row">
-        <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
+        @foreach($previllages as $prev)
+        <div class="col-xl-3 col-md-6 col-12 mt-4 ">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="frontend-assets/img/icon/save-money.png" alt="icon" width="50" height="50" />
+                    <img src="/uploads/page/{{$prev->icon1}}" alt="icon" width="50" height="50" />
                   </div>
                   <div class="h-20">
-                    <h6 class="color-primary mt-3"><b>Zero Immigration advisor cost</b></h6>
+                    <h6 class="color-primary mt-3"><b>{!! $prev->title !!}</b></h6>
                   </div>
                 </div>
               </div>
               <div class="flip-card-back">
-                <p class="text-sm py-4 px-4 mb-0">
-                  Navigating Immigration is expensive.  We take the hassle, cost and time out of the process!  All <b>Karini</b>Step <b>Academy</b> Alumni receive <b>free immigration guidance</b> to navigate Immigration and secure their visa.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <div class="card px-4 py-3 membership-card">
-                  <div class="d-flex justify-content-center">
-                    <img src="frontend-assets/img/icon/ledger.png" alt="icon" width="50" height="50" />
-                  </div>
-                  <div class="h-20">
-                    <h6 class="color-primary mt-3"><b>Zero OSCE Training Course costs</b></h6>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card-back">
-                <p class="text-sm py-4 px-4 mb-0">
-                  Our <b>Karini</b>Step Academy</b> offers world-class and accredited <b>training courses, free!</b> We will prepare you for passing OSCE and registration - We have an industry-leading 95% pass rate!
-                </p>
+              {!! $prev->description !!}
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <div class="card px-4 py-3 membership-card">
-                  <div class="d-flex justify-content-center">
-                    <img src="frontend-assets/img/icon/exam.png" alt="icon" width="50" height="50" />
-                  </div>
-                  <div class="h-20">
-                    <h6 class="color-primary mt-3"><b>Fly Now, Pay Later for OSCE exam</b></h6>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card-back">
-                <p class="text-sm py-4 px-4 mb-0">
-                  We understand that money can sometimes be an issue.  That's why we offer our nurses a <b>interest-free loans</b>.  So you can <b>Fly Now, Pay Later</b>, and accelerate starting your dream job!
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-xl-3 col-md-6 col-12 mt-4 mt-lg-0">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <div class="card px-4 py-3 membership-card">
-                  <div class="d-flex justify-content-center">
-                    <img src="frontend-assets/img/icon/support.png" alt="icon" width="50" height="50" />
-                  </div>
-                  <div class="h-20">
-                    <h6 class="color-primary mt-3"><b>24/7 Carrer-Mentoring Support</b></h6>
-                  </div>
-                </div>
-              </div>
-              <div class="flip-card-back">
-                <p class="text-sm py-4 px-4 mb-0">
-                  We're committed to your successful onboarding, so we go above and beyond!  You'll be assigned your <b>own personal mentor and coach, free of charge </b>for those challenging first 12 months.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        @endforeach
+       
       </div>
     </div>
   </div>
-
+  @php
+      $item = json_decode($sections['registered-nurse-how-to-get-started']);
+  @endphp
 
   <div class="container default-padding">
-    <h3 class="color-primary text-center">How To Get Started</h3>
-    <p class="color-primary text-center">Are you ready to Take the Step to your Australian dream? Apply Now!</p>
+    <h3 class="color-primary text-center">{!! $item->title !!}</h3>
+    <p class="color-primary text-center">{!! $item->subtitle !!}</p>
     <div class="button mt-4 mt-lg-0 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now</a>
+      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">{{$item->btntext}}</a>
     </div>
   </div>
 @endsection

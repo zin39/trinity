@@ -7,6 +7,9 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
+Route::get('/', [HomeController::class, 'index']);
+
+
 Route::get('/registered-nurses', [HomeController::class, 'registeredNurse']);
 
 Route::get('/apply-now', [HomeController::class, 'applyNow']);

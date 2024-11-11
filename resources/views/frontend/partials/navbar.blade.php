@@ -84,7 +84,7 @@
             </li>
             <li>
               <div class="button mt-4 mt-lg-0 apply-btn  ml-4">
-                <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now</a>
+                <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply Now</a>
               </div>
             </li>
           </ul>

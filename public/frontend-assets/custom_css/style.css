@@ -1695,3 +1695,7 @@ footer h4 {
 .swiper-button-prev:after, .swiper-rtl .swiper-button-prev:after {
     content: '';
 }
+
+.testimonial_message_div p{
+    color:rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}

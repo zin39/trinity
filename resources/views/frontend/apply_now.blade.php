@@ -1,36 +1,31 @@
 @extends('frontend.layouts.main')
 
 @section('content')
-  <!-- Start Banner Area
-    ============================================= -->
+
+ 
+  @php
+      $item = json_decode($sections['apply-now-banner']);
+  @endphp
+
   <div class=""
-    style="background-image: url(frontend-assets/img/apply-now/banner.png); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-    <!-- <div class="banner-style-four-thumb"
-      style="background-image: url(frontend-assets/img/banner/banner.png); background-position: center center;"> -->
-    <!-- <div class="video-btn">
-        <a href="https://www.youtube.com/watch?v=3ctoSEQsY54" class="popup-youtube">
-          <i class="fas fa-play"></i>
-        </a>
-      </div> -->
-    <!-- </div> -->
-    <!-- <div class="banner-move-animation">
-      <img src="frontend-assets/img/shape/56.png" alt="Image Not Found" />
-      <img src="frontend-assets/img/shape/16.png" alt="Image Not Found" />
-      <img src="frontend-assets/img/shape/57.png" alt="Image Not Found" />
-      <img src="frontend-assets/img/shape/18.png" alt="Image Not Found" />
-    </div> -->
-    <!-- Single Item -->
-    <div style="background: #0000003d; height:40%">
-      <div class="apply_now_banner_div h-100 d-flex justify-content-center align-center "  >
-              <div class="banner-four-info d-flex justify-content-center align-center flex-column">
+    style="background-image: url('{{$item->image}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+  
+    <div style="background: #0000003d;">
+      <div class="registered_nurse_banner_div">
+        <div class="container">
+          <div class="row align-center">
+            <div class="col-lg-12 pr-50 pr-md-15 pr-xs-15">
+              <div class="banner-four-info">
                 <h1 class="registered_nurse_h1">
-                   Apply
+                   {!! $item->tagline !!}
                 </h1>
               </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- End Banner -->
 
   <!-- awards -->
   <div class="container-xxl text-center  apply_form" style="padding: 3rem 1rem;">
