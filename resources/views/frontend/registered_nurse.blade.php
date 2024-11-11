@@ -34,7 +34,7 @@
   @endphp
   <!-- awards -->
   <div class="container-xxl text-center p-6 " style="padding: 3rem 2rem;">
-    <div class="container p-0">
+    <div class="container p-0 registered_nurse_content">
         {!! $item->description !!}
     </div>
 

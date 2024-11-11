@@ -32,7 +32,7 @@
   @endphp
   <!-- awards -->
   <div class="container-xxl text-center p-6 " style="padding: 3rem 2rem;">
-    <div class="container p-0">
+    <div class="container p-0 registered_nurse_content">
         {!! $item->description !!}
     </div>
 
@@ -137,15 +137,15 @@
 
 
   <div class="container mb-30">
-    <h3 class="color-primary text-center m-5" style="font-weight: 300;">{!! $item->title !!}</h3>
-    <p class="color-primary text-center registered_nurse_p" style="line-height:28px">
+    <h3 class="color-primary text-center m-5" style="font-weight: 300; ">{!! $item->title !!}</h3>
+    <p class="color-primary text-center registered_nurse_p" style="line-height:32px">
     {!! $item->subtitle !!}
   </p>
   </div>
 
   <div class="container mb-30">
     <h3 class="color-primary text-center mt-5">{!! $item->title2 !!}</h3>
-    <p class="color-primary text-center registered_nurse_p mb-0" style="line-height:28px">
+    <p class="color-primary text-center registered_nurse_p mb-0" style="line-height:32px">
     {!! $item->subtitle2 !!}
     </p>
     <div class="button m-4 mt-lg-0 apply-btn text-center">
@@ -156,7 +156,7 @@
 
   <div class="container mb-30">
     <h3 class="color-primary text-center m-3">{!! $item->title3 !!}</h3>
-    <p class="color-primary text-center registered_nurse_p" style="line-height:28px">Healthcare <b>Organizations</b>
+    <p class="color-primary text-center registered_nurse_p" style="line-height:32px">Healthcare <b>Organizations</b>
     {!! $item->subtitle3 !!}
       </p>
     <div class="button mt-4 mt-lg-0 apply-btn text-center">

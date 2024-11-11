@@ -30,7 +30,7 @@
   @php
       $item = json_decode($sections['privacy-policy-main-content']);
   @endphp
-  <div class="container-xxl text-center  apply_form" style="padding: 3rem 1rem;">
+  <div class="text-center  privacy_policy privacy-points" style="padding: 3rem 1rem;">
   {!! $item->description !!}
   </div>
 

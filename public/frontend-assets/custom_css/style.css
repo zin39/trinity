@@ -1556,6 +1556,30 @@ footer h4 {
     line-height: 35px;
     font-weight: 300;
 }
+.registered_nurse_content p{
+    font-size: 21px;
+    line-height: 35px;
+    font-weight: 300;
+    color: #023585;
+    margin-bottom: 0
+}
+.registered_nurse_content h2{
+    font-weight: 400;
+    font-size: 26px;
+    color: #023585;
+}
+.registered_nurse_content h3{
+    font-weight: 400;
+    font-size: 26px;
+    color: #023585;
+}
+
+.privacy_policy p{
+    color: #023585;
+    line-height:20px;
+    margin-bottom:0px;
+}
+
 
 .bg_primary_card {
     background: #023585;
@@ -1672,6 +1696,7 @@ footer h4 {
     color: #023585;
     list-style-type: '-  ';
     margin-left: 5px;
+    line-height: 20px;
 }
 
 
