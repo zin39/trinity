@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ApplicationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,7 +10,8 @@ Route::get('/', function () {
 
 Route::get('/registered-nurses', [HomeController::class, 'registeredNurse']);
 
-Route::get('/apply-now', [HomeController::class, 'applyNow']);
+Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('apply.now.view');
+Route::post('/apply-now', [ApplicationController::class, 'store'])->name('apply.now');
 
 Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy']);
 
