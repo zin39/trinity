@@ -63,7 +63,7 @@
 
           </p>
           <p class="step_sub_desc text-center mb-0">
-            <a class="btn btn-theme animation rounded-md btn-md  bg-primary" style="padding:0.2rem 0.3rem;" href="/apply-now.html">Request a Consultation </a>
+            <a class="btn btn-theme animation rounded-md btn-md  bg-primary" style="padding:0.2rem 0.3rem;" href="/apply-now">Request a Consultation </a>
           </p>
         </div>
       </div>

@@ -137,19 +137,19 @@
 
 
   <div class="container mb-30">
-    <h3 class="color-primary text-center m-5" style="font-weight: 300; ">{!! $item->title !!}</h3>
+    <h3 class="color-primary text-center m-4" style="font-weight: 300; ">{!! $item->title !!}</h3>
     <p class="color-primary text-center registered_nurse_p" style="line-height:32px">
     {!! $item->subtitle !!}
   </p>
   </div>
 
   <div class="container mb-30">
-    <h3 class="color-primary text-center mt-5">{!! $item->title2 !!}</h3>
+    <h3 class="color-primary text-center mt-4">{!! $item->title2 !!}</h3>
     <p class="color-primary text-center registered_nurse_p mb-0" style="line-height:32px">
     {!! $item->subtitle2 !!}
     </p>
     <div class="button m-4 mt-lg-0 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">{{ $item->btntext2}}</a>
+      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">{{ $item->btntext2}}</a>
     </div>
   </div>
 

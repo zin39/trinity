@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('previllages', function (Blueprint $table) {
             $table->id();
             $table->string("title")->nullable();
-            $table->tepxt("icon1")->nullable();
+            $table->text("icon1")->nullable();
             $table->text("icon2")->nullable();
             $table->text("description")->nullable();
             $table->string("section")->nullable();

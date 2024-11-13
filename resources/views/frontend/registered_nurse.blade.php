@@ -107,7 +107,7 @@
 
           </p>
           <p class="step_sub_desc text-center mb-0">
-            <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now</a>
+            <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply Now</a>
           </p>
         </div>
       </div>

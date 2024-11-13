@@ -38,7 +38,7 @@
     <h3 class="title text-center">Registered Nurses</h3>
     <p class="text-center default-paragraph mb-0 text-primary" style="line-height: 27px;">Are you ready to Take the <b>STEP</b> to your Australian dream? Apply Now!</p>
     <div class="button mt-4 mt-lg-0 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now</a>
+      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply Now</a>
     </div>
   </div>
 
@@ -48,7 +48,7 @@
       Does your organization need registered nurses? We can help!
       Contact us today!</p>
     <div class="button mt-4 mt-lg-0 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Contact Us</a>
+      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Contact Us</a>
     </div>
   </div>
 @endsection

@@ -34,42 +34,6 @@
                                         </div>
                                     @endforeach
                                 </fieldset>
-                                <fieldset class="mb-1" ng-app="Repeater" ng-controller="RepeaterController" ng-init="init({{ $opening_hours ? $opening_hours : '' }})">
-                                    <legend class="text-uppercase font-size-sm font-weight-bold">
-                                        Opening Hours
-                                    </legend>
-                                    <div ng-repeat="section in list track by $index">
-                                        <div class="form-group row mb-1">
-                                            <div class="col-lg-12">
-                                                <div class="row">
-                                                    <div class="col-lg-3 form-group-feedback form-group-feedback-right">
-                                                        <div class="input-group">
-                                                            <span class="input-group-prepend">
-                                                                <span class="input-group-text"><i class="icon-chevron-right"></i>
-                                                                </span>
-                                                            </span>
-                                                            <input type="text" placeholder="Day" name='opening_hours[@{{ $index }}][day]' ng-model="list[$index].day" class='form-control' required />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-5 form-group-feedback form-group-feedback-right">
-                                                        <div class="input-group">
-                                                            <span class="input-group-prepend">
-                                                                <span class="input-group-text"><i class="icon-chevron-right"></i>
-                                                                </span>
-                                                            </span>
-                                                            <input type="text" placeholder="Timing" name='opening_hours[@{{ $index }}][time]' ng-model="list[$index].time" class='form-control' required />
-                                                        </div>
-                                                    </div>
-                                                    <label class="col-form-label col-lg-2">
-                                                        <a href="javascript:;" ng-click="remove($index)" class="text-danger ml-1"><i class="icon-cancel-circle2"></i></a>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button" ng-click="list.push('')" class="btn btn-sm btn-primary">Add</button>
-                                </fieldset>
-
                                 <div class="text-right">
                                     <button type="submit" class="btn bg-teal-400"><i class="icon-check"></i>
                                         Update

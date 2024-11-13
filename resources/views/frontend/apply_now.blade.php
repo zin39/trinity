@@ -29,7 +29,17 @@
 
   <!-- awards -->
   <div class="container-xxl text-center  apply_form" style="padding: 3rem 1rem;">
-    <form action="{{ route('apply.now') }}" method="POST" class="quote-style-two">
+    <form action="{{ route('apply.now') }}" method="POST" class="quote-style-two" id="apply_form" enctype='multipart/form-data' files="true">
+
+    @if($errors->any())
+                    <div class="alert alert-danger mb-3">
+                        <ul class="mb-0 pl-2">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
     @csrf
       <p class="title text-center step-title">
         <b>APPLY NOW</b>
@@ -42,7 +52,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="name">First and Middle Name (if applicable) <span style="color:red">*</span></label>
-                <input class="form-control" id="first_name" name="first_name" placeholder="Your First and Middle Name" type="text">
+                <input class="form-control" id="first_name" name="first_name" placeholder="Your First and Middle Name" type="text" required>
             </div>
         </div>
       </div>
@@ -51,7 +61,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="name">Last Name <span style="color:red">*</span></label>
-                <input class="form-control" id="last_name" name="last_name" placeholder="Your Last Name" type="text">
+                <input class="form-control" required id="last_name" name="last_name" placeholder="Your Last Name" type="text">
             </div>
         </div>
       </div>
@@ -60,7 +70,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="contact_mode">Preffered Contact Mode <span style="color:red">*</span></label>
-                <select id="contact_mode" name="contact_mode">
+                <select id="contact_mode" name="contact_mode" required>
                     <option value="Nepal">Nepal</option>
                     <option value="India">India</option>
                     <option value="China">China</option>
@@ -75,7 +85,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="email">Email <span style="color:red">*</span></label>
-                <input class="form-control" id="email" name="email" placeholder="Your Email" type="email">
+                <input class="form-control" id="email" name="email" placeholder="Your Email" type="email" required>
             </div>
         </div>
       </div>
@@ -84,7 +94,7 @@
         <div class="col-lg-12">
           <div class="form-group text-left">
               <label for="phone_number" class="phone">Phone <span style="color:red">*</span></label>
-              <input type="tel" id="phone_number" name="phone_number" class="form-control w-100" style="" />
+              <input type="tel" id="phone_number" name="phone_number" class="form-control w-100" style="" required />
           </div>
 
         </div>
@@ -94,8 +104,8 @@
       <div class="row">
         <div class="col-lg-12">
             <div class="form-group text-left">
-                <label for="whatsapp_phone_number">Do you have a WhatsApp phone number? <span style="color:red">*</span></label>
-                <select id="whatsapp_phone_number" name="whatsapp_phone_number">
+                <label for="have_whatsapp">Do you have a WhatsApp phone number? <span style="color:red">*</span></label>
+                <select id="have_whatsapp" name="have_whatsapp" required>
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </select>
@@ -116,7 +126,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="currently_working_country">Country Where You are Currently Working <span style="color:red">*</span></label>
-                <select id="currently_working_country" name="currently_working_country">
+                <select id="currently_working_country" name="currently_working_country" required>
                     <option value="1">Yes</option>
                     <option value="2">No</option>
                 </select>
@@ -128,7 +138,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="country_of_birth">Country of Birth <span style="color:red">*</span></label>
-                <select id="country_of_birth" name="country_of_birth">
+                <select id="country_of_birth" name="country_of_birth" required> 
                     <option value="1">Yes</option>
                     <option value="2">No</option>
                 </select>
@@ -141,7 +151,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="date_of_birth">Date of Birth <span style="color:red">*</span></label>
-                <input class="form-control" id="date_of_birth" name="date_of_birth" placeholder="Your Email" type="date">
+                <input class="form-control" id="date_of_birth" name="date_of_birth" placeholder="Your Email" type="date" required>
             </div>
         </div>
       </div>
@@ -151,8 +161,8 @@
       <div class="row">
         <div class="col-lg-12">
             <div class="form-group text-left">
-                <label for="working_status">Are you currently working as a nurse?<span style="color:red">*</span></label>
-                <select id="working_status" name="working_status">
+                <label for="are_you_nurse">Are you currently working as a nurse?<span style="color:red">*</span></label>
+                <select id="are_you_nurse" name="are_you_nurse" required>
                     <option value="1">Yes</option>
                     <option value="2">No</option>
                 </select>
@@ -165,7 +175,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="years_of_experience">Years of Experience as an RN <span style="color:red">*</span></label>
-                <select id="years_of_experience" name="years_of_experience">
+                <select id="years_of_experience" name="years_of_experience" required>
                     <option value="1">Yes</option>
                     <option value="2">No</option>
                 </select>
@@ -177,7 +187,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="country_of_education">Country of Education <span style="color:red">*</span></label>
-                <select id="country_of_education" name="country_of_education">
+                <select id="country_of_education" name="country_of_education" required>
                     <option value="1">Yes</option>
                     <option value="2">No</option>
                 </select>
@@ -189,7 +199,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="initial_education_program">What initial educational programme did you complete to become a Registered Nurse <span style="color:red">*</span></label>
-                <select id="initial_education_program" name="initial_education_program">
+                <select id="initial_education_program" name="initial_education_program" required>
                     <option value="1">Yes</option>
                     <option value="2">No</option>
                 </select>
@@ -201,7 +211,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="university_name">College/University Name <span style="color:red">*</span></label>
-                <select id="university_name" name="university_name">
+                <select id="university_name" name="university_name" required>
                     <option value="1">Yes</option>
                     <option value="2">No</option>
                 </select>
@@ -213,7 +223,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="date_of_gratudation">Date of Graduation<span style="color:red">*</span></label>
-                <input class="form-control" id="date_of_gratudation" name="date_of_graduation" placeholder="Your Email" type="date">
+                <input class="form-control" id="date_of_gratudation" name="date_of_graduation" placeholder="Your Email" type="date" required>
             </div>
         </div>
       </div>
@@ -222,58 +232,69 @@
         <div class="col-lg-12">
             <div class="form-group text-left check-qa">
                 <label for="qualifications">Have you completed any additional postgraduate qualifications?<span style="color:red">*</span></label>
-                <div class="d-flex align-items-center gap-2">
+                
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="qualifications1" name="qualifications[]"  value="N/A" class="mb-1" {{ in_array('N/A',$item->qualifications ?? []) ? 'checked' : ''}}>
-                  <label for="qualifications">N/A</label>
-                </div>
-
-                <div class="d-flex align-items-center gap-2">
+                  <span>N/A</span>
+                </label>
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="qualifications2" name="qualifications[]"  value="MSN/MAN" class="mb-1" {{ in_array('N/A',$item->qualifications ?? []) ? 'checked' : ''}}>
-                  <label for="qualifications">MSN/MAN</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
+                  <span>MSN/MAN</span>
+                </label>
+
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="qualifications3" name="qualifications[]"  value="Registered Midwife" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">Registered Midwife</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                  <input type="checkbox" id="vehicle1" name="qualifications[]" value="ICU" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">ICU</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                  <input type="checkbox" id="vehicle1" name="qualifications[]" value="CCU" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">CCU</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
+                  <span>Registered Midwife</span>
+                </label>
+
+                <label class="custom-checkbox" >
+                  <input type="checkbox" id="qualitication4" name="qualifications[]" value="ICU" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <span>ICU</span>
+                </label>
+
+                <label class="custom-checkbox" >
+                  <input type="checkbox" id="qualitication5" name="qualifications[]" value="CCU" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <span>CCU</span>
+                </label>
+
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="vehicle1" name="qualifications[]" value="Renal/Urology" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">Renal/Urology</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
+                  <span>Renal/Urology</span>
+                </label>
+
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="vehicle1" name="qualifications[]" value="Psychiatry" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">Psychiatry</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
+                  <span>Psychiatry</span>
+                </label>
+
+
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="vehicle1" name="qualifications[]" value="Pediatric" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">Pediatric</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
+                  <span>Pediatric</span>
+                </label>
+
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="vehicle1" name="qualifications[]" value="Anasthesia" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">Anasthesia</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
+                  <span>Anasthesia</span>
+                </label>
+
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="vehicle1" name="qualifications[]" value="KRN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">KRN</label>
-                </div>
-                <div class="d-flex align-items-center gap-2">
+                  <span>KRN</span>
+                </label>
+
+                <label class="custom-checkbox" >
                   <input type="checkbox" id="vehicle1" name="qualifications[]" value="KRCHN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
-                  <label for="vehicle1">KRCHN</label>
-                </div>
+                  <span>KRCHN</span>
+                </label>
+              
             </div>
 
             <div class="row">
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="specialities">Specialities <span style="color:red">*</span></label>
-                      <select id="specialities" name="specialities">
+                      <select id="specialities" required name="specialities">
                           <option value="1">Yes</option>
                           <option value="2">No</option>
                       </select>
@@ -285,7 +306,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="english_proficiency_test">Have you taken an English Proficiency exam (IELTS, OET, TOEFL, PTE, MET, etc.)? <span style="color:red">*</span></label>
-                      <select id="english_proficiency_test" name="english_proficiency_test">
+                      <select id="english_proficiency_test" required name="english_proficiency_test">
                           <option value="1">Yes</option>
                           <option value="2">No</option>
                       </select>
@@ -297,7 +318,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="is_pass_CGFNS">Have you taken and passed the CGFNS Certification Program? <span style="color:red">*</span></label>
-                      <select id="is_pass_CGFNS" name="is_pass_CGFNS">
+                      <select id="is_pass_CGFNS" required name="is_pass_CGFNS">
                           <option value="1">Yes</option>
                           <option value="2">No</option>
                       </select>
@@ -308,8 +329,8 @@
             <div class="row">
               <div class="col-lg-12">
                   <div class="form-group text-left">
-                      <label for="is_passed_NCLEX">Have you passed the NCLEX exam? <span style="color:red">*</span></label>
-                      <select id="is_passed_NCLEX" name="is_passed_NCLEX">
+                      <label for="is_pass_NCLEX">Have you passed the NCLEX exam? <span style="color:red">*</span></label>
+                      <select id="is_pass_NCLEX"required name="is_pass_NCLEX">
                           <option value="1">Yes</option>
                           <option value="2">No</option>
                       </select>
@@ -321,7 +342,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="hear_about_us">How did you hear about us? <span style="color:red">*</span></label>
-                      <select id="hear_about_us" name="hear_about_us">
+                      <select id="hear_about_us" required name="hear_about_us">
                           <option value="1">Yes</option>
                           <option value="2">No</option>
                       </select>
@@ -333,7 +354,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="resume">Resume/CV <span style="color:red">*</span></label>
-                      <input class="form-control" id="resume" name="resume" placeholder="Your Email" type="file">
+                      <input class="form-control" required id="resume" name="resume" placeholder="Your Email" type="file">
                   </div>
               </div>
             </div>
@@ -382,7 +403,7 @@
             <div class="row">
               <div class="col-lg-12">
                   <div class="form-group text-left">
-                    <a href="" class="privacy-link">Applicant and Prospective Employer Privacy Policy</a>
+                    <a href="/privacy-policy" class="privacy-link">Applicant and Prospective Employer Privacy Policy</a>
                   </div>
                 </div>
               </div>
@@ -390,20 +411,22 @@
               <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group text-left check-qa">
-                        <div class="d-flex align-items-center gap-2">
-                          <input type="checkbox" id="recieve_applicaiotn_updates" name="recieve_applicaiotn_updates"  value="1" class="mb-0"  >
-                          <p class="text-sm text-primary mb-0">I have read and understand the Equal </p>
-                        </div>
-                        <p class="text-sm text-primary mb-0" >Opportunities and Privacy Statements <span style="color:red">*</span> </p>
+
+                      <label class="custom-checkbox" >
+                      <input type="checkbox" required id="has_checked_privacy_statement" name="has_checked_privacy_statement"  value="1" class="mb-0"  >
+                        <span> I have read and understand the Equal
+                        Opportunities and Privacy Statements <text style="color:red">*</text> 
+                        </span>
+                      </label>
                     </div>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-lg-12">
-                    <div class="form-group text-left">
-                        <label for="name">Please type your name here to certify that all the information on this form is true and correct. <span style="color:red">*</span></label>
-                        <input class="form-control" id="name" name="name" placeholder="" type="text">
+                    <div class="form-group text-left ">
+                        <label for="name" style="line-height:20px;">Please type your name here to certify that all the information on this form is true and correct. <span style="color:red">*</span></label>
+                        <input class="form-control" required id="signature_name" name="signature_name" placeholder="" type="text">
                     </div>
                 </div>
               </div>
@@ -412,7 +435,7 @@
               <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group text-left">
-                        <p class="text-sm text-primary mb-0">
+                        <p class="text-sm text-primary mb-0" style="line-height:20px;font-weight:300">
                           <b>Karini</b>Step is committed to protecting and respecting your privacy, and we’ll only use your personal information
                            to administer your account and to provide the products and services you requested from us. 
                         </p>
@@ -423,11 +446,13 @@
               <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group text-left check-qa">
-                        <div class="d-flex align-items-center gap-2">
-                          <input type="checkbox" id="vehicle1" name="vehicle1"  value="1" class="mb-0" >
-                          <p class="text-sm text-primary mb-0">I agree to receive application updates from  *</p>
-                        </div>
-                        <p class="text-sm text-primary mb-0" >KariniStep <span style="color:red">*</span> </p>
+
+                      <label class="custom-checkbox" >
+                        <input type="checkbox" required id="has_checked_recieve_application_updates" name="has_checked_recieve_application_updates"  value="1" class="mb-0" >
+                        <span> I agree to receive application updates from
+                        KariniStep <text style="color:red">*</text> 
+                        </span>
+                      </label>
                     </div>
                 </div>
               </div>
@@ -435,7 +460,7 @@
               <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group text-left">
-                        <p class="text-sm text-primary mb-0">
+                        <p class="text-sm text-primary mb-0" style="line-height:20px;">
                           You may unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy practices,
                           and how we are committed to protecting and respecting your privacy, please review our Privacy Policy.
                         </p>
@@ -446,7 +471,7 @@
               <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group text-left">
-                        <p class="text-sm text-primary mb-0">
+                        <p class="text-sm text-primary mb-0" style="line-height:20px;">
                          By clicking submit below, you consent to allow  <b>Karini</b>Step to store and process the personal information submitted
                           above to provide you the content requested. 
                         </p>
@@ -471,5 +496,27 @@
     </form>
   </div>
 
+
+@endsection
+
+@section('js')
+
+<script>
+    $(document).ready(function(){
+      console.log("ready")
+        $('#apply_form input').each(function(){
+
+          var name = $(this).attr("name");
+          var val = localStorage.getItem(name);
+          if(val && $(this).attr("type") != "file"){
+            $(this).val(val);
+          }
+        })
+        $('#apply_form input').on('focusout',function(e){
+          var name = $(this).attr("name");
+          localStorage.setItem(name, e.target.value);
+        })
+    });
+</script>
 
 @endsection

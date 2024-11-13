@@ -1558,7 +1558,7 @@ footer h4 {
 }
 .registered_nurse_content p{
     font-size: 21px;
-    line-height: 35px;
+    line-height: 30px;
     font-weight: 300;
     color: #023585;
     margin-bottom: 0
@@ -1724,3 +1724,68 @@ footer h4 {
 .testimonial_message_div p{
     color:rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
+
+
+input[type='checkbox']{
+  height:10px;
+  margin:0px;
+  padding:0px;
+}
+
+.custom-checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+  
+  .custom-checkbox span {
+    display: block;
+    margin-left: 20px;
+    padding-left: 7px;
+    line-height: 20px;
+    text-align: left;
+  }
+  
+  .custom-checkbox span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: #fdfdfd;
+    border: 1px solid #cbcbcb;
+    border-radius:4px;
+    @include vendorize(box-shadow, inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1));
+  }
+  
+  .custom-checkbox span::after {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    color: #0087b7;
+    line-height: 20px;
+    text-align: center;
+  }
+  
+  .custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+  }
+  
+  .custom-checkbox input[type="checkbox"]:checked + span::after {
+    font-family: "FontAwesome";
+    content: "\2713";
+    background:#023585;
+    color:#fff;
+  }
+  
+

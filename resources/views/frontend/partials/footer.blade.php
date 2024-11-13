@@ -1,3 +1,7 @@
+
+@php
+  $setting = \App\Models\Setting::firstOrFail();
+@endphp
 <footer class="bg-footer footer-one text-light" style="background-image: url(assets/img/shape/27.png)">
     <div class="container">
       <div class="footer-style-one pt-4">
@@ -35,26 +39,26 @@
           <div class="col-lg-4 col-12 ">
             <h5 class="text-uppercase text-center color-links" style="font-weight: 300;">Contact Us</h5>
             <ul class="d-flex justify-content-center mt-2">
-              <li class="mx-2 social-icon-circle"><a href=""><img src="frontend-assets/img/illustration/insta.png"
+              <li class="mx-2 social-icon-circle"><a href="{{$setting->instagram_link}}"><img src="frontend-assets/img/illustration/insta.png"
                     alt="icon"></i></a></li>
-              <li class="mx-2 social-icon-circle"><a href=""><img src="frontend-assets/img/illustration/facebook.png"
+              <li class="mx-2 social-icon-circle"><a href="{{$setting->facebook_link}}"><img src="frontend-assets/img/illustration/facebook.png"
                     alt="icon"></a>
               </li>
-              <li class="mx-2 social-icon-circle"><a href=""><img src="frontend-assets/img/illustration/linked_in.png"
+              <li class="mx-2 social-icon-circle"><a href="{{$setting->linkin_link}}"><img src="frontend-assets/img/illustration/linked_in.png"
                     alt="icon"></a>
               </li>
-              <li class="mx-2 social-icon-circle"><a href=""><img src="frontend-assets/img/illustration/youtube.png"
+              <li class="mx-2 social-icon-circle"><a href="{{$setting->youtube_link}}"><img src="frontend-assets/img/illustration/youtube.png"
                     alt="icon"></a></li>
-              <li class="mx-2 social-icon-circle"><a href=""><img src="frontend-assets/img/illustration/tiktok.png"
+              <li class="mx-2 social-icon-circle"><a href="{{$setting->tiktok_link}}"><img src="frontend-assets/img/illustration/tiktok.png"
                     alt="icon"></a>
               </li>
-              <li class="mx-2 social-icon-circle"><a href=""><img src="frontend-assets/img/illustration/whatsapp.png"
+              <li class="mx-2 social-icon-circle"><a href="{{$setting->tiktok_link}}"><img src="frontend-assets/img/illustration/whatsapp.png"
                     alt="icon"></a>
               </li>
             </ul>
             <div>
-              <p class="mb-0 mx-5 mt-4 text-center">Level 4/11 York St, Sydney NSW 2000, Australia</p>
-              <p class="text-center">+61 0432 430 170</p>
+              <p class="mb-0 mx-5 mt-4 text-center">{{$setting->address1}}</p>
+              <p class="text-center">{{$setting->contact_no1}} @if($setting->contact_no2), {{$setting->contact_no2}}@endif</p>
             </div>
           </div>
 
@@ -98,13 +102,13 @@
               <h4 class="widget-title color-links mb-0">Main Links</h4>
               <ul class="nolist d-flex flex-row flex-lg-column justify-content-center gap-4">
                 <li class="main-links-select">
-                  <a href="/">Healthcare Facilities</a>
+                  <a href="/healthcare-organizations">Healthcare Facilities</a>
                 </li>
                 <li class="main-links-select">
-                  <a href="/">Why Choose Us</a>
+                  <a href="/why-choose-us">Why Choose Us</a>
                 </li>
                 <li class="main-links-select">
-                  <a href="/">Registered Nurse</a>
+                  <a href="/registered-nurses">Registered Nurse</a>
                 </li>
               </ul>
             </div>
@@ -244,13 +248,66 @@
 
 <script>
   $(document).ready(function() {
-    var input = document.querySelector("#phone");
+    $('#top-bar-cross').on('click',function(){
+      console.log("Asd");
+      $('#top-bar').attr("hidden",true);
+    })
+    var input = document.querySelector("#phone_number");
     window.intlTelInput(input, {
       separateDialCode: true,
-      preferredCountries: ["us", "gb", "ca", "au"],  // You can set preferred countries here
+      preferredCountries: ["au","ph"],  // You can set preferred countries here
       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",  // For formatting/validation
     });
+
+    
     
   });
 </script>
+@if ($errors->any())
+<div class="modal fade" id="successModel" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content ">
+        <div class="modal-header text-white  text-center">
+          <h5 class="modal-title w-100" id="contactFormModalLabel">Submit Unsuccessful</h5>
+          <a type=""  data-bs-dismiss="modal" aria-label="Close">X</a>
+        </div>
+        <div class="modal-body">
+         Please fill out all the necessary information.
+        </div>
+      </div>
+    </div>
+  </div>
+           
+  <script>
+    $(document).ready(function(){
+      $('#successModel').modal('show');
+    });
+  </script>
+@endif
+@if (session()->has('message'))
+
+<div class="modal fade" id="successModel" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content ">
+        <div class="modal-header text-white  text-center">
+          <h5 class="modal-title w-100" id="contactFormModalLabel">Your Form has been submitted</h5>
+          <a type=""  data-bs-dismiss="modal" aria-label="Close">X</a>
+        </div>
+        <div class="modal-body">
+          Thank you for filling out the form. Our team member will be in touch with you soon
+        </div>
+      </div>
+    </div>
+  </div>
+           
+  <script>
+    $(document).ready(function(){
+      $('#successModel').modal('show');
+      localStorage.clear(); 
+
+    });
+  </script>
+
+
+  @endif
 @yield('js')

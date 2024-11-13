@@ -2,7 +2,9 @@
     ============================================= -->
   <!-- Start Header Top
     ============================================= -->
-  <div class="">
+
+
+  <div class="" id="top-bar">
       <div class="d-flex justify-content-between " style="background:#013155">
         <div class="">
           <p class="mb-0 text-white p-3 r_topbar"> 
@@ -15,7 +17,7 @@
             <div class="social">
               <ul>
                 <li>
-                  <a href="#">
+                  <a href="#" id="top-bar-cross">
                     <i class="fas fa-times"></i>
                   </a>
                 </li>
@@ -52,7 +54,7 @@
         <!-- </div> -->
         </div>
         <div class="d-flex align-items-center">
-          <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply
+          <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply
             Now</a>
         </div>
         <div class=>
@@ -143,7 +145,7 @@
               </div>
               <div class="sidebar-content mt-4">
                 <div class="button mt-4 mt-lg-0 apply-btn  ml-4">
-                  <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">Apply Now</a>
+                  <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply Now</a>
                 </div>
               </div>
             </div>

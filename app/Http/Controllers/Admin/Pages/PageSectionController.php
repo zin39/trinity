@@ -10,8 +10,7 @@ class PageSectionController extends Controller
 {
     public function footer() {
         $texts = PageSection::whereIn('slug', ['footer-text-1', 'footer-text-2', 'footer-copyright-text'])->pluck('content', 'slug');
-        $opening_hours = PageSection::where('slug', 'opening-hours')->first()->content;
-        return view('admin.pages.footer', compact('texts', 'opening_hours'));
+        return view('admin.pages.footer', compact('texts'));
     }
 
     public function saveFooter(Request $request) {

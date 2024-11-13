@@ -184,7 +184,7 @@
     {!! $item->subtitle !!}
     </p>
     <div class="button mt-4  apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">{!! $item->applyBtnText !!}</a>
+      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">{!! $item->applyBtnText !!}</a>
     </div>
   </div>
 
@@ -567,7 +567,7 @@
     {!! $item->subtitle !!}
     </p>
     <div class="button mt-4 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now.html">{{$item->btntext}}</a>
+      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">{{$item->btntext}}</a>
     </div>
   </div>
 @endsection

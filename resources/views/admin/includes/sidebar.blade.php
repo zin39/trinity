@@ -43,11 +43,6 @@
             <ul class="nav nav-sidebar" data-nav-type="accordion">
 
                 <li class="nav-item">
-                    <a href="{{url('admin/dashboard')}}" class="nav-link @if($Route[1]=='dashboard' && !($Route[2] ?? '')) active @endif" data-popup="tooltip" data-original-title="Dashboard" data-placement="right" data-container=".card-sidebar-mobile">
-                        <i class="icon-home4"></i><span>Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{route('admin.teams.index')}}" class="nav-link @if($Route[1]=='teams') active @endif" data-popup="tooltip" data-original-title="Team" data-placement="right" data-container=".card-sidebar-mobile">
                         <i class="icon-users"></i><span>Team</span>
                     </a>
@@ -135,8 +130,9 @@
 
                     <ul class="nav nav-group-sub" data-submenu-title="Website setup" style="{{ $menu_active ? 'display: block' : '' }}">
                         <li class="nav-item"><a href="{{ route('admin.settings.index') }}" class="nav-link @if($Route[1]=='settings') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Basic Settings</a></li>
-                        <li class="nav-item"><a href="{{ route('admin.pages.footer') }}" class="nav-link @if(($Route[2] ?? '')=='footer') active @endif" data-popup="tooltip" data-original-title="Footer" data-placement="right" data-container=".card-sidebar-mobile">Footer</a></li>
+                     {{--  <li class="nav-item"><a href="{{ route('admin.pages.footer') }}" class="nav-link @if(($Route[2] ?? '')=='footer') active @endif" data-popup="tooltip" data-original-title="Footer" data-placement="right" data-container=".card-sidebar-mobile">Footer</a></li>
                         <li class="nav-item"><a href="{{ route('admin.pages.common-sections') }}" class="nav-link @if(($Route[2] ?? '')=='common-sections') active @endif" data-popup="tooltip" data-original-title="Common Sections" data-placement="right" data-container=".card-sidebar-mobile">Common Sections</a></li>
+                        --}}
                     </ul>
                 </li>
              
