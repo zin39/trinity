@@ -27,7 +27,7 @@ class ApplicationController extends Controller
             'university_name' => 'required|string|max:255',
             'date_of_graduation' => 'required|string|max:255',
             'qualifications' => 'nullable|array',
-            'specialities' => 'required|boolean',
+            'specialities' => 'required|string',
             'english_proficiency_test' => 'required|boolean',
             'is_pass_CGFNS' => 'required|boolean',
             'is_pass_NCLEX' => 'required|boolean',
@@ -66,7 +66,7 @@ class ApplicationController extends Controller
         $application->has_checked_privacy_statement = $request->has('has_checked_privacy_statement') ? true : false ;
         $application->signature_name = $request->input('signature_name');
         $application->has_checked_recieve_application_updates = $request->has('has_checked_recieve_application_updates') ? true: false;
-        
+
         if($request->file('resume')){
             $file = $request->file('resume');
             $resume = $file->getClientOriginalName();
@@ -76,13 +76,13 @@ class ApplicationController extends Controller
         }
 
         if($request->file('unofficial_transcript')){
-            $file = $request->file('resume');
+            $file = $request->file('unofficial_transcript');
             $resume = $file->getClientOriginalName();
             $fileName = date('Y-m-d-h-i-s') . '-' . preg_replace('[ ]', '-', $resume);
             $file->move(public_path() . '/uploads/form/', $fileName);
             $application->unofficial_transcript = $fileName;
         }
-       
+
 
 
         $application->save();

@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('university_name')->nullable();
             $table->string('date_of_graduation')->nullable();
             $table->json('qualifications')->nullable();
-            $table->string('specialities')->default(false);
+            $table->string('specialities')->nullable();
             $table->string('english_proficiency_test')->default(false);
             $table->boolean('is_pass_CGFNS')->default(false);
             $table->boolean('is_pass_NCLEX')->default(false);
