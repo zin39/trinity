@@ -52,6 +52,11 @@
                         <i class="icon-stars"></i><span>Awards</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.applications.index')}}" class="nav-link @if($Route[1]=='applications') active @endif" data-popup="tooltip" data-original-title="Applications" data-placement="right" data-container=".card-sidebar-mobile">
+                        <i class="icon-stars"></i><span>Applications</span>
+                    </a>
+                </li>
                 <!-- <li class="nav-item">
                     <a href="{{route('admin.partners.index')}}" class="nav-link @if($Route[1]=='partners') active @endif" data-popup="tooltip" data-original-title="Partners" data-placement="right" data-container=".card-sidebar-mobile">
                         <i class="icon-users"></i><span>Partners</span>

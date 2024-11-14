@@ -61,10 +61,13 @@
               <div class="flip-card-front">
                 <div class="card px-4 py-3 membership-card">
                   <div class="d-flex justify-content-center">
-                    <img src="/uploads/page/{{$prev->icon1}}" alt="icon" width="50" height="50" />
+                    <img src="/uploads/page/{{$prev->icon1}}" alt="icon" style="height:4rem"/>
+                    @if($prev->icon2)
+                    <img src="/uploads/page/{{$prev->icon2}}" alt="icon" style="height:4rem"/>
+                    @endif
                   </div>
-                  <div class="h-20">
-                    <h6 class="color-primary mt-3"><b>{!! $prev->title !!}</b></h6>
+                  <div class="">
+                    {!! $prev->title !!}
                   </div>
                 </div>
               </div>
