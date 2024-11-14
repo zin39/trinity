@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Auth\ForgotPasswordController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\AwardController;
+use App\Http\Controllers\Admin\ApplicationController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
@@ -52,6 +53,7 @@ Route::middleware('auth:admin')->group(function(){
 
     Route::resource('teams', TeamController::class);
     Route::resource('awards', AwardController::class);
+    Route::resource('applications', ApplicationController::class);
     Route::resource('partners', PartnerController::class);
     Route::resource('testimonials', TestimonialController::class);
 

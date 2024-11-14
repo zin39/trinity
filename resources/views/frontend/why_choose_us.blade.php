@@ -145,7 +145,7 @@
 
   <div class="container mb-30">
     <h3 class="color-primary text-center mt-4">{!! $item->title2 !!}</h3>
-    <p class="color-primary text-center registered_nurse_p mb-0" style="line-height:32px">
+    <p class="color-primary text-center registered_nurse_p" style="line-height:32px">
     {!! $item->subtitle2 !!}
     </p>
     <div class="button m-4 mt-lg-0 apply-btn text-center">
