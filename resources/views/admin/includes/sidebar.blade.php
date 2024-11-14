@@ -57,6 +57,12 @@
                         <i class="icon-stars"></i><span>Applications</span>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{route('admin.consultation-requests.index')}}" class="nav-link @if($Route[1]=='consultation-requests') active @endif" data-popup="tooltip" data-original-title="Consultation Requests" data-placement="right" data-container=".card-sidebar-mobile">
+                        <i class="icon-stars"></i><span>Consultation Requests</span>
+                    </a>
+                </li>
                 <!-- <li class="nav-item">
                     <a href="{{route('admin.partners.index')}}" class="nav-link @if($Route[1]=='partners') active @endif" data-popup="tooltip" data-original-title="Partners" data-placement="right" data-container=".card-sidebar-mobile">
                         <i class="icon-users"></i><span>Partners</span>

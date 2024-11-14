@@ -12,6 +12,7 @@ Route::get('/registered-nurses', [HomeController::class, 'registeredNurse']);
 
 Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('apply.now.view');
 Route::post('/apply-now', [ApplicationController::class, 'store'])->name('apply.now');
+Route::post('/request-a-consultation', [ApplicationController::class, 'saveConsultation'])->name('apply.save-consultation');
 
 Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy']);
 

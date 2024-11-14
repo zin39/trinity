@@ -87,7 +87,7 @@
 
 
   <div class="default-padding how-it-works-area mt-40">
-    <div class="text-center">
+    <div class="text-center px-4">
       <h2 class="title" style="font-weight:300"><b>How does the
         Karini</b>Step <b>Academy
         Work?</b></h2>

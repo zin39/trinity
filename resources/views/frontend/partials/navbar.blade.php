@@ -46,7 +46,7 @@
       <!-- End Top Search -->
       <div class="d-flex w-100 justify-content-between align-center hidden-lg">
         <div class="d-flex align-items-center">
-          <a class="" href="index.html">
+          <a class="" href="/">
             <img src="/frontend-assets/img/new_logo.png" class="logo logo-display" alt="Logo" width="80" />
           </a>
         <!-- <div class="button lg-0 apply-btn "> -->
@@ -67,7 +67,7 @@
       <div class="navbar-right d-flex align-items-center w-100 " >
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div style="width:20%;    display: flex; justify-content: center;" class="hidden-sm-flex">
-          <img src="/frontend-assets/img/new_logo.png" alt="Logo" style="height:5rem" />
+          <a href="/"><img src="/frontend-assets/img/new_logo.png" alt="Logo" style="height:5rem" /></a>
         </div>
         <div class="collapse navbar-collapse w-100 " id="navbar-menu"  style="width:60%">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">

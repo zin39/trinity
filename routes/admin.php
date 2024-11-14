@@ -54,6 +54,8 @@ Route::middleware('auth:admin')->group(function(){
     Route::resource('teams', TeamController::class);
     Route::resource('awards', AwardController::class);
     Route::resource('applications', ApplicationController::class);
+    Route::resource('consultation-request', ConsultationRequestController::class);
+
     Route::resource('partners', PartnerController::class);
     Route::resource('testimonials', TestimonialController::class);
 

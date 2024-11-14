@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Application;
+use App\Models\ConsultationRequest;
 
 class ApplicationController extends Controller
 {
@@ -27,7 +28,7 @@ class ApplicationController extends Controller
             'university_name' => 'required|string|max:255',
             'date_of_graduation' => 'required|string|max:255',
             'qualifications' => 'nullable|array',
-            'specialities' => 'required|boolean',
+            'specialities' => 'required|string',
             'english_proficiency_test' => 'required|boolean',
             'is_pass_CGFNS' => 'required|boolean',
             'is_pass_NCLEX' => 'required|boolean',
@@ -91,6 +92,39 @@ class ApplicationController extends Controller
 
         return redirect()->route('home');
 
+
+    }
+
+    public function saveConsultation(Request $request)
+    {
+
+        $validatedData = $request->validate([
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|string|max:20',
+        ]);
+        
+
+        $application = new ConsultationRequest;
+
+        $application->first_name = $request->input('first_name');
+        $application->last_name= $request->input('last_name');
+        $application->company= $request->input('company');
+        $application->email= $request->input('email');
+        $application->phone_number = $request->input('phone_number');
+        $application->phone_number = $request->input('phone_number');
+        $application->best_time_to_respond = $request->input('best_time_to_respond');
+
+        $application->respond_by_phone = $request->has('respond_by_phone') ? true: false;
+        $application->respond_by_email = $request->has('respond_by_email') ? true: false;
+
+        $application->save();
+
+        session()->flash('message', 'Content has been updated successfully');
+
+
+        return redirect()->back();
 
     }
 

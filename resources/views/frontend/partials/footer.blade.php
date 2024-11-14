@@ -284,6 +284,91 @@
     });
   </script>
 @endif
+
+  <!-- Contact Form Modal -->
+  <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content ">
+        <div class="modal-header text-white">
+          <h5 class="modal-title" id="contactFormModalLabel">Request a Consultation</h5>
+          <a type=""  data-bs-dismiss="modal" aria-label="Close">X</a>
+        </div>
+        <div class="modal-body">
+          <form action="{{route('apply.save-consultation')}}" method="POST">
+            @csrf
+            <!-- Name Fields -->
+            <div class="mb-3 text-left">
+              <label for="firstName" class="form-label ">Name <span class="text-danger">*</span></label>
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <input type="text" class="form-control" required name="first_name" id="firstName" placeholder="First">
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" required name="last_name" id="lastName" placeholder="Last">
+                </div>
+              </div>
+            </div>
+
+            <!-- Company Field -->
+            <div class="mb-3 text-left">
+              <label for="company" class="form-label ">Company</label>
+              <input type="text" class="form-control" name="company" id="company">
+            </div>
+
+            <!-- Phone Field -->
+            <div class="mb-3 text-left">
+              <label for="phone" class="form-label ">Phone <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" required name="phone_number"  id="phone">
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3 text-left">
+              <label for="email" class="form-label ">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" required name="email" id="email">
+            </div>
+
+            <!-- Questions/Comments Field -->
+            <div class="mb-3 text-left">
+              <label for="comments" class="form-label ">Questions / Comments</label>
+              <textarea class="form-control" name="comments" id="comments" rows="3"></textarea>
+            </div>
+
+            <!-- Respond By Options -->
+            <div class="mb-3 text-left">
+              <label class="form-label ">Respond by</label>
+              <div>
+                <div class="form-check d-flex align-items-center">
+                      <label class="custom-checkbox" >
+                        <input class="form-check-input" name="respond_by_phone" type="checkbox" id="respondByPhone">
+                        <span> Phone
+                        </span>
+                      </label>
+                </div>
+                <div class="form-check mt-2 d-flex align-items-center">
+                      <label class="custom-checkbox" >
+                        <input class="form-check-input" name="respond_by_email" type="checkbox" id="respondByEmail">
+                        <span> Email
+                        </span>
+                      </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Best Time to Respond Field -->
+            <div class="mb-3 text-left">
+              <label for="bestTime" class="form-label ">Best time to respond</label>
+              <input type="text" class="form-control" name="best_time_to_respond" id="bestTime">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn-send ">SEND</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 @if (session()->has('message'))
 
 <div class="modal fade" id="successModel" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">

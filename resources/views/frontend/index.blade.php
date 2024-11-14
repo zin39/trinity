@@ -1,5 +1,46 @@
 @extends('frontend.layouts.main')
 
+@section('css')
+<style>
+    .swiper-button-prev-award{
+      left:10px;
+      right:auto;
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size) / 44* 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-button-prev-testimonial,.swiper-button-next-testimonial, .swiper-button-prev-testimonial1,.swiper-button-next-testimonial1{
+      right:auto;
+      position: absolute;
+      top: 86%;
+      width: calc(var(--swiper-navigation-size) / 44* 27);
+      height: var(--swiper-navigation-size);
+      margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+      z-index: 10;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .swiper-button-prev-testimonial{
+    left:30%;
+  }
+  .swiper-button-next-testimonial{
+    right:30%;
+  }
+
+
+
+    </style>
+@endsection
 @section('content')
   <!-- Start Banner Area
     ============================================= -->
@@ -73,10 +114,10 @@
           <!-- Add Arrows -->
         </div>
 
-        <div class="swiper-button-prev swiper-button-prev-award" style="top:50%" >
+        <div class="swiper-button-prev-award" style="position:absolute;top:50%" >
           <i class="fa fa-caret-left text-primary" style="font-size:30px"></i>
         </div>
-        <div class="swiper-button-next swiper-button-next-award" style="top:50%">
+        <div class="swiper-button-next-award" style="position:absolute;top:50%;right:10px">
           <i class="fa fa-caret-right  text-primary" style="font-size:30px"></i>
 
         </div>
@@ -156,10 +197,10 @@
                 </div>
               </div>
             </div> -->
-            <div class="swiper-button-prev swiper-button-prev-testimonial">
+            <div class="swiper-button-prev-testimonial">
               <img src="/frontend-assets/img/icon/arrow-left.png"/>
             </div>
-            <div class="swiper-button-next swiper-button-next-testimonial">
+            <div class="swiper-button-next-testimonial">
               <img src="/frontend-assets/img/icon/arrow-right.png"/>
             </div>
           </div>
@@ -289,7 +330,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="testimonial-style-two-carousel swiper" >
+              <div class="testimonial-style-two-carousel1 swiper" >
                 <div class="swiper-wrapper mb-4">
                   <!-- Single Item -->
                   @foreach($teams as $team)
@@ -315,10 +356,10 @@
                 <!-- Add Arrows -->
               </div>
 
-              <div class="swiper-button-prev swiper-button-prev-testimonial" style="top:65%;left:8%">
+              <div class="swiper-button-prev-testimonial1" style="top:65%;left:8%">
                 <i class="fa fa-caret-left text-primary" style="font-size:30px"></i>
               </div>
-              <div class="swiper-button-next swiper-button-next-testimonial" style="top:65%;right:8%">
+              <div class="swiper-button-next-testimonial1" style="top:65%;right:8%">
                 <i class="fa fa-caret-right  text-primary" style="font-size:30px"></i>
 
               </div>

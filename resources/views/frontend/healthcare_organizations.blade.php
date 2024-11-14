@@ -41,7 +41,7 @@
 
 
   <div class="default-padding how-it-works-area mt-40">
-    <div class="text-center">
+    <div class="text-center px-4">
       <h2 class="title" style="font-weight:300"><b>How does the
         Karini</b>Step <b>Partnership Work?</b></h2>
     </div>
@@ -63,7 +63,7 @@
 
           </p>
           <p class="step_sub_desc text-center mb-0">
-            <a class="btn btn-theme animation rounded-md btn-md  bg-primary" style="padding:0.2rem 0.3rem;" href="/apply-now">Request a Consultation </a>
+            <a class="btn btn-theme animation rounded-md btn-md  bg-primary" style="padding:0.2rem 0.3rem;" data-bs-toggle="modal" data-bs-target="#contactFormModal" href="#!">Request a Consultation </a>
           </p>
         </div>
       </div>
@@ -442,82 +442,6 @@
     </div>
   </div>
 
-  <!-- Contact Form Modal -->
-  <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content ">
-        <div class="modal-header text-white">
-          <h5 class="modal-title" id="contactFormModalLabel">Request a Consultation</h5>
-          <a type=""  data-bs-dismiss="modal" aria-label="Close">X</a>
-        </div>
-        <div class="modal-body">
-          <form>
-            <!-- Name Fields -->
-            <div class="mb-3">
-              <label for="firstName" class="form-label ">Name <span class="text-danger">*</span></label>
-              <div class="row">
-                <div class="col-12 mb-2">
-                  <input type="text" class="form-control" id="firstName" placeholder="First">
-                </div>
-                <div class="col-12">
-                  <input type="text" class="form-control" id="lastName" placeholder="Last">
-                </div>
-              </div>
-            </div>
 
-            <!-- Company Field -->
-            <div class="mb-3">
-              <label for="company" class="form-label ">Company</label>
-              <input type="text" class="form-control" id="company">
-            </div>
-
-            <!-- Phone Field -->
-            <div class="mb-3">
-              <label for="phone" class="form-label ">Phone <span class="text-danger">*</span></label>
-              <input type="tel" class="form-control" id="phone">
-            </div>
-
-            <!-- Email Field -->
-            <div class="mb-3">
-              <label for="email" class="form-label ">Email <span class="text-danger">*</span></label>
-              <input type="email" class="form-control" id="email">
-            </div>
-
-            <!-- Questions/Comments Field -->
-            <div class="mb-3">
-              <label for="comments" class="form-label ">Questions / Comments</label>
-              <textarea class="form-control" id="comments" rows="3"></textarea>
-            </div>
-
-            <!-- Respond By Options -->
-            <div class="mb-3">
-              <label class="form-label ">Respond by</label>
-              <div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="respondByPhone">
-                  <label class="form-label" for="respondByPhone">Phone</label>
-                </div>
-                <div class="form-check mt-2">
-                  <input class="form-check-input" type="checkbox" id="respondByEmail">
-                  <label class="form-label" for="respondByEmail">Email</label>
-                </div>
-              </div>
-            </div>
-
-            <!-- Best Time to Respond Field -->
-            <div class="mb-3">
-              <label for="bestTime" class="form-label ">Best time to respond</label>
-              <input type="text" class="form-control" id="bestTime">
-            </div>
-
-            <!-- Submit Button -->
-            <div class="d-flex justify-content-center">
-              <button type="submit" class="btn-send ">SEND</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 @endsection
 

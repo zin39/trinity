@@ -136,6 +136,45 @@ $(document).ready(function () {
     },
   });
 
+  const testimonialFive1 = new Swiper(".testimonial-style-two-carousel1", {
+    // Optional parameters
+    loop: true,
+    freeMode: true,
+    grabCursor: true,
+    slidesPerView: 3,
+    spaceBetween: 50,
+    autoplay: false,
+    dotClass: 'customPaging',
+    dots:true,
+    pagination: {
+      el: ".swiper-pagination-counter",
+      type: "custom",
+      renderCustom: function (swiper, current, total) {
+        return current + " / " + total;
+      },
+    },
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: ".swiper-button-next-testimonial1",
+      prevEl: ".swiper-button-prev-testimonial1",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
   const bullet = new Swiper(".testimonial-bullet", {
     // Optional parameters
     loop: false,
