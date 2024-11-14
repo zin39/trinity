@@ -16,7 +16,7 @@ services:
 
     depends_on:
       - db
-    command: /bin/sh -c "/usr/local/bin/wait-for-it db:3306 -- composer install && php artisan migrate:fresh --seed && apache2-foreground"
+    command: /bin/sh -c "/usr/local/bin/wait-for-it db:3306 -- composer install  && apache2-foreground"
 
   db:
     image: mysql:8.0

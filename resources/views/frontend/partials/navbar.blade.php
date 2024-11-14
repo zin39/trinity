@@ -2,12 +2,27 @@
     ============================================= -->
   <!-- Start Header Top
     ============================================= -->
+<!-- TODO  -->
+<!-- 1. Navbar buttons not working  -->
+<!-- 2. fix the scrolling in logos and testimonials  -->
+<!-- 3. Add sensible drop down items in contact mode in apply now  -->
+<!-- 4. Add country in the drop down menu of form  -->
+<!-- 5. Add 8 numbers in the experience working  -->
+<!-- 6. Open calender when clicked on the numbers in input box. -->
+<!-- 8. Add please select in every down.  -->
+<!-- 9. Add captcha in the apply now form and only the form should be submitted . -->
+<!-- 10. Request a consultation button in healthcare organization page should give a pop just like in contact us butotn. -->
+<!-- 11. Add a padding in every page for How does the karini step partnership work. -->
+<!-- 12. Debug the issue of dashboard -->
+<!-- 13. Show the application list in the sidebar below testimonials -->
+<!-- 14. Change logo in login. -->
+
 
 
   <div class="" id="top-bar">
       <div class="d-flex justify-content-between " style="background:#013155">
         <div class="">
-          <p class="mb-0 text-white p-3 r_topbar"> 
+          <p class="mb-0 text-white p-3 r_topbar">
             <span>Big news, let's meet at Cebu Doctors University for our next intake! </span>
             <a href="" class="read-more" style="margin-left:0;color:#10cdd4"> &nbsp;Read more</a>
           </p>
@@ -76,13 +91,13 @@
 
           <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
             <li class="">
-              <a href="/registered-nurses" class="dropdown-toggle active" data-toggle="dropdown">Registered Nurses</a>
+              <a href="/registered-nurses" class="active" >Registered Nurses</a>
             </li>
             <li class="">
-              <a href="/healthcare-organizations" class="dropdown-toggle" data-toggle="dropdown">Healthcare Organizations</a>
+              <a href="/healthcare-organizations" >Healthcare Organizations</a>
             </li>
             <li class="">
-              <a href="/why-choose-us" class="dropdown-toggle" data-toggle="dropdown">Why Choose Us</a>
+              <a href="/why-choose-us" >Why Choose Us</a>
             </li>
             <li>
               <div class="button mt-4 mt-lg-0 apply-btn  ml-4">
@@ -122,23 +137,23 @@
                 </form>
               </div>
               <div class="sidebar-content">
-               <a href="/registered-nurses"> 
+               <a href="/registered-nurses">
                 <h4 class="sidebar-title mb-2" style="font-size: 24px !important">
                   Registered Nurses
                 </h4>
               </a>
-               
+
               </div>
               <div class="sidebar-content">
-               <a href="/healthcare-organizations"> 
+               <a href="/healthcare-organizations">
                 <h4 class="sidebar-title mb-2" style="font-size: 24px !important">
                   Healthcare Organizations
                 </h4>
               </a>
-               
+
               </div>
               <div class="sidebar-content">
-               <a href="/why-choose-us"> 
+               <a href="/why-choose-us">
                 <h3 class="sidebar-title mb-2" style="font-size: 24px !important">
                  Why Choose Us
                 </h3>
@@ -149,7 +164,7 @@
                 </div>
               </div>
             </div>
-           
+
           </div>
           <!-- End Side Menu -->
         </div>

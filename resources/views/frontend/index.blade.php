@@ -70,7 +70,7 @@
         <div class="container">
           <div class="row align-center justify-content-center">
             <div class="col-lg-8 pr-50 pr-md-15 pr-xs-15">
-             
+
               <div class="banner-four-info text-center">
                 <h2 >
                   {{$item->tagline}}
@@ -158,7 +158,7 @@
                   </div>
                 </div>
                 @endforeach
-           
+
 
               </div>
               <div class="swiper-pagination-counter"></div>
@@ -273,10 +273,10 @@
               in-person OBA exams. Our expert team will prepare you to add our <b class="color-primary">95% pass
                 rate</b>, first time!</p>
           </div>
-          
+
         </div>
       </div>
-       
+
         <div class="d-flex flex-column align-itenms-center">
           <div class="oval-container-vertical img-container">
             <img src="/frontend-assets/img/services/service_2.png" alt="img" />
@@ -290,7 +290,7 @@
           <img src="/frontend-assets/img/home/step_employment.png" style="height:25rem" alt="arrow" />
         </div>
       <div class="d-flex flex-column flex-lg-row justify-content-center mt-5">
-       
+
         <div>
           <div class="card how-it-works-card">
             <p class="mb-0 p-4 text-primary font-weight-light text-center">Once you're Registered, we secure your <span class="color-green">EMPLOYMENT</span> and help
@@ -407,7 +407,7 @@
           </div>
         </div>
         @endforeach
-       
+
       </div>
     </div>
   </div>
@@ -591,7 +591,7 @@
           </div>
         </div>
         @endforeach
-      
+
       </div>
     </div>
   </div>

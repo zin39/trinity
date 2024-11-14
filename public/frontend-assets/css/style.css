@@ -3596,6 +3596,7 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
     transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
     z-index: 9;
     width: 100%;
+    max-height: 20rem;
 }
 
 .nice-select .list:hover .option:not(:hover) {

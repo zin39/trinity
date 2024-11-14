@@ -67,8 +67,16 @@
     <script src="{{asset('admin/global/js/plugins/forms/styling/uniform.min.js')}}"></script>
     <script src="{{asset('admin/global/js/demo_pages/form_inputs.js')}}"></script>
     <script src="{{asset('admin/global/js/demo_pages/form_select2.js')}}"></script>
+
+
+    <!-- jQuery (required for Select2) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
     @yield('script')
-    
+
 </head>
 
 <body>

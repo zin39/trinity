@@ -2,6 +2,7 @@
 @php
   $setting = \App\Models\Setting::firstOrFail();
 @endphp
+
 <footer class="bg-footer footer-one text-light" style="background-image: url(assets/img/shape/27.png)">
     <div class="container">
       <div class="footer-style-one pt-4">
@@ -259,8 +260,8 @@
       utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",  // For formatting/validation
     });
 
-    
-    
+
+
   });
 </script>
 @if ($errors->any())
@@ -277,7 +278,7 @@
       </div>
     </div>
   </div>
-           
+
   <script>
     $(document).ready(function(){
       $('#successModel').modal('show');
@@ -384,11 +385,11 @@
       </div>
     </div>
   </div>
-           
+
   <script>
     $(document).ready(function(){
       $('#successModel').modal('show');
-      localStorage.clear(); 
+      localStorage.clear();
 
     });
   </script>

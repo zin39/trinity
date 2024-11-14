@@ -8,7 +8,7 @@ use App\Models\Award;
 use App\Models\Testimonial;
 use App\Models\Team;
 use App\Models\Blog;
-
+use Rinvex\Country\Country;
 
 class HomeController extends Controller
 {
@@ -46,7 +46,8 @@ class HomeController extends Controller
     public function applyNow()
     {
         $sections = PageSection::whereIn('slug', ['apply-now-banner'])->pluck('content', 'slug');
-        return view('frontend.apply_now', compact('sections'));
+        $countries = countries();
+        return view('frontend.apply_now', compact('sections','countries'));
     }
 
     public function privacyPolicy()

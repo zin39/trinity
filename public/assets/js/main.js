@@ -1,9 +1,9 @@
 /* ===================================================================
-    
+
     Author          : Valid Theme
-    Template Name   : Urane - Insurance Company HTML Template 
+    Template Name   : Urane - Insurance Company HTML Template
     Version         : 1.0
-    
+
 * ================================================================= */
 (function ($) {
   "use strict";
@@ -331,19 +331,19 @@
       },
     });
 
-  
+
     /* ==================================================
             # Testimonial Carousel
          ===============================================*/
-    var testimonialTwo = new Swiper(".testimonial-style-two-carousel", {
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      loop: true,
-      loopedSlides: 4,
-    });
+    // var testimonialTwo = new Swiper(".testimonial-style-two-carousel", {
+    //   spaceBetween: 10,
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    //   loop: true,
+    //   loopedSlides: 4,
+    // });
     var testimonialBullet = new Swiper(".testimonial-bullet", {
       spaceBetween: 10,
       slidesPerView: "auto",

@@ -24,7 +24,7 @@
 <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md" style="background-color: #002060">
 
     <!-- Sidebar mobile toggler -->
-    <div class="sidebar-mobile-toggler text-center"> 
+    <div class="sidebar-mobile-toggler text-center">
         <a href="#" class="sidebar-mobile-main-toggle">
             <i class="icon-arrow-left8"></i>
         </a>
@@ -35,7 +35,7 @@
         </a>
     </div>
     <!-- /sidebar mobile toggler -->
-    
+
     <!-- Sidebar content -->
     <div class="sidebar-content">
         <!-- Main navigation -->
@@ -128,11 +128,11 @@
                         <li class="nav-item"><a href="{{ route('admin.pages.why_choose_us') }}" class="nav-link @if($Route[2]=='why_choose_us') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Why Choose Us</a></li>
                         <li class="nav-item"><a href="{{ route('admin.pages.privacy_policy') }}" class="nav-link @if($Route[2]=='privacy_policy') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Privacy Policy</a></li>
                         <li class="nav-item"><a href="{{ route('admin.pages.apply_now') }}" class="nav-link @if($Route[2]=='apply_now') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Apply Now</a></li>
-                        
+
                     </ul>
                 </li>
-                
-             
+
+
                 @php
                     $menu_active = $Route[1] == 'settings' || in_array($Route[2] ?? '', ['footer', 'common-sections']);
                 @endphp
@@ -146,7 +146,7 @@
                         --}}
                     </ul>
                 </li>
-             
+
 
 
             </ul>

@@ -19,7 +19,7 @@ Sidebar heading:  22px 'Manrope', sans-serif
 
 >>> TABLE OF CONTENTS:
 =======================
-        
+
     01. Template default css
         - Animations
         - General
@@ -132,7 +132,7 @@ Sidebar heading:  22px 'Manrope', sans-serif
 }
 
 
-/* ============================================================== 
+/* ==============================================================
      # Reset Browsers
 =================================================================== */
 
@@ -312,7 +312,7 @@ strong {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Template Default Styles
 =================================================================== */
 
@@ -389,7 +389,7 @@ p {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Helper CSS
 =================================================================== */
 
@@ -1064,8 +1064,8 @@ p {
 	color: var(--white);
 }
 
-/* ============================================================== 
-    # Video Play Button 
+/* ==============================================================
+    # Video Play Button
 =================================================================== */
 .video-play-button {
 	display: inline-block;
@@ -1139,7 +1139,7 @@ p {
 
 
 
-/* ============================================================== 
+/* ==============================================================
     # Template Animation
 =================================================================== */
 
@@ -1612,7 +1612,7 @@ p {
 	}
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Button Styles
 =================================================================== */
 .btn {
@@ -2814,7 +2814,7 @@ a.btn-round-animation.dark {
 	mix-blend-mode: multiply;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Topbar Styles
 =================================================================== */
 
@@ -3028,7 +3028,7 @@ a.btn-round-animation.dark {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Top Header
 =================================================================== */
 .top-header-items {
@@ -3171,7 +3171,7 @@ ul.top-header-list li:first-child::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Navbar Styles
 =================================================================== */
 @media (min-width: 1024px) {
@@ -3329,7 +3329,7 @@ ul.top-header-list li:first-child::after {
 		padding-left: 80px;
 	}
 
-	.top-bar .container-full.pr, 
+	.top-bar .container-full.pr,
 	.navbar .container-full.pr {
 		padding-left: 0;
 		padding-right: 80px;
@@ -3401,7 +3401,7 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Nice Select Styles
 =================================================================== */
 .nice-select {
@@ -3543,6 +3543,7 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 	transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
 	z-index: 9;
 	width: 100%;
+    max-height : 20rem;
 }
 
 .nice-select .list:hover .option:not(:hover) {
@@ -3604,7 +3605,7 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 	color: var(--white);
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Banner Styles
 =================================================================== */
 .banner-area {
@@ -4085,14 +4086,14 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 	opacity: 0;
 }
 
-.banner-area .swiper-button-prev::after, 
+.banner-area .swiper-button-prev::after,
 .banner-area .swiper-button-next::after {
 	font-size: 40px;
 	color: #e3ebdd;
 	font-weight: 500;
 }
 
-.banner-area.navigation-circle .swiper-button-prev, 
+.banner-area.navigation-circle .swiper-button-prev,
 .banner-area.navigation-circle .swiper-button-next {
 	height: 60px;
 	width: 60px;
@@ -4335,7 +4336,7 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 	font-weight: 700;
 }
 
-.navigation-circle.navigation-left-center .swiper-button-prev, 
+.navigation-circle.navigation-left-center .swiper-button-prev,
 .navigation-circle.navigation-left-center .swiper-button-next {
 	left: 0;
 	right: auto;
@@ -4354,13 +4355,13 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 	background: var(--color-secondary);
 }
 
-.navigation-circle.navigation-left-center:hover .swiper-button-prev, 
+.navigation-circle.navigation-left-center:hover .swiper-button-prev,
 .navigation-circle.navigation-left-center:hover .swiper-button-next {
 	left: 0;
 	right: auto;
 }
 
-.navigation-circle.navigation-left-center .swiper-button-prev::after, 
+.navigation-circle.navigation-left-center .swiper-button-prev::after,
 .navigation-circle.navigation-left-center .swiper-button-next::after {
 	background: transparent;
 	content: "\f178";
@@ -4391,7 +4392,7 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Banner Custom Style
 =================================================================== */
 
@@ -4623,7 +4624,7 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 }
 
 /* Banner Four */
-.banner-style-four-area, 
+.banner-style-four-area,
 .banner-style-four-area div {
 	height: 100%;
 }
@@ -4896,7 +4897,7 @@ nav.navbar.validnavs.navbar-style-two .navbar-header .logo-display {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # About Area
 =================================================================== */
 .fun-fact-card {
@@ -5632,7 +5633,7 @@ ul.list-style-sevel li::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # History Area
 =================================================================== */
 .history-fun-facts {
@@ -5684,7 +5685,7 @@ ul.list-style-sevel li::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Award Area
 =================================================================== */
 .award-thumb {
@@ -5714,7 +5715,7 @@ ul.list-style-sevel li::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Faq
 =================================================================== */
 .faq-style-one-items {
@@ -5809,7 +5810,7 @@ ul.list-style-sevel li::after {
 	width: 100%;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Services Area
 =================================================================== */
 .services-style-one {
@@ -5870,7 +5871,7 @@ ul.list-style-sevel li::after {
 	padding-bottom: 20px;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Services Two
 =================================================================== */
 @media only screen and (min-width: 1367px) {
@@ -6013,7 +6014,7 @@ ul.list-style-sevel li::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Services Three
 =================================================================== */
 
@@ -6164,7 +6165,7 @@ ul.list-style-sevel li::after {
 	margin: 0;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Service Four
 =================================================================== */
 .services-style-four {
@@ -6206,7 +6207,7 @@ ul.list-style-sevel li::after {
 	margin-bottom: 15px;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Service Five Area
 =================================================================== */
 .services-five-nav-tabs .nav-link::after {
@@ -6365,7 +6366,7 @@ ul.list-style-sevel li::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Service Six
 =================================================================== */
 .services-style-six-area {
@@ -6482,18 +6483,18 @@ ul.list-style-sevel li::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Services Details
 =================================================================== */
 .services-details-area .thumb img {
 	margin-bottom: 40px;
 }
 
-.services-details-area h1, 
-  .services-details-area h2, 
-  .services-details-area h3, 
-  .services-details-area h4, 
-  .services-details-area h5, 
+.services-details-area h1,
+  .services-details-area h2,
+  .services-details-area h3,
+  .services-details-area h4,
+  .services-details-area h5,
   .services-details-area h6 {
 	font-weight: 800;
 }
@@ -6834,7 +6835,7 @@ ul.list-style-sevel li::after {
 	margin-top: 50px;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Newsletter Area
 =================================================================== */
 .newsletter-subscribe {
@@ -6891,8 +6892,8 @@ ul.list-style-sevel li::after {
 	margin: 0;
 }
 
-.newsletter-subscribe h2 i, 
-.newsletter-subscribe h3 i, 
+.newsletter-subscribe h2 i,
+.newsletter-subscribe h3 i,
 .newsletter-subscribe h4 i {
 	display: inline-block;
 	height: 60px;
@@ -6912,7 +6913,7 @@ ul.list-style-sevel li::after {
 	line-height: 1;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Video Area
 =================================================================== */
 .video-content h2 {
@@ -6943,7 +6944,7 @@ ul.list-style-sevel li::after {
 
 
 
-/* ============================================================== 
+/* ==============================================================
     # Get Estimate Form
 =================================================================== */
 .price-range-slider {
@@ -7012,7 +7013,7 @@ ul.list-style-sevel li::after {
 	display: none;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Testimonial Two
 =================================================================== */
 .testimonial-bullet {
@@ -7040,7 +7041,7 @@ ul.list-style-sevel li::after {
 
 
 
-/* ============================================================== 
+/* ==============================================================
     # Blog
 =================================================================== */
 .home-blog-style-one-item {
@@ -7156,7 +7157,7 @@ ul.home-blog-meta li a {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Feature Style One
 =================================================================== */
 .feature-style-one-items {
@@ -7660,7 +7661,7 @@ ul.list-style-six li:first-child {
 	border-color: #def1f1;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Team Style One
 =================================================================== */
 .team-style-one-item img {
@@ -7720,7 +7721,7 @@ ul.list-style-six li:first-child {
 	margin-bottom: 5px;
 }
 
-/* ============================================================== 
+/* ==============================================================
     Team Style Two
 =================================================================== */
 .team-style-two-item {
@@ -7883,8 +7884,8 @@ ul.list-style-six li:first-child {
 	background: var(--white);
 }
 
-/* ============================================================== 
-     # Team Single  
+/* ==============================================================
+     # Team Single
 =================================================================== */
 
 .team-single-area .team-content-top {
@@ -8152,7 +8153,7 @@ ul.list-style-six li:first-child {
 	background: var(--bg-gray);
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Pricing One
 =================================================================== */
 .quick-call {
@@ -8393,7 +8394,7 @@ ul.list-style-three li::before {
 	z-index: -1;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Process One
 =================================================================== */
 
@@ -8501,7 +8502,7 @@ form.short-newsletter button {
 	top: 5px;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Process Style Two
 =================================================================== */
 .process-style-two-items {
@@ -8588,7 +8589,7 @@ form.short-newsletter.style-two button::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Fun Fact Style One
 =================================================================== */
 
@@ -8621,7 +8622,7 @@ form.short-newsletter.style-two button::after {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Speciality Style One
 =================================================================== */
 .speciality-style-one-area {
@@ -8695,7 +8696,7 @@ form.short-newsletter.style-two button::after {
 	width: 35%;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Estimate Style One
 =================================================================== */
 .quote-form-style-one {
@@ -8705,7 +8706,7 @@ form.short-newsletter.style-two button::after {
 	margin-top: 60px;
 }
 
-.quote-form-style-one .nav-tabs::before, 
+.quote-form-style-one .nav-tabs::before,
 .quote-form-style-one .nav-tabs::after {
 	display: none;
 }
@@ -8750,7 +8751,7 @@ form.short-newsletter.style-two button::after {
 	text-align: left;
 }
 
-.quote-form-style-one .nav-tabs .nav-item button:hover, 
+.quote-form-style-one .nav-tabs .nav-item button:hover,
 .quote-form-style-one .nav-tabs .nav-item button.active {
 	color: var(--white);
 	background: var(--dark);
@@ -9030,7 +9031,7 @@ form.quote-style-two .nice-select {
 	border-radius: 0;
 }
 
-.nav-tabs.estimate-three-nav-tabs::before, 
+.nav-tabs.estimate-three-nav-tabs::before,
 .nav-tabs.estimate-three-nav-tabs::after {
 	display: none;
 }
@@ -9312,7 +9313,7 @@ form.quote-style-four .price-range-slider .range-bar .ui-slider-handle {
 	border-color: var(--color-style-four);
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Testimonial One
 =================================================================== */
 .testimonial-style-one {
@@ -9591,7 +9592,7 @@ form.quote-style-four .price-range-slider .range-bar .ui-slider-handle {
 	font-size: 30px;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Testimonial Style Three
 =================================================================== */
 
@@ -9639,7 +9640,7 @@ form.quote-style-four .price-range-slider .range-bar .ui-slider-handle {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Brand Style One
 =================================================================== */
 
@@ -9695,7 +9696,7 @@ form.quote-style-four .price-range-slider .range-bar .ui-slider-handle {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Gallery Style One
 =================================================================== */
 .gallery-style-one-item {
@@ -9800,7 +9801,7 @@ form.quote-style-four .price-range-slider .range-bar .ui-slider-handle {
 	visibility: visible;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Project Details
 =================================================================== */
 
@@ -9959,7 +9960,7 @@ ul.list-disc li {
 	margin-top: 7px;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # Contact
 =================================================================== */
 .contact-one-list .top {
@@ -10045,7 +10046,7 @@ ul.list-disc li {
 	border: none;
 }
 
-form.contact-form.contact-form input, 
+form.contact-form.contact-form input,
 form.contact-form.contact-form textarea {
 	border: none;
 	min-height: 60px;
@@ -10098,7 +10099,7 @@ form.contact-form.contact-form button {
 	width: 100%;
 }
 
-/* ============================================================== 
+/* ==============================================================
     # App Download
 =================================================================== */
 .app-download-items {
@@ -10169,7 +10170,7 @@ a.btn-app:nth-child(2) h6 {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Footer
 =================================================================== */
 
@@ -10237,7 +10238,7 @@ footer.footer-default .f-item.about {
 	padding: 30px 50px;
 }
 
-footer.footer-default .f-item.about::before, 
+footer.footer-default .f-item.about::before,
 footer.footer-default .f-item.about::after {
 	display: none;
 }
@@ -10500,7 +10501,7 @@ footer.footer-two {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # 404 page
 =================================================================== */
 
@@ -10556,7 +10557,7 @@ footer.footer-two {
 
 
 
-/* ============================================================== 
+/* ==============================================================
     # Responsive CSS
 =================================================================== */
 
@@ -10819,7 +10820,7 @@ footer.footer-two {
 		margin-left: 25px;
 		margin-right: 15px;
 	}
-    
+
 
     /* Choose Us */
 	.feature-style-one-items {
@@ -11005,7 +11006,7 @@ footer.footer-two {
 
 /* Screen Mobile To Tablet */
 @media screen and (max-width: 1023px) {
-    
+
 
 	.text-end .item-flex {
 		justify-content: center;
@@ -11035,7 +11036,7 @@ footer.footer-two {
 		color: #cccccc;
 	}
 
-	.top-bar-style-two ul.top-header-list li h6, 
+	.top-bar-style-two ul.top-header-list li h6,
     .top-bar-style-two ul.top-header-list li a {
 		color: var(--white);
 	}
@@ -11143,7 +11144,7 @@ footer.footer-two {
 	.heading-left .title {
 		margin-bottom: 20px;
 	}
-  
+
 	/* global reset - start */
 	.order-last {
 		order: 0;
@@ -11223,7 +11224,7 @@ footer.footer-two {
 		margin-top: 40px;
 	}
 
-    
+
 
     /* Feature Style One */
 	.feature-style-one-items {
@@ -11756,7 +11757,7 @@ footer.footer-two {
 	}
 
     /* Estimate Style Four */
-    
+
 	.nav-tabs.estimate-three-nav-tabs {
 		display: grid;
 		clip-path: none;
@@ -11981,7 +11982,7 @@ footer.footer-two {
 	}
 
     /* Footer Two */
-    
+
 	.footer-style-two {
 		padding-top: 70px;
 		padding-bottom: 120px;
@@ -12337,9 +12338,9 @@ footer.footer-two {
 		font-size: 18px;
 	}
 
-    
 
-  
+
+
     /* Brand */
 	.brand-style-one-items {
 		grid-template-columns: 1fr 1fr;
@@ -12495,7 +12496,7 @@ footer.footer-two {
 		margin: 0;
 		margin-bottom: 30px;
 	}
- 
+
 
     /* Team */
 	.team-style-one-item .thumb {
@@ -12640,7 +12641,7 @@ footer.footer-two {
 		padding-bottom: 0;
 	}
 
-   
+
 
     /* Video */
 	.video-content h2 {
@@ -12675,8 +12676,8 @@ footer.footer-two {
 		padding: 50px 0;
 	}
 
-	.newsletter-subscribe h2 i, 
-    .newsletter-subscribe h3 i, 
+	.newsletter-subscribe h2 i,
+    .newsletter-subscribe h3 i,
     .newsletter-subscribe h4 i {
 		height: 50px;
 		width: 50px;
@@ -12695,14 +12696,14 @@ footer.footer-two {
 	}
 
     /* Footer */
-    
+
 	footer .footer-style-one {
 		padding-top: 30px;
 		padding-bottom: 60px;
 	}
 
     /* Footer Two */
-    
+
 	.footer-style-two {
 		padding-top: 10px;
 		padding-bottom: 60px;
@@ -12903,7 +12904,7 @@ footer.footer-two {
 }
 
 
-/* ============================================================== 
+/* ==============================================================
     # Preloader CSS
 =================================================================== */
 #preloader {
@@ -13027,3 +13028,7 @@ footer.footer-two {
 		transform: rotate(0deg);
 	}
 }
+
+
+
+

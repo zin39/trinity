@@ -44,13 +44,13 @@ $(document).ready(function () {
     pagination: {
       el: '.swiper-pagination',
     },
-  
+
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next-team',
       prevEl: '.swiper-button-prev-team',
     },
-  
+
     breakpoints: {
       // when window width is >= 320px
       320: {
@@ -67,7 +67,7 @@ $(document).ready(function () {
         slidesPerView: 3,
         spaceBetween: 30,
       },
-    }, 
+    },
   });
 
   const testimonialFour = new Swiper(".testimonial-style-four-carousel", {
@@ -78,7 +78,7 @@ $(document).ready(function () {
     slidesPerView: 1,
     spaceBetween: 50,
     autoplay: false,
-    
+
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -119,8 +119,8 @@ $(document).ready(function () {
     //   clickable: true,
     // },
     navigation: {
-      nextEl: ".swiper-button-next-testimonial",
-      prevEl: ".swiper-button-prev-testimonial",
+      nextEl: ".swiper-button-next-",
+      prevEl: ".swiper-button-prev-",
     },
     breakpoints: {
       320: {
@@ -210,29 +210,29 @@ $(document).ready(function () {
     endDate: new Date(new Date().setDate(new Date().getDate() + 5)),
   });
 
-  const feedback = new Swiper(".feedback-carousel", {
-    // Optional parameters
-    loop: false,
-    freeMode: true,
-    grabCursor: true,
-    slidesPerView: 1,
-    spaceBetween: 50,
-    autoplay: false,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-      },
-      1200: {
-        slidesPerView: 1,
-      },
-    },
-  });
+  // const feedback = new Swiper(".feedback-carousel", {
+  //   // Optional parameters
+  //   loop: false,
+  //   freeMode: true,
+  //   grabCursor: true,
+  //   slidesPerView: 1,
+  //   spaceBetween: 50,
+  //   autoplay: false,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   breakpoints: {
+  //     768: {
+  //       slidesPerView: 1,
+  //     },
+  //     1200: {
+  //       slidesPerView: 1,
+  //     },
+  //   },
+  // });
 });

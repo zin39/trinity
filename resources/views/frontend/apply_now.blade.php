@@ -1,15 +1,26 @@
 @extends('frontend.layouts.main')
+@section('css')
+<style>
+ .nice-select>span {
+            display: block;
+            overflow-x: hidden;
 
+}
+.nice-select.open .list {
+        overflow-x: auto;
+    }
+</style>
+@endsection
 @section('content')
 
- 
+
   @php
       $item = json_decode($sections['apply-now-banner']);
   @endphp
 
   <div class=""
     style="background-image: url('{{$item->image}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-  
+
     <div style="background: #0000003d;">
       <div class="registered_nurse_banner_div">
         <div class="container">
@@ -69,13 +80,16 @@
       <div class="row">
         <div class="col-lg-12">
             <div class="form-group text-left">
-                <label for="contact_mode">Preffered Contact Mode <span style="color:red">*</span></label>
+                <label for="contact_mode">Preferred Contact Mode*<span style="color:red">*</span></label>
                 <select id="contact_mode" name="contact_mode" required>
-                    <option value="Nepal">Nepal</option>
-                    <option value="India">India</option>
-                    <option value="China">China</option>
-                    <option value="Bhutan">Bhutan</option>
-                    <option value="Bangladesh">Bangladesh</option>
+                        <option value="Email">Email</option>
+                        <option value="Phone Call">Phone Call</option>
+                        <option value="Text Message/SMS">Text Message/SMS</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                        <option value="Video Call">Video Call</option>
+                        <option value="In-Person Meeting">In-Person Meeting</option>
+                        <option value="Chat App ">Chat App </option>
+                        <option value="Social Media">Social Media</option>
                 </select>
               </div>
         </div>
@@ -122,30 +136,37 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-12">
-            <div class="form-group text-left">
-                <label for="currently_working_country">Country Where You are Currently Working <span style="color:red">*</span></label>
-                <select id="currently_working_country" name="currently_working_country" required>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                </select>
-              </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group text-left">
+            <label for="currently_working_country">Country You Are Currently Working<span style="color:red">*</span></label>
+            <select id="currently_working_country" class="form-control select2 " name="currently_working_country" required>
+                <option value="" disabled selected>Select your country</option>
+                @foreach ($countries as $country)
+                    <option value="{{ $country['iso_3166_1_alpha2'] ?? '' }}">
+                        {{ $country['emoji'] ?? '' }} {{ $country['name']['common'] ?? $country['name'] }}
+                    </option>
+                @endforeach
+            </select>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="row">
-        <div class="col-lg-12">
-            <div class="form-group text-left">
-                <label for="country_of_birth">Country of Birth <span style="color:red">*</span></label>
-                <select id="country_of_birth" name="country_of_birth" required> 
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                </select>
-              </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group text-left">
+            <label for="country_of_birth">Country of Birth <span style="color:red">*</span></label>
+            <select id="country_of_birth" class="form-control select2 " name="country_of_birth" required>
+                <option value="" disabled selected>Select your country</option>
+                @foreach ($countries as $country)
+                    <option value="{{ $country['iso_3166_1_alpha2'] ?? '' }}">
+                        {{ $country['emoji'] ?? '' }} {{ $country['name']['common'] ?? $country['name'] }}
+                    </option>
+                @endforeach
+            </select>
         </div>
-      </div>
-
+    </div>
+</div>
 
       <div class="row">
         <div class="col-lg-12">
@@ -176,32 +197,46 @@
             <div class="form-group text-left">
                 <label for="years_of_experience">Years of Experience as an RN <span style="color:red">*</span></label>
                 <select id="years_of_experience" name="years_of_experience" required>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
                 </select>
               </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-12">
-            <div class="form-group text-left">
-                <label for="country_of_education">Country of Education <span style="color:red">*</span></label>
-                <select id="country_of_education" name="country_of_education" required>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                </select>
-              </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group text-left">
+            <label for="country_of_education">Country Of Education<span style="color:red">*</span></label>
+            <select id="country_of_education" class="form-control select2 " name="country_of_education" required>
+                <option value="" disabled selected>Select your country</option>
+                @foreach ($countries as $country)
+                    <option value="{{ $country['iso_3166_1_alpha2'] ?? '' }}">
+                        {{ $country['emoji'] ?? '' }} {{ $country['name']['common'] ?? $country['name'] }}
+                    </option>
+                @endforeach
+            </select>
         </div>
-      </div>
+    </div>
+</div>
 
       <div class="row">
         <div class="col-lg-12">
             <div class="form-group text-left">
-                <label for="initial_education_program">What initial educational programme did you complete to become a Registered Nurse <span style="color:red">*</span></label>
+                <label for="initial_education_program">What Initial Educational Programme Did You Complete To Become A Registered Nurse <span style="color:red">*</span></label>
                 <select id="initial_education_program" name="initial_education_program" required>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option value="adn">Select Your Programme</option>
+                    <option value="adn">Associate Degree in Nursing (ADN)</option>
+                    <option value="bsn">Bachelor of Science in Nursing (BSN)</option>
+                    <option value="diploma">Diploma in Nursing</option>
+                    <option value="absn">Accelerated BSN (ABSN)</option>
+                    <option value="lpn-to-rn">LPN to RN Bridge Program</option>
                 </select>
               </div>
         </div>
@@ -212,8 +247,17 @@
             <div class="form-group text-left">
                 <label for="university_name">College/University Name <span style="color:red">*</span></label>
                 <select id="university_name" name="university_name" required>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option value="">Select Your University</option>
+                    <option value="nuhs">National University of Health Sciences (Singapore)</option>
+                    <option value="pgimer">Postgraduate Institute of Medical Education and Research (PGIMER), Chandigarh, India</option>
+                    <option value="aims">All India Institute of Medical Sciences (AIIMS), New Delhi, India</option>
+                    <option value="cu">Chulalongkorn University, Bangkok, Thailand</option>
+                    <option value="cuhk">The Chinese University of Hong Kong (CUHK), Hong Kong</option>
+                    <option value="um">University of Malaya, Kuala Lumpur, Malaysia</option>
+                    <option value="hku">The University of Hong Kong (HKU), Hong Kong</option>
+                    <option value="nus">National University of Singapore (NUS), Singapore</option>
+                    <option value="bmu">B.P. Koirala Institute of Health Sciences, Dharan, Nepal</option>
+                    <option value="tmc">Tianjin Medical University, Tianjin, China</option>
                 </select>
               </div>
         </div>
@@ -232,7 +276,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left check-qa">
                 <label for="qualifications">Have you completed any additional postgraduate qualifications?<span style="color:red">*</span></label>
-                
+
                 <label class="custom-checkbox" >
                   <input type="checkbox" id="qualifications1" name="qualifications[]"  value="N/A" class="mb-1" {{ in_array('N/A',$item->qualifications ?? []) ? 'checked' : ''}}>
                   <span>N/A</span>
@@ -287,7 +331,7 @@
                   <input type="checkbox" id="vehicle1" name="qualifications[]" value="KRCHN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>KRCHN</span>
                 </label>
-              
+
             </div>
 
             <div class="row">
@@ -295,8 +339,17 @@
                   <div class="form-group text-left">
                       <label for="specialities">Specialities <span style="color:red">*</span></label>
                       <select id="specialities" required name="specialities">
-                          <option value="1">Yes</option>
-                          <option value="2">No</option>
+                            <option value="">Select Your Speciality</option>
+                            <option value="pediatric-nursing">Pediatric Nursing</option>
+                            <option value="critical-care-nursing">Critical Care Nursing</option>
+                            <option value="surgical-nursing">Surgical Nursing</option>
+                            <option value="oncology-nursing">Oncology Nursing</option>
+                            <option value="psychiatric-nursing">Psychiatric/Mental Health Nursing</option>
+                            <option value="emergency-nursing">Emergency/Trauma Nursing</option>
+                            <option value="neonatal-nursing">Neonatal Nursing</option>
+                            <option value="geriatric-nursing">Geriatric Nursing</option>
+                            <option value="cardiac-nursing">Cardiac Nursing</option>
+                            <option value="community-health-nursing">Community Health Nursing</option>
                       </select>
                     </div>
               </div>
@@ -343,8 +396,14 @@
                   <div class="form-group text-left">
                       <label for="hear_about_us">How did you hear about us? <span style="color:red">*</span></label>
                       <select id="hear_about_us" required name="hear_about_us">
-                          <option value="1">Yes</option>
-                          <option value="2">No</option>
+                            <option value="social-media">Social Media (e.g., Facebook, Instagram)</option>
+                            <option value="search-engine">Search Engine (e.g., Google, Bing)</option>
+                            <option value="friend-family">Friends or Family Recommendation</option>
+                            <option value="email-newsletter">Email Newsletter</option>
+                            <option value="advertisement">Online Advertisement</option>
+                            <option value="event-seminar">Event or Seminar</option>
+                            <option value="news-article">News Article or Blog</option>
+                            <option value="other">Other</option>
                       </select>
                     </div>
               </div>
@@ -415,7 +474,7 @@
                       <label class="custom-checkbox" >
                       <input type="checkbox" required id="has_checked_privacy_statement" name="has_checked_privacy_statement"  value="1" class="mb-0"  >
                         <span> I have read and understand the Equal
-                        Opportunities and Privacy Statements <text style="color:red">*</text> 
+                        Opportunities and Privacy Statements <text style="color:red">*</text>
                         </span>
                       </label>
                     </div>
@@ -450,7 +509,7 @@
                       <label class="custom-checkbox" >
                         <input type="checkbox" required id="has_checked_recieve_application_updates" name="has_checked_recieve_application_updates"  value="1" class="mb-0" >
                         <span> I agree to receive application updates from
-                        KariniStep <text style="color:red">*</text> 
+                        KariniStep <text style="color:red">*</text>
                         </span>
                       </label>
                     </div>
@@ -518,5 +577,6 @@
         })
     });
 </script>
+
 
 @endsection
