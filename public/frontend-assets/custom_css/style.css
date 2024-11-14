@@ -1739,7 +1739,7 @@ input[type='checkbox']{
     margin-bottom: 10px;
     line-height: 20px;
   }
-  
+
   .custom-checkbox span {
     display: block;
     margin-left: 20px;
@@ -1747,7 +1747,7 @@ input[type='checkbox']{
     line-height: 20px;
     text-align: left;
   }
-  
+
   .custom-checkbox span::before {
     content: "";
     display: block;
@@ -1761,7 +1761,7 @@ input[type='checkbox']{
     border-radius:4px;
     @include vendorize(box-shadow, inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1));
   }
-  
+
   .custom-checkbox span::after {
     display: block;
     position: absolute;
@@ -1774,18 +1774,26 @@ input[type='checkbox']{
     line-height: 20px;
     text-align: center;
   }
-  
+
   .custom-checkbox input[type="checkbox"] {
     opacity: 0;
     z-index: -1;
     position: absolute;
   }
-  
+
   .custom-checkbox input[type="checkbox"]:checked + span::after {
     font-family: "FontAwesome";
     content: "\2713";
     background:#023585;
     color:#fff;
   }
-  
 
+
+.scrollable-select {
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto;
+}
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 200px; /* Adjust the height as needed */
+  overflow-y: auto;  /* Enables vertical scroll */
+}
