@@ -9,6 +9,8 @@ use App\Models\ConsultationRequest;
 class ApplicationController extends Controller
 {
    public function store(Request $request) {
+
+    dd($request->qualifications);
         # code...
 
         $validatedData = $request->validate([
@@ -113,7 +115,7 @@ class ApplicationController extends Controller
         $application->company= $request->input('company');
         $application->email= $request->input('email');
         $application->phone_number = $request->input('phone_number');
-        $application->phone_number = $request->input('phone_number');
+        $application->comments = $request->input('comments');
         $application->best_time_to_respond = $request->input('best_time_to_respond');
 
         $application->respond_by_phone = $request->has('respond_by_phone') ? true: false;

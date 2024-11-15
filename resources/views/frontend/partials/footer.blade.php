@@ -235,8 +235,8 @@
   <script src="frontend-assets/js/rangeSlider.min.js"></script>
   <script src="frontend-assets/js/jquery-ui.min.js"></script>
   <script src="frontend-assets/js/SplitText.min.js"></script>
-  <script src="frontend-assets/js/main.js"></script>
-  <script src="frontend-assets/custom_js/main.js"></script>
+  <script src="frontend-assets/js/main.js?v=1.2"></script>
+  <script src="frontend-assets/custom_js/main.js?v=1.2"></script>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
         </script>

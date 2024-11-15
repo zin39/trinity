@@ -21,7 +21,7 @@
     <link href="{{ asset('frontend-assets/css/helper.css') }}" rel="stylesheet" />
     <link href="{{ asset('frontend-assets/css/unit-test.css') }}" rel="stylesheet" />
     <link href="{{ asset('frontend-assets/css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/custom_css/style.css?v=1.1') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend-assets/custom_css/style.css?v=1.2') }}" rel="stylesheet" />
     <link href="{{ asset('frontend-assets/custom_css/responsive.css') }}" rel="stylesheet" />
     <link rel="stylesheet"
        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">

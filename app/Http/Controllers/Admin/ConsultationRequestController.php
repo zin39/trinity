@@ -24,13 +24,13 @@ class ConsultationRequestController extends Controller
 
         $consultationRequests = $consultationRequests->paginate(15);
 
-        return view('admin.consultationRequests.index', compact('consultationRequests'));
+        return view('admin.consultation-requests.index', compact('consultationRequests'));
     }
 
     public function show($consultationRequest )
     {
         $consultationRequest = ConsultationRequest::findOrFail($consultationRequest);
-        return view('admin.consultationRequests.show', compact('consultationRequest'));
+        return view('admin.consultation-requests.show', compact('consultationRequest'));
 
     }
 }

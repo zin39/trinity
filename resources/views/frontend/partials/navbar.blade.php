@@ -18,8 +18,10 @@
 <!-- 14. Change logo in login. -->
 
 
-
-  <div class="" id="top-bar">
+@php
+  $setting = \App\Models\Setting::firstOrFail();
+@endphp
+<div class="" id="top-bar">
       <div class="d-flex justify-content-between " style="background:#013155">
         <div class="">
           <p class="mb-0 text-white p-3 r_topbar">
@@ -62,7 +64,11 @@
       <div class="d-flex w-100 justify-content-between align-center hidden-lg">
         <div class="d-flex align-items-center">
           <a class="" href="/">
-            <img src="/frontend-assets/img/new_logo.png" class="logo logo-display" alt="Logo" width="80" />
+                @if($setting->company_logo)
+                    <img src="/{{$setting->company_logo}}" alt="Logo" style="height:5rem" />
+                @else
+                    <img src="/frontend-assets/img/new_logo.png" alt="Logo" style="height:5rem" />
+                @endif
           </a>
         <!-- <div class="button lg-0 apply-btn "> -->
 
@@ -82,7 +88,13 @@
       <div class="navbar-right d-flex align-items-center w-100 " >
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div style="width:20%;    display: flex; justify-content: center;" class="hidden-sm-flex">
-          <a href="/"><img src="/frontend-assets/img/new_logo.png" alt="Logo" style="height:5rem" /></a>
+             <a href="/">
+                @if($setting->company_logo)
+                    <img src="/{{$setting->company_logo}}" alt="Logo" style="height:5rem" />
+                @else
+                    <img src="/frontend-assets/img/new_logo.png" alt="Logo" style="height:5rem" />
+                @endif
+            </a>
         </div>
         <div class="collapse navbar-collapse w-100 " id="navbar-menu"  style="width:60%">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">

@@ -16,6 +16,111 @@
 
   @php
       $item = json_decode($sections['apply-now-banner']);
+      $countries = [
+        [ "name" => "Afghanistan", "flag"=> "🇦🇫" ],
+    [ "name" => "Albania", "flag"=> "🇦🇱" ],
+    [ "name" => "Algeria", "flag"=> "🇩🇿" ],
+    [ "name" => "Andorra", "flag"=> "🇦🇩" ],
+    [ "name" => "Angola", "flag"=> "🇦🇴" ],
+    [ "name" => "Antigua and Barbuda", "flag"=> "🇦🇬" ],
+    [ "name" => "Argentina", "flag"=> "🇦🇷" ],
+    [ "name" => "Armenia", "flag"=> "🇦🇲" ],
+    [ "name" => "Australia", "flag"=> "🇦🇺" ],
+    [ "name" => "Austria", "flag"=> "🇦🇹" ],
+    [ "name" => "Azerbaijan", "flag"=> "🇦🇿" ],
+    [ "name" => "Bahamas", "flag"=> "🇧🇸" ],
+    [ "name" => "Bahrain", "flag"=> "🇧🇭" ],
+    [ "name" => "Bangladesh", "flag"=> "🇧🇩" ],
+    [ "name" => "Barbados", "flag"=> "🇧🇧" ],
+    [ "name" => "Belarus", "flag"=> "🇧🇾" ],
+    [ "name" => "Belgium", "flag"=> "🇧🇪" ],
+    [ "name" => "Belize", "flag"=> "🇧🇿" ],
+    [ "name" => "Benin", "flag"=> "🇧🇯" ],
+    [ "name" => "Bhutan", "flag"=> "🇧🇹" ],
+    [ "name" => "Bolivia", "flag"=> "🇧🇴" ],
+    [ "name" => "Bosnia and Herzegovina", "flag"=> "🇧🇦" ],
+    [ "name" => "Botswana", "flag"=> "🇧🇼" ],
+    [ "name" => "Brazil", "flag"=> "🇧🇷" ],
+    [ "name" => "Brunei", "flag"=> "🇧🇳" ],
+    [ "name" => "Bulgaria", "flag"=> "🇧🇬" ],
+    [ "name" => "Burkina Faso", "flag"=> "🇧🇫" ],
+    [ "name" => "Burundi", "flag"=> "🇧🇮" ],
+    [ "name" => "Cabo Verde", "flag"=> "🇨🇻" ],
+    [ "name" => "Cambodia", "flag"=> "🇰🇭" ],
+    [ "name" => "Cameroon", "flag"=> "🇨🇲" ],
+    [ "name" => "Canada", "flag"=> "🇨🇦" ],
+    [ "name" => "Central African Republic", "flag"=> "🇨🇫" ],
+    [ "name" => "Chad", "flag"=> "🇹🇩" ],
+    [ "name" => "Chile", "flag"=> "🇨🇱" ],
+    [ "name" => "China", "flag"=> "🇨🇳" ],
+    [ "name" => "Colombia", "flag"=> "🇨🇴" ],
+    [ "name" => "Comoros", "flag"=> "🇰🇲" ],
+    [ "name" => "Congo, Democratic Republic of the", "flag"=> "🇨🇩" ],
+    [ "name" => "Congo, Republic of the", "flag"=> "🇨🇬" ],
+    [ "name" => "Costa Rica", "flag"=> "🇨🇷" ],
+    [ "name" => "Croatia", "flag"=> "🇭🇷" ],
+    [ "name" => "Cuba", "flag"=> "🇨🇺" ],
+    [ "name" => "Cyprus", "flag"=> "🇨🇾" ],
+    [ "name" => "Czechia", "flag"=> "🇨🇿" ],
+    [ "name" => "Denmark", "flag"=> "🇩🇰" ],
+    [ "name" => "Djibouti", "flag"=> "🇩🇯" ],
+    [ "name" => "Dominica", "flag"=> "🇩🇲" ],
+    [ "name" => "Dominican Republic", "flag"=> "🇩🇴" ],
+    [ "name" => "Ecuador", "flag"=> "🇪🇨" ],
+    [ "name" => "Egypt", "flag"=> "🇪🇬" ],
+    [ "name" => "El Salvador", "flag"=> "🇸🇻" ],
+    [ "name" => "Equatorial Guinea", "flag"=> "🇬🇶" ],
+    [ "name" => "Eritrea", "flag"=> "🇪🇷" ],
+    [ "name" => "Estonia", "flag"=> "🇪🇪" ],
+    [ "name" => "Eswatini", "flag"=> "🇸🇿" ],
+    [ "name" => "Ethiopia", "flag"=> "🇪🇹" ],
+    [ "name" => "Fiji", "flag"=> "🇫🇯" ],
+    [ "name" => "Finland", "flag"=> "🇫🇮" ],
+    [ "name" => "France", "flag"=> "🇫🇷" ],
+    [ "name" => "Gabon", "flag"=> "🇬🇦" ],
+    [ "name" => "Gambia", "flag"=> "🇬🇲" ],
+    [ "name" => "Georgia", "flag"=> "🇬🇪" ],
+    [ "name" => "Germany", "flag"=> "🇩🇪" ],
+    [ "name" => "Ghana", "flag"=> "🇬🇭" ],
+    [ "name" => "Greece", "flag"=> "🇬🇷" ],
+    [ "name" => "Grenada", "flag"=> "🇬🇩" ],
+    [ "name" => "Guatemala", "flag"=> "🇬🇹" ],
+    [ "name" => "Guinea", "flag"=> "🇬🇳" ],
+    [ "name" => "Guinea-Bissau", "flag"=> "🇬🇼" ],
+    [ "name" => "Guyana", "flag"=> "🇬🇾" ],
+    [ "name" => "Haiti", "flag"=> "🇭🇹" ],
+    [ "name" => "Honduras", "flag"=> "🇭🇳" ],
+    [ "name" => "Hungary", "flag"=> "🇭🇺" ],
+    [ "name" => "Iceland", "flag"=> "🇮🇸" ],
+    [ "name" => "India", "flag"=> "🇮🇳" ],
+    [ "name" => "Indonesia", "flag"=> "🇮🇩" ],
+    [ "name" => "Iran", "flag"=> "🇮🇷" ],
+    [ "name" => "Iraq", "flag"=> "🇮🇶" ],
+    [ "name" => "Ireland", "flag"=> "🇮🇪" ],
+    [ "name" => "Israel", "flag"=> "🇮🇱" ],
+    [ "name" => "Italy", "flag"=> "🇮🇹" ],
+    [ "name" => "Jamaica", "flag"=> "🇯🇲" ],
+    [ "name" => "Japan", "flag"=> "🇯🇵" ],
+    [ "name" => "Jordan", "flag"=> "🇯🇴" ],
+    [ "name" => "Kazakhstan", "flag"=> "🇰🇿" ],
+    [ "name" => "Kenya", "flag"=> "🇰🇪" ],
+    [ "name" => "Kiribati", "flag"=> "🇰🇮" ],
+    [ "name" => "Korea, North", "flag"=> "🇰🇵" ],
+    [ "name" => "Korea, South", "flag"=> "🇰🇷" ],
+    [ "name" => "Kosovo", "flag"=> "🇽🇰" ],
+    [ "name" => "Kuwait", "flag"=> "🇰🇼" ],
+    [ "name" => "Kyrgyzstan", "flag"=> "🇰🇬" ],
+    [ "name" => "Laos", "flag"=> "🇱🇦" ],
+    [ "name" => "Latvia", "flag"=> "🇱🇻" ],
+    [ "name" => "Lebanon", "flag"=> "🇱🇧" ],
+    [ "name" => "Lesotho", "flag"=> "🇱🇸" ],
+    [ "name" => "Liberia", "flag"=> "🇱🇷" ],
+    [ "name" => "Libya", "flag"=> "🇱🇾" ],
+    [ "name" => "Liechtenstein", "flag"=> "🇱🇮" ],
+    [ "name" => "Lithuania", "flag"=> "🇱🇹" ],
+    [ "name" => "Luxembourg", "flag"=> "🇱🇺" ],
+    [ "name" => "Madagascar", "flag"=> "🇲🇬" ]  
+      ]
   @endphp
 
   <div class=""
@@ -143,8 +248,9 @@
             <select id="currently_working_country" class="form-control select2 " name="currently_working_country" required>
                 <option value="" disabled selected>Select your country</option>
                 @foreach ($countries as $country)
-                    <option value="{{ $country['iso_3166_1_alpha2'] ?? '' }}">
-                        {{ $country['emoji'] ?? '' }} {{ $country['name']['common'] ?? $country['name'] }}
+
+                    <option value="{{ $country['name'] ?? '' }}"> 
+                        {{ $country['flag'] }} {{ $country['name'] }}
                     </option>
                 @endforeach
             </select>
@@ -159,8 +265,8 @@
             <select id="country_of_birth" class="form-control select2 " name="country_of_birth" required>
                 <option value="" disabled selected>Select your country</option>
                 @foreach ($countries as $country)
-                    <option value="{{ $country['iso_3166_1_alpha2'] ?? '' }}">
-                        {{ $country['emoji'] ?? '' }} {{ $country['name']['common'] ?? $country['name'] }}
+                    <option value="{{ $country['name'] ?? '' }}">
+                    {{ $country['flag'] }}  {{ $country['name'] }}
                     </option>
                 @endforeach
             </select>
@@ -185,7 +291,7 @@
                 <label for="are_you_nurse">Are you currently working as a nurse?<span style="color:red">*</span></label>
                 <select id="are_you_nurse" name="are_you_nurse" required>
                     <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option value="0">No</option>
                 </select>
               </div>
         </div>
@@ -217,7 +323,7 @@
             <select id="country_of_education" class="form-control select2 " name="country_of_education" required>
                 <option value="" disabled selected>Select your country</option>
                 @foreach ($countries as $country)
-                    <option value="{{ $country['iso_3166_1_alpha2'] ?? '' }}">
+                    <option value="{{ $country['name'] ?? '' }}">
                         {{ $country['emoji'] ?? '' }} {{ $country['name']['common'] ?? $country['name'] }}
                     </option>
                 @endforeach
@@ -278,57 +384,57 @@
                 <label for="qualifications">Have you completed any additional postgraduate qualifications?<span style="color:red">*</span></label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualifications1" name="qualifications[]"  value="N/A" class="mb-1" {{ in_array('N/A',$item->qualifications ?? []) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications1" name="qualifications[0]"  value="N/A" class="mb-1" {{ in_array('N/A',$item->qualifications ?? []) ? 'checked' : ''}}>
                   <span>N/A</span>
                 </label>
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualifications2" name="qualifications[]"  value="MSN/MAN" class="mb-1" {{ in_array('N/A',$item->qualifications ?? []) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications2" name="qualifications[1]"  value="MSN/MAN" class="mb-1" {{ in_array('MSN/MAN',$item->qualifications ?? []) ? 'checked' : ''}}>
                   <span>MSN/MAN</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualifications3" name="qualifications[]"  value="Registered Midwife" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications3" name="qualifications[2]"  value="Registered Midwife" class="mb-1" {{ in_array('Registered Midwife',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>Registered Midwife</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication4" name="qualifications[]" value="ICU" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualitication4" name="qualifications[3]" value="ICU" class="mb-1" {{ in_array('ICU',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>ICU</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication5" name="qualifications[]" value="CCU" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualitication5" name="qualifications[4]" value="CCU" class="mb-1" {{ in_array('CCU',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>CCU</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="vehicle1" name="qualifications[]" value="Renal/Urology" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualitication6" name="qualifications[5]" value="Renal/Urology" class="mb-1" {{ in_array('Renal/Urology',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>Renal/Urology</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="vehicle1" name="qualifications[]" value="Psychiatry" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualitication7" name="qualifications[6]" value="Psychiatry" class="mb-1" {{ in_array('Psychiatry',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>Psychiatry</span>
                 </label>
 
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="vehicle1" name="qualifications[]" value="Pediatric" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualitication8" name="qualifications[7]" value="Pediatric" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>Pediatric</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="vehicle1" name="qualifications[]" value="Anasthesia" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualitication9" name="qualifications[8]" value="Anasthesia" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>Anasthesia</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="vehicle1" name="qualifications[]" value="KRN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="vehicle1" name="qualifications[9]" value="KRN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>KRN</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="vehicle1" name="qualifications[]" value="KRCHN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualitication10" name="qualifications[10]" value="KRCHN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
                   <span>KRCHN</span>
                 </label>
 
@@ -361,7 +467,7 @@
                       <label for="english_proficiency_test">Have you taken an English Proficiency exam (IELTS, OET, TOEFL, PTE, MET, etc.)? <span style="color:red">*</span></label>
                       <select id="english_proficiency_test" required name="english_proficiency_test">
                           <option value="1">Yes</option>
-                          <option value="2">No</option>
+                          <option value="0">No</option>
                       </select>
                     </div>
               </div>
@@ -373,7 +479,7 @@
                       <label for="is_pass_CGFNS">Have you taken and passed the CGFNS Certification Program? <span style="color:red">*</span></label>
                       <select id="is_pass_CGFNS" required name="is_pass_CGFNS">
                           <option value="1">Yes</option>
-                          <option value="2">No</option>
+                          <option value="0">No</option>
                       </select>
                     </div>
               </div>
@@ -385,7 +491,7 @@
                       <label for="is_pass_NCLEX">Have you passed the NCLEX exam? <span style="color:red">*</span></label>
                       <select id="is_pass_NCLEX"required name="is_pass_NCLEX">
                           <option value="1">Yes</option>
-                          <option value="2">No</option>
+                          <option value="0">No</option>
                       </select>
                     </div>
               </div>

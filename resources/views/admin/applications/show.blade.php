@@ -9,7 +9,7 @@
 <!-- Form inputs -->
 <div class="card">
     <div class="card-header header-elements-inline">
-        <h5 class="card-title">Edit Application</h5>
+        <h5 class="card-title">Application of {{$application->first_name}} {{$application->last_name}}</h5>
         <div class="header-elements">
             <a href="{{ route('admin.applications.index') }}" class="btn bg-primary">
                 <b><i class="icon-esc"></i></b>
@@ -55,6 +55,7 @@
                 {{$application->email}}
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-md-2">
                     <b>Phone Number</b>
@@ -64,40 +65,14 @@
                 {{$application->phone_number}}
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <b>Phone Number</b>
-                </div>
-
-                <div class="col-md-10">
-                {{$application->phone_number}}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <b>Phone Number</b>
-                </div>
-
-                <div class="col-md-10">
-                {{$application->phone_number}}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <b>Phone Number</b>
-                </div>
-
-                <div class="col-md-10">
-                {{$application->phone_number}}
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="col-md-2">
                     <b>Have Whatsapp</b>
                 </div>
 
                 <div class="col-md-10">
-                {{$application->have_whatsapp}}
+                {{$application->have_whatsapp ? "Yes" : "No"}}
                 </div>
             </div>
             <div class="row">
@@ -111,7 +86,7 @@
             </div>
             <div class="row">
                 <div class="col-md-2">
-                    <b>currently_working_country</b>
+                    <b>Currently Working Country</b>
                 </div>
 
                 <div class="col-md-10">
@@ -120,7 +95,7 @@
             </div>
             <div class="row">
                 <div class="col-md-2">
-                    <b>country_of_birth</b>
+                    <b>Country of Birth</b>
                 </div>
 
                 <div class="col-md-10">
@@ -129,7 +104,7 @@
             </div>
             <div class="row">
                 <div class="col-md-2">
-                    <b>date_of_birth</b>
+                    <b>Date of Birth</b>
                 </div>
 
                 <div class="col-md-10">
@@ -142,7 +117,7 @@
                 </div>
 
                 <div class="col-md-10">
-                {{$application->are_you_nurse}}
+                {{$application->are_you_nurse ? "Yes" : "No"}}
                 </div>
             </div>
             <div class="row">
@@ -196,7 +171,10 @@
                 </div>
 
                 <div class="col-md-10">
-                {{$application->qualifications}}
+                @foreach(json_decode($application->qualifications) as $sp)
+                    {{$sp}}
+                    @if(!$loop->last),@endif
+                @endforeach
                 </div>
             </div>
             <div class="row">
@@ -223,7 +201,7 @@
                 </div>
 
                 <div class="col-md-10">
-                {{$application->is_pass_CGFNS}}
+                {{$application->is_pass_CGFNS ? "Yes" : "No"}}
                 </div>
             </div>
             <div class="row">
@@ -232,7 +210,7 @@
                 </div>
 
                 <div class="col-md-10">
-                {{$application->is_pass_NCLEX}}
+                {{$application->is_pass_NCLEX ? "Yes" : "No"}}
                 </div>
             </div>
             <div class="row">
@@ -277,7 +255,11 @@
                 </div>
 
                 <div class="col-md-10">
-                {{$application->has_checked_recieve_application_updates}}
+                    @if($application->has_checked_recieve_application_updates)
+                    <i class="icon-check text-success" ></i>
+                    @else
+                    <i class="icon-cross text-danger" ></i>
+                    @endif
                 </div>
             </div>
         </div>

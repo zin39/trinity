@@ -46,7 +46,7 @@ class HomeController extends Controller
     public function applyNow()
     {
         $sections = PageSection::whereIn('slug', ['apply-now-banner'])->pluck('content', 'slug');
-        $countries = countries();
+        $countries = [];
         return view('frontend.apply_now', compact('sections','countries'));
     }
 
