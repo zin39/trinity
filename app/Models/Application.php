@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application extends Model
 {
+    protected $casts = [
+        'qualifications' => 'array'
+        ];
+
+    protected $fillable = [
+        'is_read',
+    ];
+
 
 
 }

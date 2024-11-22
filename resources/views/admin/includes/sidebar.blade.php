@@ -18,7 +18,13 @@
             display: none!important;
         }
     }
-
+    .badge {
+        font-size: 12px;
+        padding: 3px 7px;
+        position: relative;
+        top: -10px;
+        right: -10px;
+    }
 </style>
 
 <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md" style="background-color: #002060">
@@ -53,8 +59,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.applications.index')}}" class="nav-link @if($Route[1]=='applications') active @endif" data-popup="tooltip" data-original-title="Applications" data-placement="right" data-container=".card-sidebar-mobile">
+                    <a href="{{ route('admin.applications.index') }}" class="nav-link @if($Route[1] == 'applications') active @endif" data-popup="tooltip" data-original-title="Applications" data-placement="right" data-container=".card-sidebar-mobile" id="applications-nav-link">
                         <i class="icon-stars"></i><span>Applications</span>
+                        @if($unreadCount> 0) <!-- Display only if there are new applications -->
+                            <span class="badge badge-pill badge-danger"></span>
+                        @endif
                     </a>
                 </li>
 
@@ -157,3 +166,43 @@
     <!-- /sidebar content -->
 
 </div>
+<script>
+    function updateUnreadCount() {
+        $.ajax({
+            url: "{{ route('admin.applications.unreadCount') }}",
+            method: 'GET',
+            success: function(data) {
+                // Log a message to the console to confirm the function is working
+                console.log("Ajax request executed. Unread count:", data.unreadCount);
+
+                var $badge = $('#unread-badge');
+
+                if (data.unreadCount > 0) {
+                    console.log("There are " + data.unreadCount + " unread applications.");
+
+                    if ($badge.length === 0) {
+                        // If the badge doesn't exist, create and append it
+                        $('<span class="badge badge-pill badge-danger" id="unread-badge">' + data.unreadCount + '</span>')
+                            .appendTo('#applications-nav-link');
+                    } else {
+                        // If the badge exists, just update the count
+                        $badge.text(data.unreadCount);
+                    }
+                } else {
+                    // If unread count is 0, remove the badge
+                    $badge.remove();
+                    console.log("No unread applications.");
+                }
+            },
+            error: function(xhr) {
+                console.error("Error fetching unread count:", xhr.responseText);
+            }
+        });
+    }
+
+    // Call the function every 5 seconds
+    setInterval(updateUnreadCount, 5000);
+
+    // Initial call to populate on load
+    updateUnreadCount();
+</script>

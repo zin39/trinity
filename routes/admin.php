@@ -54,7 +54,14 @@ Route::middleware('auth:admin')->group(function(){
 
     Route::resource('teams', TeamController::class);
     Route::resource('awards', AwardController::class);
+    Route::get('/applications/{id}/mark-as-read', [ApplicationController::class, 'markAsRead'])->name('applications.markAsRead');
+    Route::get('/admin/applications/unread-count', [ApplicationController::class, 'getUnreadCount'])->name('applications.unreadCount');
+    Route::get('/admin/applications/fetch-new', [ApplicationController::class, 'fetchNewApplications'])->name('applications.fetchNew');
     Route::resource('applications', ApplicationController::class);
+
+    Route::get('/consultation-requests/{id}/mark-as-read', [ ConsultationRequestController::class, 'markAsRead'])->name('applications.markAsRead');
+    Route::get('/admin/consultation-requests/unread-count', [ConsultationRequestController::class, 'getUnreadCount'])->name('applications.unreadCount');
+    Route::get('/admin/consultation-requests/fetch-new', [ConsultationRequestController::class, 'fetchNewApplications'])->name('applications.fetchNew');
     Route::resource('consultation-requests', ConsultationRequestController::class);
 
     Route::resource('partners', PartnerController::class);
@@ -67,7 +74,7 @@ Route::middleware('auth:admin')->group(function(){
     Route::get('pages/why_choose_us', [AllPageController::class, 'whyChooseUs'])->name('pages.why_choose_us');
     Route::get('pages/privacy_policy', [AllPageController::class, 'privacyPolicy'])->name('pages.privacy_policy');
     Route::get('pages/apply_now', [AllPageController::class, 'applyNow'])->name('pages.apply_now');
-    
+
     Route::post('pages/savepage', [AllPageController::class, 'save'])->name('pages.savepage');
     Route::post('pages/save-previllages', [AllPageController::class, 'savePrevillage'])->name('pages.save-previllages');
 
@@ -81,11 +88,11 @@ Route::middleware('auth:admin')->group(function(){
     Route::post('pages/staffing-solutions', [PageController::class, 'updatePageSections'])->name('pages.staffing-solutions');
     Route::post('pages/jobs-in-australia', [PageController::class, 'updatePageSections'])->name('pages.jobs-in-australia');
     Route::post('pages/{id}', [PageController::class, 'update'])->name('pages.update');
-    
+
     Route::get('pages/{id}/subpage', [PageController::class, 'subpageCreate'])->name('pages.subpage.create');
     Route::post('pages/{id}/subpage', [PageController::class, 'subpageStore'])->name('pages.subpage.store');
     Route::get('pages/{id}/subpage/{subpage_id}', [PageController::class, 'subpageEdit'])->name('pages.subpage.edit');
     Route::post('pages/{id}/subpage/{subpage_id}', [PageController::class, 'subpageUpdate'])->name('pages.subpage.update');
     Route::delete('pages/{id}/subpage/{subpage_id}', [PageController::class, 'subpageDelete'])->name('pages.subpage.delete');
 });
-    
+

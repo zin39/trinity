@@ -55,7 +55,7 @@
                 {{$application->email}}
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-2">
                     <b>Phone Number</b>
@@ -65,7 +65,7 @@
                 {{$application->phone_number}}
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-2">
                     <b>Have Whatsapp</b>
@@ -171,7 +171,7 @@
                 </div>
 
                 <div class="col-md-10">
-                @foreach(json_decode($application->qualifications) as $sp)
+                @foreach(($application->qualifications) as $sp)
                     {{$sp}}
                     @if(!$loop->last),@endif
                 @endforeach

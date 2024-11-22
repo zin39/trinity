@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class ConsultationRequest extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'is_read',
+    ];
+
 }

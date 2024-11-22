@@ -119,7 +119,7 @@
     [ "name" => "Liechtenstein", "flag"=> "🇱🇮" ],
     [ "name" => "Lithuania", "flag"=> "🇱🇹" ],
     [ "name" => "Luxembourg", "flag"=> "🇱🇺" ],
-    [ "name" => "Madagascar", "flag"=> "🇲🇬" ]  
+    [ "name" => "Madagascar", "flag"=> "🇲🇬" ]
       ]
   @endphp
 
@@ -186,7 +186,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="contact_mode">Preferred Contact Mode*<span style="color:red">*</span></label>
-                <select id="contact_mode" name="contact_mode" required>
+                <select class="dropwdown" id="contact_mode" name="contact_mode" required>
                         <option value="Email">Email</option>
                         <option value="Phone Call">Phone Call</option>
                         <option value="Text Message/SMS">Text Message/SMS</option>
@@ -224,7 +224,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="have_whatsapp">Do you have a WhatsApp phone number? <span style="color:red">*</span></label>
-                <select id="have_whatsapp" name="have_whatsapp" required>
+                <select class="dropwdown" id="have_whatsapp" name="have_whatsapp" required>
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </select>
@@ -245,11 +245,11 @@
     <div class="col-lg-12">
         <div class="form-group text-left">
             <label for="currently_working_country">Country You Are Currently Working<span style="color:red">*</span></label>
-            <select id="currently_working_country" class="form-control select2 " name="currently_working_country" required>
-                <option value="" disabled selected>Select your country</option>
+            <select class="dropwdown" id="currently_working_country" class="form-control select2 " name="currently_working_country" required>
+                <option value="" >Select your country</option>
                 @foreach ($countries as $country)
 
-                    <option value="{{ $country['name'] ?? '' }}"> 
+                    <option value="{{ $country['name'] ?? '' }}">
                         {{ $country['flag'] }} {{ $country['name'] }}
                     </option>
                 @endforeach
@@ -262,7 +262,7 @@
     <div class="col-lg-12">
         <div class="form-group text-left">
             <label for="country_of_birth">Country of Birth <span style="color:red">*</span></label>
-            <select id="country_of_birth" class="form-control select2 " name="country_of_birth" required>
+            <select class="dropwdown" id="country_of_birth" class="form-control select2 " name="country_of_birth" required>
                 <option value="" disabled selected>Select your country</option>
                 @foreach ($countries as $country)
                     <option value="{{ $country['name'] ?? '' }}">
@@ -289,7 +289,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="are_you_nurse">Are you currently working as a nurse?<span style="color:red">*</span></label>
-                <select id="are_you_nurse" name="are_you_nurse" required>
+                <select  class="dropwdown" id="are_you_nurse" name="are_you_nurse" required>
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </select>
@@ -302,7 +302,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="years_of_experience">Years of Experience as an RN <span style="color:red">*</span></label>
-                <select id="years_of_experience" name="years_of_experience" required>
+                <select class="dropwdown" id="years_of_experience" name="years_of_experience" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -320,7 +320,7 @@
     <div class="col-lg-12">
         <div class="form-group text-left">
             <label for="country_of_education">Country Of Education<span style="color:red">*</span></label>
-            <select id="country_of_education" class="form-control select2 " name="country_of_education" required>
+            <select class="dropwdown" id="country_of_education" class="form-control select2 " name="country_of_education" required>
                 <option value="" disabled selected>Select your country</option>
                 @foreach ($countries as $country)
                     <option value="{{ $country['name'] ?? '' }}">
@@ -336,7 +336,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="initial_education_program">What Initial Educational Programme Did You Complete To Become A Registered Nurse <span style="color:red">*</span></label>
-                <select id="initial_education_program" name="initial_education_program" required>
+                <select class="dropwdown" id="initial_education_program" name="initial_education_program" required>
                     <option value="adn">Select Your Programme</option>
                     <option value="adn">Associate Degree in Nursing (ADN)</option>
                     <option value="bsn">Bachelor of Science in Nursing (BSN)</option>
@@ -352,7 +352,7 @@
         <div class="col-lg-12">
             <div class="form-group text-left">
                 <label for="university_name">College/University Name <span style="color:red">*</span></label>
-                <select id="university_name" name="university_name" required>
+                <select class="dropwdown" id="university_name" name="university_name" required>
                     <option value="">Select Your University</option>
                     <option value="nuhs">National University of Health Sciences (Singapore)</option>
                     <option value="pgimer">Postgraduate Institute of Medical Education and Research (PGIMER), Chandigarh, India</option>
@@ -377,64 +377,63 @@
             </div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-lg-12">
             <div class="form-group text-left check-qa">
                 <label for="qualifications">Have you completed any additional postgraduate qualifications?<span style="color:red">*</span></label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualifications1" name="qualifications[0]"  value="N/A" class="mb-1" {{ in_array('N/A',$item->qualifications ?? []) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]"  value="N/A" class="mb-1" >
                   <span>N/A</span>
                 </label>
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualifications2" name="qualifications[1]"  value="MSN/MAN" class="mb-1" {{ in_array('MSN/MAN',$item->qualifications ?? []) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]"  value="MSN/MAN" class="mb-1" >
                   <span>MSN/MAN</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualifications3" name="qualifications[2]"  value="Registered Midwife" class="mb-1" {{ in_array('Registered Midwife',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]"  value="Registered Midwife" class="mb-1" >
                   <span>Registered Midwife</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication4" name="qualifications[3]" value="ICU" class="mb-1" {{ in_array('ICU',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]" value="ICU" class="mb-1" >
                   <span>ICU</span>
                 </label>
 
-                <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication5" name="qualifications[4]" value="CCU" class="mb-1" {{ in_array('CCU',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]" value="CCU" class="mb-1" >
                   <span>CCU</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication6" name="qualifications[5]" value="Renal/Urology" class="mb-1" {{ in_array('Renal/Urology',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]" value="Renal/Urology" class="mb-1" >
                   <span>Renal/Urology</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication7" name="qualifications[6]" value="Psychiatry" class="mb-1" {{ in_array('Psychiatry',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]" value="Psychiatry" class="mb-1" >
                   <span>Psychiatry</span>
                 </label>
 
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication8" name="qualifications[7]" value="Pediatric" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]" value="Pediatric" class="mb-1" >
                   <span>Pediatric</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication9" name="qualifications[8]" value="Anasthesia" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]" value="Anasthesia" class="mb-1" >
                   <span>Anasthesia</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="vehicle1" name="qualifications[9]" value="KRN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]" value="KRN" class="mb-1" >
                   <span>KRN</span>
                 </label>
 
                 <label class="custom-checkbox" >
-                  <input type="checkbox" id="qualitication10" name="qualifications[10]" value="KRCHN" class="mb-1" {{ in_array('N/A',json_decode($item->qualifications ?? '[]' , true)) ? 'checked' : ''}}>
+                  <input type="checkbox" id="qualifications[]" name="qualifications[]" value="KRCHN" class="mb-1" >
                   <span>KRCHN</span>
                 </label>
 
@@ -444,7 +443,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="specialities">Specialities <span style="color:red">*</span></label>
-                      <select id="specialities" required name="specialities">
+                      <select class="dropwdown" id="specialities" required name="specialities">
                             <option value="">Select Your Speciality</option>
                             <option value="pediatric-nursing">Pediatric Nursing</option>
                             <option value="critical-care-nursing">Critical Care Nursing</option>
@@ -465,7 +464,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="english_proficiency_test">Have you taken an English Proficiency exam (IELTS, OET, TOEFL, PTE, MET, etc.)? <span style="color:red">*</span></label>
-                      <select id="english_proficiency_test" required name="english_proficiency_test">
+                      <select class="dropwdown" id="english_proficiency_test" required name="english_proficiency_test">
                           <option value="1">Yes</option>
                           <option value="0">No</option>
                       </select>
@@ -477,7 +476,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="is_pass_CGFNS">Have you taken and passed the CGFNS Certification Program? <span style="color:red">*</span></label>
-                      <select id="is_pass_CGFNS" required name="is_pass_CGFNS">
+                      <select class="dropwdown" id="is_pass_CGFNS" required name="is_pass_CGFNS">
                           <option value="1">Yes</option>
                           <option value="0">No</option>
                       </select>
@@ -489,7 +488,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="is_pass_NCLEX">Have you passed the NCLEX exam? <span style="color:red">*</span></label>
-                      <select id="is_pass_NCLEX"required name="is_pass_NCLEX">
+                      <select class="dropwdown" id="is_pass_NCLEX"required name="is_pass_NCLEX">
                           <option value="1">Yes</option>
                           <option value="0">No</option>
                       </select>
@@ -501,7 +500,7 @@
               <div class="col-lg-12">
                   <div class="form-group text-left">
                       <label for="hear_about_us">How did you hear about us? <span style="color:red">*</span></label>
-                      <select id="hear_about_us" required name="hear_about_us">
+                      <select class="dropwdown" id="hear_about_us" required name="hear_about_us">
                             <option value="social-media">Social Media (e.g., Facebook, Instagram)</option>
                             <option value="search-engine">Search Engine (e.g., Google, Bing)</option>
                             <option value="friend-family">Friends or Family Recommendation</option>
@@ -665,24 +664,38 @@
 @endsection
 
 @section('js')
-
+@if(isset($clearLocalStorage) && $clearLocalStorage)
+<script>
+    localStorage.clear();
+</script>
+@endif
 <script>
     $(document).ready(function(){
-      console.log("ready")
-        $('#apply_form input').each(function(){
+        console.log("ready");
 
-          var name = $(this).attr("name");
-          var val = localStorage.getItem(name);
-          if(val && $(this).attr("type") != "file"){
-            $(this).val(val);
-          }
-        })
-        $('#apply_form input').on('focusout',function(e){
-          var name = $(this).attr("name");
-          localStorage.setItem(name, e.target.value);
-        })
+        // Existing code for inputs
+        $('#apply_form input').each(function() {
+            var name = $(this).attr("name");
+            var val = localStorage.getItem(name);
+            if (val && $(this).attr("type") != "file") {
+                $(this).val(val);
+            }
+        });
+
+
+        $('#apply_form input').on('focusout', function(e) {
+            var name = $(this).attr("name");
+            localStorage.setItem(name, e.target.value);
+        });
+
+        $('select').each(function() {
+// Remove any display: none; property
+            $(this).css('display', '');
+            $(this).css({
+                'position': 'absolute',
+                'left': '-9999px'
+            });
+        });
     });
 </script>
-
-
 @endsection

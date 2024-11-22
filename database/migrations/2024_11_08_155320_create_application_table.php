@@ -41,6 +41,7 @@ return new class extends Migration
             $table->boolean('has_checked_privacy_statement')->default(false);
             $table->string('signature_name')->nullable();
             $table->boolean('has_checked_recieve_application_updates')->default(false);
+            $table->boolean('is_read')->default(false);
             $table->timestamps();
 
         });

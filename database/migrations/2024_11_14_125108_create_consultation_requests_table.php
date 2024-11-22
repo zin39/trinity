@@ -22,6 +22,7 @@ return new class extends Migration
             $table->boolean('respond_by_phone')->default(0);
             $table->boolean('respond_by_email')->default(0);
             $table->string('best_time_to_respond')->nullable();
+            $table->boolean('is_read')->default(false);
             $table->timestamps();
         });
     }

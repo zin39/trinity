@@ -5,8 +5,22 @@
 @section('script')
 @stop
 
+@section('css')
+<style>
+
+.application-item.unread{
+    font-weight: bold;
+    color: black;
+}
+
+.application-item.read{
+    font-weight: normal;
+    color: grey; !important
+}
+</style>
+@endsection
 @section('content')
-     
+
     @include('admin.consultation-requests.partial.filter')
 <!-- Striped rows -->
     <div class="card">
@@ -17,7 +31,7 @@
             </a>
         </div> -->
 
-        <table class="table datatable-basic table-striped">
+        <table class="table datatable-basic table-striped" id="applications-table">
             <thead>
                 <tr class="bg-primary">
                     <th>Name</th>
@@ -30,7 +44,7 @@
             <tbody>
                 @if($consultationRequests->total() != 0)
                     @foreach($consultationRequests as $key => $value)
-                        <tr>
+                        <tr id="application-{{ $value->id }}" class="application-item {{ $value->is_read? 'read' : 'unread' }}" >
                             <td>{{ $value->first_name }} {{ $value->last_name }}</td>
                             <td>{{ $value->phone_number }}</td>
                             <td>{{ $value->email }}</td>
@@ -74,4 +88,95 @@
     });
 
 </script>
+<script>
+function markAsViewed(id) {
+    console.log("markAsViewed called for application ID:", id);
+    fetch(`/admin/consultation-requests/${id}/mark-as-read`, {
+        method: 'GET',
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'Application marked as read') {
+            const applicationRow = document.getElementById(`application-${id}`);
+            if (applicationRow) {
+                // Check console to confirm function execution
+                console.log("Class change from unread to read for application:", id);
+
+                applicationRow.classList.remove('unread');
+                applicationRow.classList.add('read');
+            }
+        } else {
+            alert('Error: ' + data.message);
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+</script>
+
+<script>
+    let lastAppId = @json($lastAppId);
+    console.log("Initial lastAppId from server:", lastAppId);
+
+    // Function to fetch and display new applications
+    function fetchNewApplications() {
+        console.log("Attempting to fetch new applications...");
+        $.ajax({
+            url: "{{ route('admin.request-consultation.fetchNew') }}",
+            method: 'GET',
+            data: {
+                last_app_id: lastAppId  // Send lastAppId as a parameter to the server
+            },
+            success: function(data) {
+                if (data.applications.length > 0) {
+                    // Loop through new applications and append them to the table
+                    data.applications.forEach(function(application) {
+                        if (application.id > lastAppId) {
+                            lastAppId = application.id;  // Update lastAppId to the highest new ID
+                        }
+
+                        console.log("New application data:", consultation-requests);
+
+                        var row = '<tr id="application-' + consultation-requests.id + '" class="application-item unread">' +
+                                    '<td>' + consultation-requests.name + '</td>' +
+                                    '<td>' + consultation-requests.phone_number + '</td>' +
+                                    '<td>' + consultation-requests.email + '</td>' +
+                                    '<td>' + consultation-requests.country_of_birth + '</td>' +
+                                    '<td class="text-right">' +
+                                        // View button
+                                        '<a href="{{ url('admin/consultation-requests') }}/' + application.id + '" class="btn bg-success-400 btn-icon rounded-round" data-popup="tooltip" data-original-title="View" data-placement="bottom" onclick="markAsViewed(' + application.id + ')">' +
+                                            '<i class="icon-eye"></i>' +
+                                        '</a>' +
+                                        // Delete button
+                                        '<form action="{{ url('admin/consultation-requests') }}/' + application.id + '" method="POST" style="display:inline;">' +
+                                            '@csrf' +
+                                            '@method("DELETE")' +
+                                            '<button type="submit" class="btn btn-danger btn-icon rounded-round" data-popup="tooltip" data-original-title="Delete" data-placement="bottom">' +
+                                                '<i class="icon-trash"></i>' +
+                                            '</button>' +
+                                        '</form>' +
+                                    '</td>' +
+                                  '</tr>';
+
+                        // Prepend new row to the table
+                        $('#applications-table tbody').prepend(row);
+                    });
+                }
+            },
+            error: function(xhr) {
+                console.error("Error fetching new applications:", xhr.responseText);
+            }
+        });
+    }
+
+    // Call the function every 5 seconds to check for new applications
+    setInterval(fetchNewApplications, 5000);
+
+    // Initial call to populate on load
+    fetchNewApplications();
+</script>
+
 @endsection

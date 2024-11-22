@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Application;
+use App\Models\ConsultationRequest;
 use App\ViewComposer\AdminSidebarComposer;
 use App\ViewComposer\SettingsComposer;
 use Illuminate\Auth\Middleware\Authenticate;
@@ -24,6 +26,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        View::composer('*', function ($view) {
+            $unreadCount = Application::where('is_read', false)->count();
+            $unreadCount = ConsultationRequest::where('is_read',false)->count();
+            $view->with('unreadCount', $unreadCount);
+        });
+
         Authenticate::redirectUsing(function () {
             return route('admin.login');
         });
