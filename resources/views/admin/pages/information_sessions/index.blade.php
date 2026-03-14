@@ -5,7 +5,7 @@
 @section('content')
 <style>
     .nav-sidebar .nav-link { color: #333; }
-    .nav-sidebar .nav-link.active { background-color: #00206045; color: #002060; }
+    .nav-sidebar .nav-link.active { background-color: #4A342845; color: #4A3428; }
 </style>
 @php $active = request('active', 'info-sessions-main'); @endphp
 <div class="d-flex">

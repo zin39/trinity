@@ -125,7 +125,7 @@ function markAsViewed(id) {
     function fetchNewApplications() {
         console.log("Attempting to fetch new applications...");
         $.ajax({
-            url: "{{ route('admin.request-consultation.fetchNew') }}",
+            url: "{{ route('admin.consultation-requests.fetchNew') }}",
             method: 'GET',
             data: {
                 last_app_id: lastAppId  // Send lastAppId as a parameter to the server

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>@yield('title') | Trinty</title>
+	<title>@yield('title') | Karissa Subedi Career Consultancy</title>
 
 	<!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" type="text/css">
@@ -16,9 +16,9 @@
 	<link href="{{asset('admin/css/colors.min.css')}}" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 	<style>
-		body {
-            font-family: 'Manrope', sans-serif;
-        }
+		body { font-family: 'Manrope', sans-serif; }
+		.text-primary { color: #4A3428 !important; }
+		.bg-primary { background-color: #4A3428 !important; }
 	</style>
 	<!-- Core JS files -->
 	<script src="{{asset('admin/global/js/main/jquery.min.js')}}"></script>

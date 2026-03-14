@@ -1,6 +1,6 @@
 
 <div class="">
-	<div class="page-header page-header-dark  mb-0" style="background-color: #002060">
+	<div class="page-header page-header-dark  mb-0" style="background-color: #4A3428">
 		@if (Request::is('admin/dashboard'))
 			<div class="page-header-content header-elements-inline px-3">
 				<div class="page-title">

@@ -44,13 +44,17 @@
         font-weight: 500;
     }
 </style>
-<div class="navbar navbar-expand-md navbar-dark border-transparent" style="background-color: #002060">
+<div class="navbar navbar-expand-md navbar-dark border-transparent" style="background-color: #4A3428">
     <div class="navbar-brand wmin-0 mr-5" style="padding-top:5px; padding-bottom:5px">
-        <a href="{{route('admin.dashboard')}}" class="d-inline-block">
-            
-                <img src="{{ asset($setting->company_logo) }}" alt="{{ $setting->company_name }}" style="height:50px;width:auto;">
-
-
+        <a href="{{route('admin.dashboard')}}" class="d-inline-block" style="display:flex !important; align-items:center; text-decoration:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40" height="40" style="flex-shrink:0;">
+                <rect width="48" height="48" rx="6" fill="#C8A46A"/>
+                <text x="24" y="33" text-anchor="middle" font-family="'Playfair Display','Georgia',serif" font-size="24" font-weight="700" fill="#FFFFFF" letter-spacing="-1">KS</text>
+            </svg>
+            <span style="margin-left:10px; display:flex; flex-direction:column; line-height:1.2;">
+                <span style="color:#fff; font-weight:600; font-size:0.9rem;">Karissa Subedi</span>
+                <span style="color:#C8A46A; font-size:0.6rem; text-transform:uppercase; letter-spacing:0.05em;">Career Consultancy Services</span>
+            </span>
         </a>
     </div>
 

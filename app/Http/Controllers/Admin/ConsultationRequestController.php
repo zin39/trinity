@@ -24,7 +24,9 @@ class ConsultationRequestController extends Controller
 
         $consultationRequests = $consultationRequests->paginate(15);
 
-        return view('admin.consultation-requests.index', compact('consultationRequests'));
+        $lastAppId = ConsultationRequest::max('id') ?? 0;
+
+        return view('admin.consultation-requests.index', compact('consultationRequests', 'lastAppId'));
     }
 
     public function show($consultationRequest )

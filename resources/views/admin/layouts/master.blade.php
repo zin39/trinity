@@ -39,6 +39,21 @@
         }
 
     </style>
+    <style>
+        .text-primary { color: #4A3428 !important; }
+        a.text-primary:hover { color: #6B4A3A !important; }
+        .bg-primary { background-color: #4A3428 !important; }
+        .btn-primary, .bg-primary-400 { background-color: #4A3428 !important; border-color: #4A3428 !important; }
+        .btn-primary:hover { background-color: #6B4A3A !important; border-color: #6B4A3A !important; }
+        .border-top-success { border-top-color: #C8A46A !important; }
+        .bg-success-400 { background-color: #C8A46A !important; }
+        .bg-success-600 { background-color: #A67C3C !important; }
+        .btn-success, .bg-success { background-color: #C8A46A !important; border-color: #C8A46A !important; }
+        .breadcrumb-line { background-color: #5a3f33 !important; }
+        .breadcrumb-item a, .breadcrumb-item.active { color: rgba(255,255,255,0.8) !important; }
+        .page-header-dark .breadcrumb-line { border-top: 1px solid rgba(200,164,106,0.2); }
+        .nav-sidebar .nav-item-header { color: #C8A46A; }
+    </style>
     @yield('css')
     <!-- Core JS files -->
     <script src="{{asset('admin/global/js/main/jquery.min.js')}}"></script>
@@ -46,34 +61,17 @@
     <script src="{{asset('admin/global/js/plugins/loaders/blockui.min.js')}}"></script>
     <!-- /core JS files -->
 
-    <!-- Theme JS files -->
+    <!-- Plugins (must load before app.js) -->
     <script src="{{asset('admin/global/js/plugins/ui/moment/moment.min.js')}}"></script>
-
-    <script src="{{asset('admin/js/app.js')}}"></script>
-    <script type="text/javascript" src="{{asset('admin/js/custom.js')}}"></script>
-    <!-- Extra JS files -->
-    <script src="{{asset('admin/assets/js/extra/newsticker.js')}}"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
-
-    <script src="{{asset('admin/global/js/plugins/visualization/d3/d3.min.js')}}"></script>
-    <script src="{{asset('admin/global/js/plugins/visualization/d3/d3_tooltip.js')}}"></script>
-
-    <script src="{{asset('admin/contech.js')}}"></script>
-
+    <script src="{{asset('admin/global/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="{{asset('admin/global/js/plugins/alertify.min.js')}}"></script>
 
-    <script src="{{asset('admin/global/js/demo_pages/datatables_basic.js')}}"></script>
-    <script src="{{asset('admin/global/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <!-- Theme JS -->
+    <script src="{{asset('admin/js/app.js')}}"></script>
+    <script type="text/javascript" src="{{asset('admin/js/custom.js')}}"></script>
     <script src="{{asset('admin/global/js/demo_pages/form_inputs.js')}}"></script>
-    <script src="{{asset('admin/global/js/demo_pages/form_select2.js')}}"></script>
-
-
-    <!-- jQuery (required for Select2) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
     @yield('script')
 

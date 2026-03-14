@@ -31,15 +31,15 @@ class DatabaseSeeder extends Seeder
         Setting::firstOrCreate(
             ['id' => 1],
             [
-                'company_name' => 'KariniStep',
+                'company_name' => 'Karissa Subedi Career Consultancy Services',
                 'company_logo' => null,
-                'company_copyright' => '© KariniStep Pty Ltd',
+                'company_copyright' => '© Karissa Subedi Career Consultancy Services',
                 'contact_no1' => '+61 000 000 000',
                 'contact_no2' => null,
                 'address1' => 'Australia',
                 'address2' => null,
                 'postcode' => null,
-                'company_email' => 'info@karinistep.com',
+                'company_email' => 'info@karissasubedi.com.au',
                 'facebook_link' => '#',
                 'instagram_link' => '#',
                 'linkin_link' => '#',

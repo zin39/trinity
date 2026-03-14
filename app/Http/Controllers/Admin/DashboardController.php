@@ -16,7 +16,7 @@ class DashboardController extends Controller
      */
     public function dashboard()
     {
-        return redirect()->route('admin.teams.index');
+        return redirect()->route('admin.pages.homepage');
     }
 
     public function changePassword()

@@ -27,7 +27,7 @@ class SettingsComposer
     public function create(View $view)
     {
         $setting = Setting::first() ?? new Setting();
-        if(!$setting->company_logo) $setting->company_logo = 'admin/global/images/logo.png';
+        if(!$setting->company_logo) $setting->company_logo = 'frontend-assets/img/logo.jpg';
         if(!$setting->company_name) $setting->company_name = env('APP_NAME');
         
         $view->with('setting', $setting);

@@ -9,7 +9,7 @@
 
     <div class="navbar-collapse collapse" id="navbar-footer">
         <span class="navbar-text">
-            &copy; {{date('Y')}}. <a href="{{ url('/') }}" target="_blank" class="text-primary">{{ $setting->company_name }}</a>
+            &copy; {{date('Y')}}. <a href="{{ url('/') }}" target="_blank" style="color: #C8A46A;">{{ $setting->company_name }}</a>
         </span>
     </div>
 </div>
