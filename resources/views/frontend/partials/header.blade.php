@@ -1,33 +1,23 @@
 <head>
-    <!-- ========== Meta Tags ========== -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Urane - Insurance Company HTML Template " />
+    <meta name="description" content="Professional career consultancy offering pathway guidance, education support, and career advisory services, with a strong focus on healthcare and graduate opportunities." />
 
-    <!-- ========== Page Title ========== -->
-    <title>Trnty</title>
+    <title>Karissa Subedi Career Consultancy Services | Professional Career Guidance</title>
 
-    <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="{{ asset('frontend-assets/img/favicon.png') }}" type="image/x-icon" />
 
-    <!-- ========== Start Stylesheet ========== -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link href="{{ asset('frontend-assets/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('frontend-assets/css/font-awesome.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/magnific-popup.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/swiper-bundle.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/animate.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/validnavs.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/helper.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/unit-test.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/custom_css/style.css?v=1.2') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/custom_css/responsive.css') }}" rel="stylesheet" />
-    <link rel="stylesheet"
-       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <link href="{{ asset('frontend-assets/custom_css/style.css?v=3.0') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend-assets/custom_css/responsive.css?v=3.0') }}" rel="stylesheet" />
 
-    <!-- ========== End Stylesheet ========== -->
     @yield('css')
-
 </head>

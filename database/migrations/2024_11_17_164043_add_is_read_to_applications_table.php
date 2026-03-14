@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('applications', function (Blueprint $table) {
-            $table->boolean('is_read')->default(false);
-            //
+            if (!Schema::hasColumn('applications', 'is_read')) {
+                $table->boolean('is_read')->default(false);
+            }
         });
     }
 

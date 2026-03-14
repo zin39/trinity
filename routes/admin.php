@@ -59,9 +59,9 @@ Route::middleware('auth:admin')->group(function(){
     Route::get('/admin/applications/fetch-new', [ApplicationController::class, 'fetchNewApplications'])->name('applications.fetchNew');
     Route::resource('applications', ApplicationController::class);
 
-    Route::get('/consultation-requests/{id}/mark-as-read', [ ConsultationRequestController::class, 'markAsRead'])->name('applications.markAsRead');
-    Route::get('/admin/consultation-requests/unread-count', [ConsultationRequestController::class, 'getUnreadCount'])->name('applications.unreadCount');
-    Route::get('/admin/consultation-requests/fetch-new', [ConsultationRequestController::class, 'fetchNewApplications'])->name('applications.fetchNew');
+    Route::get('/consultation-requests/{id}/mark-as-read', [ConsultationRequestController::class, 'markAsRead'])->name('consultation-requests.markAsRead');
+    Route::get('/admin/consultation-requests/unread-count', [ConsultationRequestController::class, 'getUnreadCount'])->name('consultation-requests.unreadCount');
+    Route::get('/admin/consultation-requests/fetch-new', [ConsultationRequestController::class, 'fetchNewApplications'])->name('consultation-requests.fetchNew');
     Route::resource('consultation-requests', ConsultationRequestController::class);
 
     Route::resource('partners', PartnerController::class);
@@ -69,11 +69,10 @@ Route::middleware('auth:admin')->group(function(){
 
     // Page Management
     Route::get('pages/homepage', [AllPageController::class, 'homepage'])->name('pages.homepage');
-    Route::get('pages/registered_nurses', [AllPageController::class, 'registeredNurses'])->name('pages.registered_nurses');
-    Route::get('pages/healthcare_organizations', [AllPageController::class, 'healthcareOrganizations'])->name('pages.healthcare_organizations');
-    Route::get('pages/why_choose_us', [AllPageController::class, 'whyChooseUs'])->name('pages.why_choose_us');
-    Route::get('pages/privacy_policy', [AllPageController::class, 'privacyPolicy'])->name('pages.privacy_policy');
-    Route::get('pages/apply_now', [AllPageController::class, 'applyNow'])->name('pages.apply_now');
+    Route::get('pages/about', [AllPageController::class, 'aboutPage'])->name('pages.about');
+    Route::get('pages/services', [AllPageController::class, 'servicesPage'])->name('pages.services');
+    Route::get('pages/information_sessions', [AllPageController::class, 'informationSessionsPage'])->name('pages.information_sessions');
+    Route::get('pages/contact', [AllPageController::class, 'contactPage'])->name('pages.contact');
 
     Route::post('pages/savepage', [AllPageController::class, 'save'])->name('pages.savepage');
     Route::post('pages/save-previllages', [AllPageController::class, 'savePrevillage'])->name('pages.save-previllages');

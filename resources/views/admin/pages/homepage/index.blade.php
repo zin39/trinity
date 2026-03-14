@@ -2,117 +2,66 @@
 @section('title')Homepage Settings @stop
 @section('breadcrum')Homepage Settings @stop
 
-@section('script')
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-<script src="{{ asset('admin/js/repeater.js')}}"></script>
-<script>
-    angular.element(document).ready(function() {
-        angular.bootstrap(document.getElementById("hire-now-app"), ['Repeater']);
-    });
-</script>
-@stop 
-
 @section('content')
 <style>
-    .nav-sidebar .nav-link {
-        color: #333;
-    }
-    .nav-sidebar .nav-link.active {
-        background-color: #00206045;
-        color: #002060;
-    }
-    .nav-sidebar .nav-item:not(.nav-item-header):first-child {
-        padding-top: 0;
-    }
-    .nav-sidebar .nav-item:not(.nav-item-header):last-child {
-        padding-bottom: 0;
-    }
+    .nav-sidebar .nav-link { color: #333; }
+    .nav-sidebar .nav-link.active { background-color: #00206045; color: #002060; }
+    .nav-sidebar .nav-item:not(.nav-item-header):first-child { padding-top: 0; }
+    .nav-sidebar .nav-item:not(.nav-item-header):last-child { padding-bottom: 0; }
 </style>
 @php
-    $active = request('active', 'home-banner-area');
+    $active = request('active', 'home-hero');
 @endphp
-<!-- Form inputs -->
 <div class="d-flex">
     <div class="sidebar sidebar-component sidebar-expand-lg bg-transparent shadow-none pr-2">
         <div class="sidebar-content">
             <div class="card">
-                <div class="">
-                    <ul class="nav nav-sidebar" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a href="#home-banner-area" class="nav-link {{ $active == 'home-banner-area' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
-                                <i class="icon-images2 me-2"></i>
-                                Banner Area
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="#home-nurses-testimonials-area" class="nav-link {{ $active == 'home-nurses-testimonials-area' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
-                                <i class="icon-images2 me-2"></i>
-                               Testimonials Area
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="#home-registered-nurse-take-step" class="nav-link {{ $active == 'home-registered-nurse-take-step' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
-                                <i class="icon-images2 me-2"></i>
-                               Take a step Area
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="#home-membership-previllage" class="nav-link {{ $active == 'home-membership-previllage' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
-                                <i class="icon-images2 me-2"></i>
-                              Membership Previllage Area
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="#home-latest-news" class="nav-link {{ $active == 'home-latest-news' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
-                                <i class="icon-images2 me-2"></i>
-                            Latest News area
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a href="#home-how-to-get-started" class="nav-link {{ $active == 'home-how-to-get-started' ? 'active' : '' }}" data-toggle="tab" aria-selected="true" role="tab">
-                                <i class="icon-images2 me-2"></i>
-                              How to get Started Area
-                            </a>
-                        </li>
-                       
-                    </ul>
-                </div>
+                <ul class="nav nav-sidebar" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a href="#home-hero" class="nav-link {{ $active == 'home-hero' ? 'active' : '' }}" data-toggle="tab" role="tab">
+                            <i class="icon-images2 me-2"></i> Hero Section
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#home-intro" class="nav-link {{ $active == 'home-intro' ? 'active' : '' }}" data-toggle="tab" role="tab">
+                            <i class="icon-images2 me-2"></i> Introduction
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#home-why-choose-us" class="nav-link {{ $active == 'home-why-choose-us' ? 'active' : '' }}" data-toggle="tab" role="tab">
+                            <i class="icon-images2 me-2"></i> Why Choose Us
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#home-services-preview" class="nav-link {{ $active == 'home-services-preview' ? 'active' : '' }}" data-toggle="tab" role="tab">
+                            <i class="icon-images2 me-2"></i> Services Preview
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#home-closing-cta" class="nav-link {{ $active == 'home-closing-cta' ? 'active' : '' }}" data-toggle="tab" role="tab">
+                            <i class="icon-images2 me-2"></i> Closing CTA
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
     <div class="tab-content flex-fill">
-        <div class="tab-pane fade {{ $active == 'home-banner-area' ? 'active show' : '' }}" id="home-banner-area">
-            @include('admin.pages.homepage.partials.banner-area')
+        <div class="tab-pane fade {{ $active == 'home-hero' ? 'active show' : '' }}" id="home-hero">
+            @include('admin.pages.homepage.partials.home-hero')
         </div>
-
-        <div class="tab-pane fade {{ $active == 'home-nurses-testimonials-area' ? 'active show' : '' }}" id="home-nurses-testimonials-area">
-            @include('admin.pages.homepage.partials.home-nurses-testimonials-area')
+        <div class="tab-pane fade {{ $active == 'home-intro' ? 'active show' : '' }}" id="home-intro">
+            @include('admin.pages.homepage.partials.home-intro')
         </div>
-
-        <div class="tab-pane fade {{ $active == 'home-registered-nurse-take-step' ? 'active show' : '' }}" id="home-registered-nurse-take-step">
-            @include('admin.pages.homepage.partials.home-registered-nurse-take-step')
+        <div class="tab-pane fade {{ $active == 'home-why-choose-us' ? 'active show' : '' }}" id="home-why-choose-us">
+            @include('admin.pages.homepage.partials.home-why-choose-us')
         </div>
-
-        <div class="tab-pane fade {{ $active == 'home-membership-previllage' ? 'active show' : '' }}" id="home-membership-previllage">
-            @include('admin.pages.homepage.partials.home-membership-previllage')
+        <div class="tab-pane fade {{ $active == 'home-services-preview' ? 'active show' : '' }}" id="home-services-preview">
+            @include('admin.pages.homepage.partials.home-services-preview')
         </div>
-
-        <div class="tab-pane fade {{ $active == 'home-latest-news' ? 'active show' : '' }}" id="home-latest-news">
-            @include('admin.pages.homepage.partials.home-latest-news')
+        <div class="tab-pane fade {{ $active == 'home-closing-cta' ? 'active show' : '' }}" id="home-closing-cta">
+            @include('admin.pages.homepage.partials.home-closing-cta')
         </div>
-
-        <div class="tab-pane fade {{ $active == 'home-how-to-get-started' ? 'active show' : '' }}" id="home-how-to-get-started">
-            @include('admin.pages.homepage.partials.home-how-to-get-started')
-        </div>
-
-                       
-                       
-
-
-      
     </div>
 </div>
-
 @stop
-
-

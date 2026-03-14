@@ -129,15 +129,13 @@
                     $menu_active = $Route[1] == 'pages';
                 @endphp
                 <li class="nav-item nav-item-submenu {{ $menu_active ? 'nav-item-open' : '' }}">
-                    <a href="#" class="nav-link" data-popup="tooltip" data-original-title="Healthcare Professionals" data-placement="right" data-container=".card-sidebar-mobile"><i class="icon-user-tie"></i> <span>Page Management</span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Home Page" style="{{ $menu_active ? 'display: block' : '' }}">
-                        <li class="nav-item"><a href="{{ route('admin.pages.homepage') }}" class="nav-link @if($Route[2]=='homepage') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Home Page</a></li>
-                        <li class="nav-item"><a href="{{ route('admin.pages.registered_nurses') }}" class="nav-link @if($Route[2]=='registered_nurses') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Registered Nurses</a></li>
-                        <li class="nav-item"><a href="{{ route('admin.pages.healthcare_organizations') }}" class="nav-link @if($Route[2]=='healthcare_organizations') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Healthcare Organizations</a></li>
-                        <li class="nav-item"><a href="{{ route('admin.pages.why_choose_us') }}" class="nav-link @if($Route[2]=='why_choose_us') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Why Choose Us</a></li>
-                        <li class="nav-item"><a href="{{ route('admin.pages.privacy_policy') }}" class="nav-link @if($Route[2]=='privacy_policy') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Privacy Policy</a></li>
-                        <li class="nav-item"><a href="{{ route('admin.pages.apply_now') }}" class="nav-link @if($Route[2]=='apply_now') active @endif" data-popup="tooltip" data-original-title="Basic Settings" data-placement="right" data-container=".card-sidebar-mobile">Apply Now</a></li>
-
+                    <a href="#" class="nav-link" data-popup="tooltip" data-original-title="Page Management" data-placement="right" data-container=".card-sidebar-mobile"><i class="icon-user-tie"></i> <span>Page Management</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Page Management" style="{{ $menu_active ? 'display: block' : '' }}">
+                        <li class="nav-item"><a href="{{ route('admin.pages.homepage') }}" class="nav-link @if(($Route[2] ?? '')=='homepage') active @endif" data-popup="tooltip" data-original-title="Home Page" data-placement="right" data-container=".card-sidebar-mobile">Home Page</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.about') }}" class="nav-link @if(($Route[2] ?? '')=='about') active @endif" data-popup="tooltip" data-original-title="About" data-placement="right" data-container=".card-sidebar-mobile">About</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.services') }}" class="nav-link @if(($Route[2] ?? '')=='services') active @endif" data-popup="tooltip" data-original-title="Services" data-placement="right" data-container=".card-sidebar-mobile">Services</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.information_sessions') }}" class="nav-link @if(($Route[2] ?? '')=='information_sessions') active @endif" data-popup="tooltip" data-original-title="Information Sessions" data-placement="right" data-container=".card-sidebar-mobile">Information Sessions</a></li>
+                        <li class="nav-item"><a href="{{ route('admin.pages.contact') }}" class="nav-link @if(($Route[2] ?? '')=='contact') active @endif" data-popup="tooltip" data-original-title="Contact" data-placement="right" data-container=".card-sidebar-mobile">Contact</a></li>
                     </ul>
                 </li>
 

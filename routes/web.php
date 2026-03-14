@@ -1,21 +1,13 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
-
-Route::get('/registered-nurses', [HomeController::class, 'registeredNurse']);
-
-Route::get('/apply-now', [HomeController::class, 'applyNow'])->name('apply.now.view');
-Route::post('/apply-now', [ApplicationController::class, 'store'])->name('apply.now');
-Route::post('/request-a-consultation', [ApplicationController::class, 'saveConsultation'])->name('apply.save-consultation');
-
-Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy']);
-
-Route::get('/healthcare-organizations', [HomeController::class, 'healthcareOrganizations']);
-
-Route::get('/why-choose-us', [HomeController::class, 'whyChooseUs']);
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/information-sessions', [HomeController::class, 'informationSessions'])->name('information-sessions');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy');

@@ -36,42 +36,40 @@ class ConsultationRequestController extends Controller
 
     public function markAsRead($id)
     {
-        $application = Application::findOrFail($id);
+        $consultationRequest = ConsultationRequest::findOrFail($id);
 
-        // Update the 'is_read' column to true
-        $application->update(['is_read' => true]);
+        $consultationRequest->update(['is_read' => true]);
 
-        // Get the count of remaining unread applications
-        $remainingUnreadCount = Application::where('is_read', false)->count();
+        $remainingUnreadCount = ConsultationRequest::where('is_read', false)->count();
 
-        // Return JSON response if called via AJAX
         return response()->json([
-            'message' => 'Application marked as read',
+            'message' => 'Consultation request marked as read',
             'remaining_unread' => $remainingUnreadCount,
         ]);
     }
+
     public function getUnreadCount()
     {
-        $unreadCount = Application::where('is_read', false)->count();
+        $unreadCount = ConsultationRequest::where('is_read', false)->count();
+
         return response()->json(['unreadCount' => $unreadCount]);
     }
+
     public function fetchNewApplications(Request $request)
     {
         $request->validate([
-                'last_app_id' => 'integer'
-            ]);
+            'last_app_id' => 'integer',
+        ]);
 
-            // Get the most recent application ID from the request, defaulting to 36
-            $lastAppId = $request->input('last_app_id', 36);
+        $lastAppId = $request->input('last_app_id', 0);
 
-            // Fetch applications that are unread and have an ID greater than lastAppId
-            $applications = Application::where('is_read', false)
-                                        ->where('id', '>', $lastAppId)
-                                        ->orderBy('created_at', 'desc')
-                                        ->get();
+        $consultationRequests = ConsultationRequest::where('is_read', false)
+            ->where('id', '>', $lastAppId)
+            ->orderBy('created_at', 'desc')
+            ->get();
 
-            return response()->json([
-                'applications' => $applications
-            ]);
+        return response()->json([
+            'applications' => $consultationRequests,
+        ]);
     }
 }

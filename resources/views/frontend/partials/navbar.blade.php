@@ -1,191 +1,51 @@
-<!-- Start Header Top
-    ============================================= -->
-  <!-- Start Header Top
-    ============================================= -->
-<!-- TODO  -->
-<!-- 1. Navbar buttons not working  -->
-<!-- 2. fix the scrolling in logos and testimonials  -->
-<!-- 3. Add sensible drop down items in contact mode in apply now  -->
-<!-- 4. Add country in the drop down menu of form  -->
-<!-- 5. Add 8 numbers in the experience working  -->
-<!-- 6. Open calender when clicked on the numbers in input box. -->
-<!-- 8. Add please select in every down.  -->
-<!-- 9. Add captcha in the apply now form and only the form should be submitted . -->
-<!-- 10. Request a consultation button in healthcare organization page should give a pop just like in contact us butotn. -->
-<!-- 11. Add a padding in every page for How does the karini step partnership work. -->
-<!-- 12. Debug the issue of dashboard -->
-<!-- 13. Show the application list in the sidebar below testimonials -->
-<!-- 14. Change logo in login. -->
-
-
 @php
-  $setting = \App\Models\Setting::firstOrFail();
+    $setting = \App\Models\Setting::first();
+    $currentPath = request()->path();
 @endphp
-<div class="" id="top-bar">
-      <div class="d-flex justify-content-between " style="background:#013155">
-        <div class="">
-          <p class="mb-0 text-white p-3 r_topbar">
-            <span>Big news, let's meet at Cebu Doctors University for our next intake! </span>
-            <a href="" class="read-more" style="margin-left:0;color:#10cdd4"> &nbsp;Read more</a>
-          </p>
-        </div>
-        <div class="bg-primary">
-          <div class="cross-div">
-            <div class="social">
-              <ul>
-                <li>
-                  <a href="#" id="top-bar-cross">
-                    <i class="fas fa-times"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-  <!-- End Header Top -->
-  <!-- Header
-    ============================================= -->
-  <header>
-    <!-- Start Navigation -->
-    <nav class="navbar mobile-sidenav navbar-style-two navbar-sticky validnavs">
-      <!-- Start Top Search -->
-      <div class="top-search">
-        <div class="container-xl">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-search"></i></span>
-            <input type="text" class="form-control" placeholder="Search" />
-            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-          </div>
-        </div>
-      </div>
-      <!-- End Top Search -->
-      <div class="d-flex w-100 justify-content-between align-center hidden-lg">
-        <div class="d-flex align-items-center">
-          <a class="" href="/">
-                @if($setting->company_logo)
-                    <img src="/{{$setting->company_logo}}" alt="Logo" style="height:5rem" />
-                @else
-                    <img src="/frontend-assets/img/new_logo.png" alt="Logo" style="height:5rem" />
-                @endif
-          </a>
-        <!-- <div class="button lg-0 apply-btn "> -->
 
-        <!-- </div> -->
-        </div>
-        <div class="d-flex align-items-center">
-          <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply
-            Now</a>
-        </div>
-        <div class=>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-            <i class="fa fa-bars"></i>
-          </button>
+<nav class="site-navbar">
+    <div class="navbar-inner">
+        <!-- Brand -->
+        <a href="{{ route('home') }}" class="navbar-brand">
+            <div class="brand-monogram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
+                    <rect width="48" height="48" rx="6" fill="#4A3428"/>
+                    <text x="24" y="33" text-anchor="middle" font-family="'Playfair Display', 'Georgia', serif" font-size="24" font-weight="700" fill="#C8A46A" letter-spacing="-1">KS</text>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">Karissa Subedi</span>
+                <span class="brand-tagline">Career Consultancy Services</span>
+            </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <ul class="navbar-nav-links">
+            <li><a href="{{ route('home') }}" class="{{ $currentPath === '/' ? 'active' : '' }}">Home</a></li>
+            <li><a href="{{ route('about') }}" class="{{ $currentPath === 'about' ? 'active' : '' }}">About</a></li>
+            <li><a href="{{ route('services') }}" class="{{ $currentPath === 'services' ? 'active' : '' }}">Services</a></li>
+            <li><a href="{{ route('information-sessions') }}" class="{{ $currentPath === 'information-sessions' ? 'active' : '' }}">Information Sessions</a></li>
+            <li><a href="{{ route('contact') }}" class="{{ $currentPath === 'contact' ? 'active' : '' }}">Contact</a></li>
+        </ul>
+
+        <!-- CTA + Hamburger -->
+        <div class="navbar-cta">
+            <a href="{{ route('contact') }}" class="btn-gold d-none d-lg-inline-block">Book a Consultation</a>
+            <button class="navbar-toggle-btn ms-3" type="button" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </div>
 
-      <div class="navbar-right d-flex align-items-center w-100 " >
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div style="width:20%;    display: flex; justify-content: center;" class="hidden-sm-flex">
-             <a href="/">
-                @if($setting->company_logo)
-                    <img src="/{{$setting->company_logo}}" alt="Logo" style="height:5rem" />
-                @else
-                    <img src="/frontend-assets/img/new_logo.png" alt="Logo" style="height:5rem" />
-                @endif
-            </a>
-        </div>
-        <div class="collapse navbar-collapse w-100 " id="navbar-menu"  style="width:60%">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-            <i class="fa fa-times"></i>
-          </button>
-
-          <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-            <li class="">
-              <a href="/registered-nurses" class="active" >Registered Nurses</a>
-            </li>
-            <li class="">
-              <a href="/healthcare-organizations" >Healthcare Organizations</a>
-            </li>
-            <li class="">
-              <a href="/why-choose-us" >Why Choose Us</a>
-            </li>
-            <li>
-              <div class="button mt-4 mt-lg-0 apply-btn  ml-4">
-                <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply Now</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-
-        <div class="attr-right"  style="width:20%">
-          <!-- Start Atribute Navigation -->
-          <div class="attr-nav attr-box">
-            <ul>
-              <li class="side-menu">
-                <a href="#">
-                  <span class="bar-1"></span>
-                  <span class="bar-2"></span>
-                  <span class="bar-3"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- End Atribute Navigation -->
-
-          <!-- Start Side Menu -->
-          <div class="side">
-            <a href="#" class="close-side"><i class="fas fa-times"></i></a>
-            <div class="widget">
-              <div class="logo search-bar">
-                <form class="d-flex">
-                  <!-- <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-                  <button class="btn-outline-success animate search-button d-flex align-items-center ps-3 color-white"
-                    type="submit">
-                    Search -->
-                  </button>
-                </form>
-              </div>
-              <div class="sidebar-content">
-               <a href="/registered-nurses">
-                <h4 class="sidebar-title mb-2" style="font-size: 24px !important">
-                  Registered Nurses
-                </h4>
-              </a>
-
-              </div>
-              <div class="sidebar-content">
-               <a href="/healthcare-organizations">
-                <h4 class="sidebar-title mb-2" style="font-size: 24px !important">
-                  Healthcare Organizations
-                </h4>
-              </a>
-
-              </div>
-              <div class="sidebar-content">
-               <a href="/why-choose-us">
-                <h3 class="sidebar-title mb-2" style="font-size: 24px !important">
-                 Why Choose Us
-                </h3>
-              </div>
-              <div class="sidebar-content mt-4">
-                <div class="button mt-4 mt-lg-0 apply-btn  ml-4">
-                  <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply Now</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- End Side Menu -->
-        </div>
-        <!-- Main Nav -->
-      </div>
-      <!-- Overlay screen for menu -->
-      <div class="overlay-screen"></div>
-      <!-- End Overlay screen for menu -->
-    </nav>
-    <!-- End Navigation -->
-  </header>
-  <!-- End Header -->
+    <!-- Mobile Nav -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('about') }}">About</a></li>
+            <li><a href="{{ route('services') }}">Services</a></li>
+            <li><a href="{{ route('information-sessions') }}">Information Sessions</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
+        </ul>
+        <a href="{{ route('contact') }}" class="btn-gold">Book a Consultation</a>
+    </div>
+</nav>

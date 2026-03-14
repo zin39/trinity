@@ -2,53 +2,38 @@
 
 @section('content')
 
- 
-  @php
-      $item = json_decode($sections['privacy-policy-banner']);
-  @endphp
+@php
+    $content = optional(isset($sections['privacy-policy-main-content']) ? json_decode($sections['privacy-policy-main-content']) : null);
+@endphp
 
-  <div class=""
-    style="background-image: url('{{$item->image}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-  
-    <div style="background: #0000003d;">
-      <div class="registered_nurse_banner_div">
-        <div class="container">
-          <div class="row align-center">
-            <div class="col-lg-12 pr-50 pr-md-15 pr-xs-15">
-              <div class="banner-four-info">
-                <h1 class="registered_nurse_h1">
-                   {!! $item->tagline !!}
-                </h1>
-              </div>
-            </div>
-          </div>
+<!-- Page Hero -->
+<div class="page-hero">
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="breadcrumb-text">Home &mdash; Privacy Policy</p>
+    </div>
+</div>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="privacy-content fade-in-section">
+            <div class="gold-divider gold-divider-left"></div>
+            @if($content && $content->description)
+                {!! $content->description !!}
+            @else
+                <h4>Privacy Policy</h4>
+                <p>Karissa Subedi Career Consultancy Services is committed to protecting your privacy. This policy outlines how we collect, use, and safeguard your personal information.</p>
+                <h5>Information We Collect</h5>
+                <p>We collect personal information that you voluntarily provide when you contact us or submit an enquiry.</p>
+                <h5>How We Use Your Information</h5>
+                <p>We use your information to process enquiries, communicate with you about our services, and improve our offerings.</p>
+                <h5>Data Security</h5>
+                <p>We implement appropriate security measures to protect your personal information against unauthorised access or disclosure.</p>
+                <h5>Contact Us</h5>
+                <p>If you have questions about our privacy policy, please contact us via our <a href="{{ route('contact') }}">contact page</a>.</p>
+            @endif
         </div>
-      </div>
     </div>
-  </div>
+</section>
 
-  @php
-      $item = json_decode($sections['privacy-policy-main-content']);
-  @endphp
-  <div class="text-center  privacy_policy privacy-points" style="padding: 3rem 1rem;">
-  {!! $item->description !!}
-  </div>
-
-  <div class="container mb-40 ">
-    <h3 class="title text-center">Registered Nurses</h3>
-    <p class="text-center default-paragraph mb-0 text-primary" style="line-height: 27px;">Are you ready to Take the <b>STEP</b> to your Australian dream? Apply Now!</p>
-    <div class="button mt-4 mt-lg-0 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Apply Now</a>
-    </div>
-  </div>
-
-  <div class="container mb-40">
-    <h3 class="title text-center">Healthcare Organizations</h3>
-    <p class="text-center default-paragraph mb-0 text-primary" style="line-height: 27px;">
-      Does your organization need registered nurses? We can help!
-      Contact us today!</p>
-    <div class="button mt-4 mt-lg-0 apply-btn text-center">
-      <a class="btn btn-theme animation rounded-md btn-md  bg-primary" href="/apply-now">Contact Us</a>
-    </div>
-  </div>
 @endsection

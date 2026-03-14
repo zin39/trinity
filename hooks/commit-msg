@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+# Enforces Conventional Commits format on commit messages.
+# https://www.conventionalcommits.org/
+#
+
+commit_msg_file="$1"
+commit_msg=$(head -1 "$commit_msg_file")
+
+# Allow merge and revert commits to pass through
+if echo "$commit_msg" | grep -qE '^(Merge|Revert) '; then
+    exit 0
+fi
+
+# Validate against Conventional Commits pattern
+if ! echo "$commit_msg" | grep -qE '^(feat|fix|docs|style|refactor|test|chore)(\([a-zA-Z0-9_-]+\))?: .+'; then
+    echo ""
+    echo "ERROR: Commit message does not follow Conventional Commits format."
+    echo ""
+    echo "Expected: <type>(<optional scope>): <description>"
+    echo ""
+    echo "Types: feat, fix, docs, style, refactor, test, chore"
+    echo ""
+    echo "Examples:"
+    echo "  feat: add user registration form"
+    echo "  fix(auth): resolve login redirect loop"
+    echo "  docs: update API documentation"
+    echo "  chore(deps): upgrade Laravel to v11.10"
+    echo ""
+    echo "Your message: $commit_msg"
+    echo ""
+    exit 1
+fi

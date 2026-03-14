@@ -2,69 +2,61 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\PageSection;
-use App\Models\Award;
-use App\Models\Testimonial;
-use App\Models\Team;
-use App\Models\Blog;
-use Rinvex\Country\Country;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        $sections = PageSection::whereIn('slug', ['home-banner-area', 'home-nurses-testimonials-area', 'home-registered-nurse-take-step', 'home-membership-previllage', 'home-latest-news', 'home-how-to-get-started'])->pluck('content', 'slug');
-        $awards = Award::where('status',1)->get();
-        $testimonials = Testimonial::where('status',1)->get();
-        $teams = Team::where('status',1)->get();
-        $blogs = Blog::where('status',1)->get();
-        return view('frontend.index',compact('sections','awards','testimonials','teams','blogs'));
+        $sections = PageSection::whereIn('slug', [
+            'home-hero', 'home-intro', 'home-why-choose-us', 'home-services-preview', 'home-closing-cta',
+        ])->pluck('content', 'slug');
+
+        return view('frontend.index', compact('sections'));
     }
 
-    public function registeredNurse()
+    public function about()
     {
-        $sections = PageSection::whereIn('slug', ['registered-nurse-banner', 'registered-nurse-main-content', 'registered-nurse-how-to-qualify', 'registered-nurse-membership-previllage', 'registered-nurse-how-to-get-started'])->pluck('content', 'slug');
-        return view('frontend.registered_nurse',compact('sections'));
+        $sections = PageSection::whereIn('slug', [
+            'about-main', 'about-mission', 'about-vision', 'about-values',
+        ])->pluck('content', 'slug');
+
+        return view('frontend.about', compact('sections'));
     }
 
-    public function applyNow()
+    public function services()
     {
-        $sections = PageSection::whereIn('slug', ['apply-now-banner'])->pluck('content', 'slug');
-        $countries = [];
-        return view('frontend.apply_now', compact('sections','countries'));
+        $sections = PageSection::whereIn('slug', [
+            'services-main', 'services-items', 'services-cta',
+        ])->pluck('content', 'slug');
+
+        return view('frontend.services', compact('sections'));
+    }
+
+    public function informationSessions()
+    {
+        $sections = PageSection::whereIn('slug', [
+            'info-sessions-main', 'info-sessions-graduates', 'info-sessions-nursing', 'info-sessions-cta',
+        ])->pluck('content', 'slug');
+
+        return view('frontend.information_sessions', compact('sections'));
+    }
+
+    public function contact()
+    {
+        $sections = PageSection::whereIn('slug', [
+            'contact-main', 'contact-details',
+        ])->pluck('content', 'slug');
+
+        return view('frontend.contact', compact('sections'));
     }
 
     public function privacyPolicy()
     {
-        $sections = PageSection::whereIn('slug', ['privacy-policy-banner', 'privacy-policy-main-content','privacy-policy-apply-section'])->pluck('content', 'slug');
+        $sections = PageSection::whereIn('slug', [
+            'privacy-policy-banner', 'privacy-policy-main-content',
+        ])->pluck('content', 'slug');
+
         return view('frontend.privacy_policy', compact('sections'));
-    }
-
-    public function healthcareOrganizations()
-    {
-        $sections = PageSection::whereIn('slug', ['healthcare-organizations-banner', 'healthcare-organizations-main-content','healthcare-organizations-membership-previllage', 'healthcare-organizations-how-to-get-started'])->pluck('content', 'slug');
-        return view('frontend.healthcare_organizations',compact('sections'));
-    }
-
-    public function whyChooseUs()
-    {
-        $sections = PageSection::whereIn('slug', ['why-choose-us-banner', 'why-choose-us-main-content','why-choose-us-membership-previllage', 'why-choose-us-apply-section'])->pluck('content', 'slug');
-        return view('frontend.why_choose_us',compact('sections'));
     }
 }

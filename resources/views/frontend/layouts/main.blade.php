@@ -2,27 +2,11 @@
 <html lang="en">
     @include('frontend.partials.header')
 
-    <body class="color-style-three">
-        <!-- Start Preloader 
-            ============================================= -->
-        <div id="preloader">
-            <div class="urane-loader-inner">
-            <div class="urane-loader">
-                <span class="urane-loader-item"></span>
-                <span class="urane-loader-item"></span>
-                <span class="urane-loader-item"></span>
-                <span class="urane-loader-item"></span>
-                <span class="urane-loader-item"></span>
-                <span class="urane-loader-item"></span>
-                <span class="urane-loader-item"></span>
-                <span class="urane-loader-item"></span>
-            </div>
-            </div>
-        </div>
-        <!-- preloader end -->
-
+    <body>
         @include('frontend.partials.navbar')
-        @yield('content')
+        <div class="page-content">
+            @yield('content')
+        </div>
         @include('frontend.partials.footer')
     </body>
 </html>
