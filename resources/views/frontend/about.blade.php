@@ -11,6 +11,9 @@
 
 <!-- Page Hero -->
 <div class="page-hero">
+    @if($main->hero_image ?? null)
+        <div class="page-hero-bg" style="background-image: url('/{{ $main->hero_image }}')"></div>
+    @endif
     <div class="container">
         <h1>{{ $main->heading ?? 'About Us' }}</h1>
         <p class="breadcrumb-text">Home &mdash; About</p>
@@ -21,12 +24,17 @@
 <section class="section-padding">
     <div class="container">
         <div class="row justify-content-center fade-in-section">
-            <div class="col-lg-8">
+            <div class="{{ ($main->about_image ?? null) ? 'col-lg-7' : 'col-lg-8' }}">
                 <div class="gold-divider"></div>
                 <div style="font-size: 1.05rem; line-height: 1.9; color: var(--color-coffee-brown);">
                     {!! nl2br(e($main->body ?? 'Karissa Subedi Career Consultancy Services was established with a vision to provide professional, supportive, and ethical career guidance for individuals seeking to build meaningful futures.')) !!}
                 </div>
             </div>
+            @if($main->about_image ?? null)
+            <div class="col-lg-5 mt-4 mt-lg-0 fade-in-section">
+                <img src="/{{ $main->about_image }}" alt="About Karissa Subedi Career Consultancy" class="about-side-image">
+            </div>
+            @endif
         </div>
     </div>
 </section>

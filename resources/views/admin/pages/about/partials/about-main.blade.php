@@ -4,7 +4,7 @@
 @endphp
 <div class="card">
     <div class="card-body">
-        <form method="POST" action="{{ route('admin.pages.savepage') }}">
+        <form method="POST" enctype="multipart/form-data" action="{{ route('admin.pages.savepage') }}">
             @csrf
             <input type="hidden" name="slug" value="{{ $slug }}">
             <input type="hidden" name="route" value="about">
@@ -18,6 +18,27 @@
                 <label class="col-form-label col-lg-3">Body Text:</label>
                 <div class="col-lg-9">
                     <textarea name="{{ $slug }}[body]" class="form-control" rows="8">{{ old($slug.'.body', $section->body) }}</textarea>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-form-label col-lg-3">Hero Background Image:</label>
+                <div class="col-lg-9">
+                    <input type="file" accept="image/*" name="{{ $slug }}[hero_image]" class="form-control">
+                    @if($section && ($section->hero_image ?? null))
+                        <img src="{{ asset($section->hero_image) }}" alt="Hero" style="height:80px;margin-top:8px;">
+                        <input type="hidden" name="{{ $slug }}[hero_image]" value="{{ $section->hero_image }}">
+                    @endif
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-form-label col-lg-3">About Image (side photo):</label>
+                <div class="col-lg-9">
+                    <input type="file" accept="image/*" name="{{ $slug }}[about_image]" class="form-control">
+                    @if($section && ($section->about_image ?? null))
+                        <img src="{{ asset($section->about_image) }}" alt="About" style="height:80px;margin-top:8px;">
+                        <input type="hidden" name="{{ $slug }}[about_image]" value="{{ $section->about_image }}">
+                    @endif
+                    <small class="text-muted">Displayed alongside the body text. Recommended: portrait orientation.</small>
                 </div>
             </div>
             <div class="text-right">

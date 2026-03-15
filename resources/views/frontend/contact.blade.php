@@ -9,6 +9,9 @@
 
 <!-- Page Hero -->
 <div class="page-hero">
+    @if($main->hero_image ?? null)
+        <div class="page-hero-bg" style="background-image: url('/{{ $main->hero_image }}')"></div>
+    @endif
     <div class="container">
         <h1>{{ $main->heading ?? 'Contact Us' }}</h1>
         <p class="breadcrumb-text">Home &mdash; Contact</p>

@@ -463,6 +463,7 @@ img {
     padding: 48px 0;
 }
 
+/* Overlay — adapts when background image is present */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -472,7 +473,13 @@ img {
     z-index: 1;
 }
 
-/* Decorative geometric pattern */
+/* When a bg image exists, reduce overlay opacity to let image show */
+.hero-section:has(.hero-bg-image)::before {
+    background:
+        linear-gradient(160deg, rgba(74,52,40,0.82) 0%, rgba(74,52,40,0.6) 40%, rgba(107,74,58,0.5) 100%);
+}
+
+/* Decorative geometric circles */
 .hero-section::after {
     content: '';
     position: absolute;
@@ -495,9 +502,10 @@ img {
     position: absolute;
     inset: 0;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     z-index: 0;
+    filter: saturate(0.7);
 }
 
 .hero-content {
@@ -862,6 +870,25 @@ img {
     border-radius: 50%;
 }
 
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    filter: saturate(0.6) brightness(0.7);
+}
+
+.page-hero:has(.page-hero-bg) {
+    position: relative;
+}
+
+.page-hero:has(.page-hero-bg)::after {
+    background:
+        linear-gradient(160deg, rgba(74,52,40,0.75) 0%, rgba(74,52,40,0.5) 100%);
+}
+
 .page-hero h1 {
     font-family: var(--font-heading);
     color: var(--color-white);
@@ -880,6 +907,19 @@ img {
     text-transform: uppercase;
     position: relative;
     z-index: 1;
+}
+
+/* ============================================
+   About Side Image
+   ============================================ */
+
+.about-side-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
+    max-height: 500px;
 }
 
 /* ============================================
