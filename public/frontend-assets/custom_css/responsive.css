@@ -116,10 +116,6 @@
     }
 
     .page-hero {
-        padding: 120px 0 56px;
-    }
-
-    .page-hero:has(.page-hero-bg) {
         padding: 160px 0 100px;
         min-height: 400px;
     }
@@ -354,10 +350,6 @@
     }
 
     .page-hero {
-        padding: 120px 0 64px;
-    }
-
-    .page-hero:has(.page-hero-bg) {
         padding: 180px 0 120px;
         min-height: 450px;
     }

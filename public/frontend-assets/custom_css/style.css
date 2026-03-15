@@ -463,21 +463,15 @@ img {
     padding: 48px 0;
 }
 
-/* Overlay — adapts when background image is present */
 .hero-section::before {
     content: '';
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(160deg, rgba(74,52,40,0.97) 0%, rgba(74,52,40,0.85) 40%, rgba(107,74,58,0.7) 100%);
+        linear-gradient(160deg, rgba(74,52,40,0.85) 0%, rgba(74,52,40,0.65) 40%, rgba(107,74,58,0.55) 100%);
     z-index: 1;
 }
 
-/* When a bg image exists, reduce overlay opacity to let image show */
-.hero-section:has(.hero-bg-image)::before {
-    background:
-        linear-gradient(160deg, rgba(74,52,40,0.82) 0%, rgba(74,52,40,0.6) 40%, rgba(107,74,58,0.5) 100%);
-}
 
 /* Decorative geometric circles */
 .hero-section::after {
@@ -842,16 +836,11 @@ img {
 
 .page-hero {
     background: var(--color-deep-brown);
-    padding: 96px 0 40px;
+    padding: 140px 0 80px;
+    min-height: 340px;
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-
-/* Taller hero when background image is present */
-.page-hero:has(.page-hero-bg) {
-    padding: 140px 0 80px;
-    min-height: 340px;
 }
 
 .page-hero::before {
