@@ -16,8 +16,8 @@
     <!-- Stylesheets -->
     <link href="{{ asset('frontend-assets/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('frontend-assets/css/font-awesome.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/custom_css/style.css?v=4.0') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/custom_css/responsive.css?v=4.0') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend-assets/custom_css/style.css?v=4.2') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend-assets/custom_css/responsive.css?v=4.2') }}" rel="stylesheet" />
 
     @yield('css')
 </head>

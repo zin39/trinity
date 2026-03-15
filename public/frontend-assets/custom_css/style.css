@@ -848,6 +848,12 @@ img {
     overflow: hidden;
 }
 
+/* Taller hero when background image is present */
+.page-hero:has(.page-hero-bg) {
+    padding: 140px 0 80px;
+    min-height: 340px;
+}
+
 .page-hero::before {
     content: '';
     position: absolute;
