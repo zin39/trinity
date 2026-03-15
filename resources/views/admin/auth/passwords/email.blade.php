@@ -10,7 +10,7 @@
 				<div>
 					<div class="text-center mb-3">
 						<div style="margin-bottom:12px;">
-							<img src="{{ asset('frontend-assets/img/logo-full.png') }}" alt="Karissa Subedi Career Consultancy Services" style="max-width:280px; height:auto;">
+							<img src="{{ asset('frontend-assets/img/logo.jpeg') }}" alt="Karissa Subedi Career Consultancy Services" style="max-width:280px; height:auto;">
 						</div>
 						<h5 class="mb-0 mt-2">Password Reset</h5>
 						<span class="d-block text-muted">Please provide email address</span>

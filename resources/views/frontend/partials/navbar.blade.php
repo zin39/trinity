@@ -7,13 +7,7 @@
     <div class="navbar-inner">
         <!-- Brand -->
         <a href="{{ route('home') }}" class="navbar-brand">
-            <div class="brand-monogram">
-                <img src="{{ asset('frontend-assets/img/icon.svg') }}" alt="KS" width="48" height="48">
-            </div>
-            <div class="brand-text">
-                <span class="brand-name">Karissa Subedi</span>
-                <span class="brand-tagline">Career Consultancy Services</span>
-            </div>
+            <img src="{{ asset('frontend-assets/img/logo.jpeg') }}" alt="Karissa Subedi Career Consultancy Services" class="navbar-logo">
         </a>
 
         <!-- Desktop Nav -->
