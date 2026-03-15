@@ -6,7 +6,8 @@
 
     <title>Karissa Subedi Career Consultancy Services | Professional Career Guidance</title>
 
-    <link rel="shortcut icon" href="{{ asset('frontend-assets/img/favicon.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('frontend-assets/img/favicon.png') }}" type="image/png" />
+    <link rel="apple-touch-icon" href="{{ asset('frontend-assets/img/apple-touch-icon.png') }}" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +17,8 @@
     <!-- Stylesheets -->
     <link href="{{ asset('frontend-assets/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('frontend-assets/css/font-awesome.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/custom_css/style.css?v=4.4') }}" rel="stylesheet" />
-    <link href="{{ asset('frontend-assets/custom_css/responsive.css?v=4.4') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend-assets/custom_css/style.css?v=4.5') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend-assets/custom_css/responsive.css?v=4.5') }}" rel="stylesheet" />
 
     @yield('css')
 </head>

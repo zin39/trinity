@@ -289,8 +289,8 @@ img {
 
 .navbar-brand .brand-monogram {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
     transition: var(--transition);
 }
 
@@ -298,10 +298,12 @@ img {
     transform: scale(1.05);
 }
 
+.navbar-brand .brand-monogram img,
 .navbar-brand .brand-monogram svg {
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: contain;
 }
 
 .navbar-brand .brand-text {
@@ -1338,10 +1340,12 @@ textarea.form-control-custom {
     margin-bottom: 0.75rem;
 }
 
+.footer-brand .footer-logo-mark img,
 .footer-brand .footer-logo-mark svg {
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: contain;
 }
 
 .footer-brand .footer-company-name {

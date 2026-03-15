@@ -9,10 +9,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="footer-brand">
                     <div class="footer-logo-mark">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
-                            <rect width="48" height="48" rx="6" fill="#C8A46A"/>
-                            <text x="24" y="33" text-anchor="middle" font-family="'Playfair Display', 'Georgia', serif" font-size="24" font-weight="700" fill="#FFFFFF" letter-spacing="-1">KS</text>
-                        </svg>
+                        <img src="{{ asset('frontend-assets/img/icon.svg') }}" alt="KS" width="44" height="44">
                     </div>
                     <p class="footer-company-name">Karissa Subedi Career Consultancy Services</p>
                     <p class="footer-tagline">Professional Career Guidance and Pathway Support</p>

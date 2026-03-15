@@ -8,10 +8,7 @@
         <!-- Brand -->
         <a href="{{ route('home') }}" class="navbar-brand">
             <div class="brand-monogram">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" aria-hidden="true">
-                    <rect width="48" height="48" rx="6" fill="#4A3428"/>
-                    <text x="24" y="33" text-anchor="middle" font-family="'Playfair Display', 'Georgia', serif" font-size="24" font-weight="700" fill="#C8A46A" letter-spacing="-1">KS</text>
-                </svg>
+                <img src="{{ asset('frontend-assets/img/icon.svg') }}" alt="KS" width="48" height="48">
             </div>
             <div class="brand-text">
                 <span class="brand-name">Karissa Subedi</span>
