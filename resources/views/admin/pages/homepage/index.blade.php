@@ -5,7 +5,7 @@
 @section('content')
 <style>
     .nav-sidebar .nav-link { color: #333; }
-    .nav-sidebar .nav-link.active { background-color: #4A342845; color: #4A3428; }
+    .nav-sidebar .nav-link.active { background-color: #4A2E1F45; color: #4A2E1F; }
     .nav-sidebar .nav-item:not(.nav-item-header):first-child { padding-top: 0; }
     .nav-sidebar .nav-item:not(.nav-item-header):last-child { padding-bottom: 0; }
 </style>

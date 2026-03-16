@@ -5,13 +5,13 @@
    ============================================ */
 
 :root {
-    --color-deep-brown: #4A3428;
-    --color-coffee-brown: #6B4A3A;
-    --color-warm-beige: #F5EFE8;
-    --color-premium-gold: #C8A46A;
-    --color-deep-gold: #A67C3C;
+    --color-deep-brown: #4A2E1F;
+    --color-coffee-brown: #2E2E2E;
+    --color-warm-beige: #FAF8F2;
+    --color-premium-gold: #99782e;
+    --color-deep-gold: #d8bf6b;
     --color-white: #FFFFFF;
-    --color-cream: #FAF7F2;
+    --color-cream: #FAF8F2;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
     --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);

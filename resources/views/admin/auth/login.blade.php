@@ -3,7 +3,7 @@
 @section('content')
 	<!-- Login form -->
 	<form method="POST" action="{{ route('admin.login') }}" class="login-form wmin-sm-400">
-		<div class="card mb-0" style="border-radius: 40px;background-color: gainsboro; border-top: 3px solid #C8A46A;">
+		<div class="card mb-0" style="border-radius: 40px;background-color: gainsboro; border-top: 3px solid #99782e;">
 			@csrf
 			<div class="card-body">
 				
@@ -12,7 +12,7 @@
 						<div style="margin-bottom:12px;">
 							<img src="{{ asset('frontend-assets/img/logo.jpeg') }}" alt="Karissa Subedi Career Consultancy Services" style="max-width:260px; height:auto;">
 						</div>
-						<h5 class="mb-0 mt-2">Login to <b style="color: #C8A46A;">Admin Panel</b></h5>
+						<h5 class="mb-0 mt-2">Login to <b style="color: #99782e;">Admin Panel</b></h5>
 						<span class="d-block text-muted">Your credentials</span>
 					</div>
 					
@@ -50,7 +50,7 @@
 					</div>
 
 					<div class="form-group">
-						<button type="submit" class="btn btn-block" style="background-color: #4A3428; color: #fff;"><b>Login</b></button>
+						<button type="submit" class="btn btn-block" style="background-color: #4A2E1F; color: #fff;"><b>Login</b></button>
 					</div>
 				</div>
 			</div>

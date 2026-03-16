@@ -4,10 +4,10 @@
 @endphp
 <style>
     .sidebar-dark .nav-sidebar .nav-item>.nav-link.active {
-        background-color: #6B4A3A;
+        background-color: #2E2E2E;
     }
     .sidebar-dark .nav-sidebar>.nav-item-open>.nav-link:not(.disabled) {
-        background-color: #6B4A3A;
+        background-color: #2E2E2E;
     }
     .nav-group-sub .nav-link {
         padding: 0.625rem 1.25rem 0.625rem 2.5rem;
@@ -27,7 +27,7 @@
     }
 </style>
 
-<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md" style="background-color: #4A3428">
+<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md" style="background-color: #4A2E1F">
 
     <!-- Sidebar mobile toggler -->
     <div class="sidebar-mobile-toggler text-center">

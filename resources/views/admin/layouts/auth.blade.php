@@ -17,8 +17,8 @@
 	<!-- /global stylesheets -->
 	<style>
 		body { font-family: 'Manrope', sans-serif; }
-		.text-primary { color: #4A3428 !important; }
-		.bg-primary { background-color: #4A3428 !important; }
+		.text-primary { color: #4A2E1F !important; }
+		.bg-primary { background-color: #4A2E1F !important; }
 	</style>
 	<!-- Core JS files -->
 	<script src="{{asset('admin/global/js/main/jquery.min.js')}}"></script>
