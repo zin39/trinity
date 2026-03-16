@@ -100,7 +100,7 @@ function markAsViewed(id) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data.message === 'Application marked as read') {
+        if (data.message === 'Consultation request marked as read') {
             const applicationRow = document.getElementById(`application-${id}`);
             if (applicationRow) {
                 // Check console to confirm function execution
@@ -138,13 +138,13 @@ function markAsViewed(id) {
                             lastAppId = application.id;  // Update lastAppId to the highest new ID
                         }
 
-                        console.log("New application data:", consultation-requests);
+                        console.log("New application data:", application);
 
-                        var row = '<tr id="application-' + consultation-requests.id + '" class="application-item unread">' +
-                                    '<td>' + consultation-requests.name + '</td>' +
-                                    '<td>' + consultation-requests.phone_number + '</td>' +
-                                    '<td>' + consultation-requests.email + '</td>' +
-                                    '<td>' + consultation-requests.country_of_birth + '</td>' +
+                        var row = '<tr id="application-' + application.id + '" class="application-item unread">' +
+                                    '<td>' + application.first_name + ' ' + application.last_name + '</td>' +
+                                    '<td>' + application.phone_number + '</td>' +
+                                    '<td>' + application.email + '</td>' +
+                                    '<td>' + application.company + '</td>' +
                                     '<td class="text-right">' +
                                         // View button
                                         '<a href="{{ url('admin/consultation-requests') }}/' + application.id + '" class="btn bg-success-400 btn-icon rounded-round" data-popup="tooltip" data-original-title="View" data-placement="bottom" onclick="markAsViewed(' + application.id + ')">' +

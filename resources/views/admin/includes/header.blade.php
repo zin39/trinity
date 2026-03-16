@@ -47,7 +47,7 @@
 <div class="navbar navbar-expand-md navbar-dark border-transparent" style="background-color: #4A3428">
     <div class="navbar-brand wmin-0 mr-5" style="padding-top:5px; padding-bottom:5px">
         <a href="{{route('admin.dashboard')}}" class="d-inline-block" style="display:flex !important; align-items:center; text-decoration:none;">
-            <img src="{{ asset('frontend-assets/img/icon.svg') }}" alt="KS" width="40" height="40" style="flex-shrink:0;">
+            <img src="{{ asset($setting->company_logo ?? 'frontend-assets/img/logo.jpeg') }}" alt="KS" width="40" height="40" style="flex-shrink:0;">
             <span style="margin-left:10px; display:flex; flex-direction:column; line-height:1.2;">
                 <span style="color:#fff; font-weight:600; font-size:0.9rem;">Karissa Subedi</span>
                 <span style="color:#C8A46A; font-size:0.6rem; text-transform:uppercase; letter-spacing:0.05em;">Career Consultancy Services</span>
