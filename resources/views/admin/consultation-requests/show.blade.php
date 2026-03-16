@@ -67,6 +67,36 @@
 
             <div class="row">
                 <div class="col-md-2">
+                    <b>Country</b>
+                </div>
+
+                <div class="col-md-10">
+                {{$consultationRequest->country ?? '-'}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <b>Organisation</b>
+                </div>
+
+                <div class="col-md-10">
+                {{$consultationRequest->organisation ?? '-'}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <b>Enquiry Type</b>
+                </div>
+
+                <div class="col-md-10">
+                {{ ucfirst($consultationRequest->enquiry_type ?? '-') }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
                     <b>Questions/Comments</b>
                 </div>
 

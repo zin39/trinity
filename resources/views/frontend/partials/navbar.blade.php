@@ -13,9 +13,10 @@
         <!-- Desktop Nav -->
         <ul class="navbar-nav-links">
             <li><a href="{{ route('home') }}" class="{{ $currentPath === '/' ? 'active' : '' }}">Home</a></li>
-            <li><a href="{{ route('about') }}" class="{{ $currentPath === 'about' ? 'active' : '' }}">About</a></li>
-            <li><a href="{{ route('services') }}" class="{{ $currentPath === 'services' ? 'active' : '' }}">Services</a></li>
-            <li><a href="{{ route('information-sessions') }}" class="{{ $currentPath === 'information-sessions' ? 'active' : '' }}">Information Sessions</a></li>
+            <li><a href="{{ route('about') }}" class="{{ $currentPath === 'about' ? 'active' : '' }}">About Us</a></li>
+            <li><a href="{{ route('candidate') }}" class="{{ $currentPath === 'candidate' ? 'active' : '' }}">Candidate</a></li>
+            <li><a href="{{ route('employer') }}" class="{{ $currentPath === 'employer' ? 'active' : '' }}">Employer</a></li>
+            <li><a href="{{ route('testimonials') }}" class="{{ $currentPath === 'testimonials' ? 'active' : '' }}">Testimonials</a></li>
             <li><a href="{{ route('contact') }}" class="{{ $currentPath === 'contact' ? 'active' : '' }}">Contact</a></li>
         </ul>
 
@@ -32,9 +33,10 @@
     <div class="mobile-nav">
         <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('about') }}">About</a></li>
-            <li><a href="{{ route('services') }}">Services</a></li>
-            <li><a href="{{ route('information-sessions') }}">Information Sessions</a></li>
+            <li><a href="{{ route('about') }}">About Us</a></li>
+            <li><a href="{{ route('candidate') }}">Candidate</a></li>
+            <li><a href="{{ route('employer') }}">Employer</a></li>
+            <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
         </ul>
         <a href="{{ route('contact') }}" class="btn-gold">Book a Consultation</a>

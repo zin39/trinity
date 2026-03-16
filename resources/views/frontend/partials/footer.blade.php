@@ -21,11 +21,12 @@
                 <h6 class="footer-heading">Quick Links</h6>
                 <ul class="footer-links">
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('about') }}">About</a></li>
-                    <li><a href="{{ route('services') }}">Services</a></li>
-                    <li><a href="{{ route('information-sessions') }}">Information Sessions</a></li>
+                    <li><a href="{{ route('about') }}">About Us</a></li>
+                    <li><a href="{{ route('candidate') }}">Candidate</a></li>
+                    <li><a href="{{ route('employer') }}">Employer</a></li>
+                    <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
                 </ul>
             </div>
 

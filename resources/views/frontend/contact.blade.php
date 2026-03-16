@@ -24,7 +24,7 @@
         <div class="row justify-content-center mb-5">
             <div class="col-lg-7 text-center fade-in-section">
                 <div class="gold-divider"></div>
-                <p class="section-subtitle mx-auto">{{ $main->intro ?? 'We would be pleased to assist you with your career enquiries. Get in touch to learn more about our services and available pathways.' }}</p>
+                <p class="section-subtitle mx-auto">{{ $main->intro ?? 'Whether you are a candidate exploring career pathways or an employer seeking international talent, we would be pleased to hear from you.' }}</p>
             </div>
         </div>
 
@@ -72,7 +72,7 @@
                         <div class="detail-icon"><i class="fas fa-briefcase"></i></div>
                         <div>
                             <span class="detail-label">Services</span>
-                            <span class="detail-value">Career Consultancy &amp; Pathway Guidance</span>
+                            <span class="detail-value">Career Consultancy &amp; International Recruitment</span>
                         </div>
                     </div>
                 </div>
@@ -110,22 +110,37 @@
                             <label class="form-label-custom" for="email">Email Address <span style="color: var(--color-deep-gold);">*</span></label>
                             <input type="email" id="email" name="email" class="form-control-custom" placeholder="your@email.com" value="{{ old('email') }}" required>
                         </div>
-                        <div class="form-group-custom">
-                            <label class="form-label-custom" for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-control-custom" placeholder="+61 4XX XXX XXX" value="{{ old('phone', old('phone_number')) }}">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group-custom">
+                                    <label class="form-label-custom" for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control-custom" placeholder="+61 4XX XXX XXX" value="{{ old('phone') }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-custom">
+                                    <label class="form-label-custom" for="country">Country</label>
+                                    <input type="text" id="country" name="country" class="form-control-custom" placeholder="Your country" value="{{ old('country') }}">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group-custom">
-                            <label class="form-label-custom" for="area_of_enquiry">Area of Enquiry</label>
-                            <select id="area_of_enquiry" name="area_of_enquiry" class="form-control-custom">
-                                <option value="">Please select...</option>
-                                <option value="Career Consultation" {{ old('area_of_enquiry') == 'Career Consultation' ? 'selected' : '' }}>Career Consultation</option>
-                                <option value="Education Guidance" {{ old('area_of_enquiry') == 'Education Guidance' ? 'selected' : '' }}>Education Guidance</option>
-                                <option value="Employer Introduction Pathway" {{ old('area_of_enquiry') == 'Employer Introduction Pathway' ? 'selected' : '' }}>Employer Introduction Pathway</option>
-                                <option value="Graduate Career Support" {{ old('area_of_enquiry') == 'Graduate Career Support' ? 'selected' : '' }}>Graduate Career Support</option>
-                                <option value="Healthcare Career Advisory" {{ old('area_of_enquiry') == 'Healthcare Career Advisory' ? 'selected' : '' }}>Healthcare Career Advisory</option>
-                                <option value="Information Session" {{ old('area_of_enquiry') == 'Information Session' ? 'selected' : '' }}>Information Session</option>
-                                <option value="Other" {{ old('area_of_enquiry') == 'Other' ? 'selected' : '' }}>Other</option>
-                            </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group-custom">
+                                    <label class="form-label-custom" for="organisation">Organisation <small class="text-muted">(optional)</small></label>
+                                    <input type="text" id="organisation" name="organisation" class="form-control-custom" placeholder="Your organisation" value="{{ old('organisation') }}">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group-custom">
+                                    <label class="form-label-custom" for="enquiry_type">I Am A</label>
+                                    <select id="enquiry_type" name="enquiry_type" class="form-control-custom">
+                                        <option value="">Please select...</option>
+                                        <option value="candidate" {{ old('enquiry_type') == 'candidate' ? 'selected' : '' }}>Candidate</option>
+                                        <option value="employer" {{ old('enquiry_type') == 'employer' ? 'selected' : '' }}>Employer</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group-custom">
                             <label class="form-label-custom" for="comments">Message</label>

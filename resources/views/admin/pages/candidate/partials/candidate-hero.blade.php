@@ -1,28 +1,25 @@
 @php
-    $section = optional(isset($sections['home-intro']) ? json_decode($sections['home-intro']) : null);
-    $slug = 'home-intro';
+    $section = optional(isset($sections['candidate-hero']) ? json_decode($sections['candidate-hero']) : null);
+    $slug = 'candidate-hero';
 @endphp
 <div class="card">
     <div class="card-body">
-        <form method="POST" action="{{ route('admin.pages.savepage') }}">
+        <form method="POST" enctype="multipart/form-data" action="{{ route('admin.pages.savepage') }}">
             @csrf
             <input type="hidden" name="slug" value="{{ $slug }}">
-            <input type="hidden" name="route" value="homepage">
-
+            <input type="hidden" name="route" value="candidate">
             <div class="form-group row mb-3">
                 <label class="col-form-label col-lg-3">Heading:</label>
                 <div class="col-lg-9">
-                    <input type="text" name="{{ $slug }}[heading]" class="form-control" value="{{ old($slug.'.heading', $section->heading) }}" required>
+                    <input type="text" name="{{ $slug }}[heading]" class="form-control" value="{{ old($slug.'.heading', $section->heading) }}">
                 </div>
             </div>
-
             <div class="form-group row mb-3">
                 <label class="col-form-label col-lg-3">Body Text:</label>
                 <div class="col-lg-9">
-                    <textarea name="{{ $slug }}[body]" class="form-control" rows="6">{{ old($slug.'.body', $section->body) }}</textarea>
+                    <textarea name="{{ $slug }}[body]" class="form-control" rows="4">{{ old($slug.'.body', $section->body) }}</textarea>
                 </div>
             </div>
-
             <div class="text-right">
                 <button class="btn btn-primary" type="submit"><i class="icon-database-insert mr-2"></i> Save</button>
             </div>

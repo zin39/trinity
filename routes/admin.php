@@ -70,8 +70,9 @@ Route::middleware('auth:admin')->group(function(){
     // Page Management
     Route::get('pages/homepage', [AllPageController::class, 'homepage'])->name('pages.homepage');
     Route::get('pages/about', [AllPageController::class, 'aboutPage'])->name('pages.about');
-    Route::get('pages/services', [AllPageController::class, 'servicesPage'])->name('pages.services');
-    Route::get('pages/information_sessions', [AllPageController::class, 'informationSessionsPage'])->name('pages.information_sessions');
+    Route::get('pages/candidate', [AllPageController::class, 'candidatePage'])->name('pages.candidate');
+    Route::get('pages/employer', [AllPageController::class, 'employerPage'])->name('pages.employer');
+    Route::get('pages/testimonials_page', [AllPageController::class, 'testimonialsPage'])->name('pages.testimonials_page');
     Route::get('pages/contact', [AllPageController::class, 'contactPage'])->name('pages.contact');
 
     Route::post('pages/savepage', [AllPageController::class, 'save'])->name('pages.savepage');

@@ -14,7 +14,7 @@ class AllPageController extends Controller
     public function homepage()
     {
         $sections = PageSection::whereIn('slug', [
-            'home-hero', 'home-intro', 'home-why-choose-us', 'home-services-preview', 'home-closing-cta',
+            'home-hero', 'home-about-short',
         ])->pluck('content', 'slug');
 
         return view('admin.pages.homepage.index', compact('sections'));
@@ -29,22 +29,32 @@ class AllPageController extends Controller
         return view('admin.pages.about.index', compact('sections'));
     }
 
-    public function servicesPage()
+    public function candidatePage()
     {
         $sections = PageSection::whereIn('slug', [
-            'services-main', 'services-items', 'services-cta',
+            'candidate-hero', 'candidate-pathways', 'candidate-values', 'candidate-services',
         ])->pluck('content', 'slug');
 
-        return view('admin.pages.services.index', compact('sections'));
+        return view('admin.pages.candidate.index', compact('sections'));
     }
 
-    public function informationSessionsPage()
+    public function employerPage()
     {
         $sections = PageSection::whereIn('slug', [
-            'info-sessions-main', 'info-sessions-graduates', 'info-sessions-nursing', 'info-sessions-cta',
+            'employer-hero', 'employer-partnerships', 'employer-values',
+            'employer-preparation', 'employer-workforce', 'employer-cta',
         ])->pluck('content', 'slug');
 
-        return view('admin.pages.information_sessions.index', compact('sections'));
+        return view('admin.pages.employer.index', compact('sections'));
+    }
+
+    public function testimonialsPage()
+    {
+        $sections = PageSection::whereIn('slug', [
+            'testimonials-hero',
+        ])->pluck('content', 'slug');
+
+        return view('admin.pages.testimonials_page.index', compact('sections'));
     }
 
     public function contactPage()

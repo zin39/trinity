@@ -35,9 +35,10 @@
             <thead>
                 <tr class="bg-primary">
                     <th>Name</th>
-                    <th>Phone Number</th>
                     <th>Email</th>
-                    <th>Company</th>
+                    <th>Type</th>
+                    <th>Country</th>
+                    <th>Organisation</th>
                     <th class="text-right">Action</th>
                 </tr>
             </thead>
@@ -46,9 +47,10 @@
                     @foreach($consultationRequests as $key => $value)
                         <tr id="application-{{ $value->id }}" class="application-item {{ $value->is_read? 'read' : 'unread' }}" >
                             <td>{{ $value->first_name }} {{ $value->last_name }}</td>
-                            <td>{{ $value->phone_number }}</td>
                             <td>{{ $value->email }}</td>
-                            <td>{{ $value->company }}</td>
+                            <td>{{ ucfirst($value->enquiry_type ?? '-') }}</td>
+                            <td>{{ $value->country ?? '-' }}</td>
+                            <td>{{ $value->organisation ?? '-' }}</td>
                             <!-- <td>
                                 <span class="badge {{ $value->status ? 'badge-success' : 'badge-danger' }}">{{ $value->status ? 'Enabled' : 'Disabled' }}</span>
                             </td> -->
@@ -68,7 +70,7 @@
                     @endforeach
                 @else
                     <tr>
-                        <td colspan="4">No Consultation Request Found !!!</td>
+                        <td colspan="6">No Consultation Request Found !!!</td>
                     </tr>
                 @endif
             </tbody>

@@ -14,7 +14,23 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 form-group">
+        <div class="col-lg-3 form-group">
+            <div class="row">
+                <label class="col-form-label col-lg-12">Type:<span class="text-danger">*</span></label>
+                <div class="col-lg-12 form-group-feedback form-group-feedback-right">
+                    <div class="input-group">
+                        <span class="input-group-prepend">
+                            <span class="input-group-text"><i class="icon-tag"></i></span>
+                        </span>
+                        <select name="type" class="form-control" required>
+                            <option value="candidate" {{ old('type', $testimonial->type ?? 'candidate') == 'candidate' ? 'selected' : '' }}>Candidate</option>
+                            <option value="employer" {{ old('type', $testimonial->type ?? '') == 'employer' ? 'selected' : '' }}>Employer</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 form-group">
             <div class="row">
                 <label class="col-form-label col-lg-12">Status:<span class="text-danger">*</span></label>
                 <div class="col-lg-12 form-group-feedback form-group-feedback-right">

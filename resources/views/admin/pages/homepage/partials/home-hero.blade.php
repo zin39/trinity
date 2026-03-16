@@ -9,55 +9,57 @@
             <input type="hidden" name="slug" value="{{ $slug }}">
             <input type="hidden" name="route" value="homepage">
 
+            <h5 class="mb-3">Candidate Panel (Left)</h5>
+
             <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">Heading:</label>
+                <label class="col-form-label col-lg-3">Candidate Heading:</label>
                 <div class="col-lg-9">
-                    <input type="text" name="{{ $slug }}[heading]" class="form-control" value="{{ old($slug.'.heading', $section->heading) }}" required>
+                    <input type="text" name="{{ $slug }}[candidate_heading]" class="form-control" value="{{ old($slug.'.candidate_heading', $section->candidate_heading) }}">
                 </div>
             </div>
 
             <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">Subheading:</label>
+                <label class="col-form-label col-lg-3">Candidate CTA Text:</label>
                 <div class="col-lg-9">
-                    <textarea name="{{ $slug }}[subheading]" class="form-control" rows="3">{{ old($slug.'.subheading', $section->subheading) }}</textarea>
+                    <input type="text" name="{{ $slug }}[candidate_cta]" class="form-control" value="{{ old($slug.'.candidate_cta', $section->candidate_cta) }}">
                 </div>
             </div>
 
             <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">CTA 1 Text:</label>
+                <label class="col-form-label col-lg-3">Candidate Background Image:</label>
                 <div class="col-lg-9">
-                    <input type="text" name="{{ $slug }}[cta1_text]" class="form-control" value="{{ old($slug.'.cta1_text', $section->cta1_text) }}">
+                    <input type="file" accept="image/*" name="{{ $slug }}[candidate_image]" class="form-control">
+                    @if($section && ($section->candidate_image ?? null))
+                        <img src="{{ asset($section->candidate_image) }}" alt="Candidate" style="height:80px;margin-top:8px;">
+                        <input type="hidden" name="{{ $slug }}[candidate_image]" value="{{ $section->candidate_image }}">
+                    @endif
+                </div>
+            </div>
+
+            <hr>
+            <h5 class="mb-3">Employer Panel (Right)</h5>
+
+            <div class="form-group row mb-3">
+                <label class="col-form-label col-lg-3">Employer Heading:</label>
+                <div class="col-lg-9">
+                    <input type="text" name="{{ $slug }}[employer_heading]" class="form-control" value="{{ old($slug.'.employer_heading', $section->employer_heading) }}">
                 </div>
             </div>
 
             <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">CTA 1 Link:</label>
+                <label class="col-form-label col-lg-3">Employer CTA Text:</label>
                 <div class="col-lg-9">
-                    <input type="text" name="{{ $slug }}[cta1_link]" class="form-control" value="{{ old($slug.'.cta1_link', $section->cta1_link) }}">
+                    <input type="text" name="{{ $slug }}[employer_cta]" class="form-control" value="{{ old($slug.'.employer_cta', $section->employer_cta) }}">
                 </div>
             </div>
 
             <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">CTA 2 Text:</label>
+                <label class="col-form-label col-lg-3">Employer Background Image:</label>
                 <div class="col-lg-9">
-                    <input type="text" name="{{ $slug }}[cta2_text]" class="form-control" value="{{ old($slug.'.cta2_text', $section->cta2_text) }}">
-                </div>
-            </div>
-
-            <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">CTA 2 Link:</label>
-                <div class="col-lg-9">
-                    <input type="text" name="{{ $slug }}[cta2_link]" class="form-control" value="{{ old($slug.'.cta2_link', $section->cta2_link) }}">
-                </div>
-            </div>
-
-            <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">Background Image:</label>
-                <div class="col-lg-9">
-                    <input type="file" accept="image/*" name="{{ $slug }}[background_image]" class="form-control">
-                    @if($section && $section->background_image)
-                        <img src="{{ asset($section->background_image) }}" alt="Background" style="height:80px;margin-top:8px;">
-                        <input type="hidden" name="{{ $slug }}[background_image]" value="{{ $section->background_image }}">
+                    <input type="file" accept="image/*" name="{{ $slug }}[employer_image]" class="form-control">
+                    @if($section && ($section->employer_image ?? null))
+                        <img src="{{ asset($section->employer_image) }}" alt="Employer" style="height:80px;margin-top:8px;">
+                        <input type="hidden" name="{{ $slug }}[employer_image]" value="{{ $section->employer_image }}">
                     @endif
                 </div>
             </div>

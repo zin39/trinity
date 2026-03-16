@@ -50,6 +50,7 @@ class TestimonialController extends Controller
 
         $testimonial->message = $request->message;
         $testimonial->status = $request->status;
+        $testimonial->type = $request->type ?? 'candidate';
         $testimonial->save();
 
         flash('Testimonial has been created successfully')->success();
@@ -100,6 +101,7 @@ class TestimonialController extends Controller
 
         $testimonial->message = $request->message;
         $testimonial->status = $request->status;
+        $testimonial->type = $request->type ?? 'candidate';
         $testimonial->save();
 
         flash('Testimonial has been updated successfully')->success();

@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\PageSection;
+use App\Models\Testimonial;
 
 class HomeController extends Controller
 {
     public function index()
     {
         $sections = PageSection::whereIn('slug', [
-            'home-hero', 'home-intro', 'home-why-choose-us', 'home-services-preview', 'home-closing-cta',
+            'home-hero', 'home-about-short',
         ])->pluck('content', 'slug');
 
         return view('frontend.index', compact('sections'));
@@ -24,22 +25,35 @@ class HomeController extends Controller
         return view('frontend.about', compact('sections'));
     }
 
-    public function services()
+    public function candidate()
     {
         $sections = PageSection::whereIn('slug', [
-            'services-main', 'services-items', 'services-cta',
+            'candidate-hero', 'candidate-pathways', 'candidate-values', 'candidate-services',
         ])->pluck('content', 'slug');
 
-        return view('frontend.services', compact('sections'));
+        return view('frontend.candidate', compact('sections'));
     }
 
-    public function informationSessions()
+    public function employer()
     {
         $sections = PageSection::whereIn('slug', [
-            'info-sessions-main', 'info-sessions-graduates', 'info-sessions-nursing', 'info-sessions-cta',
+            'employer-hero', 'employer-partnerships', 'employer-values',
+            'employer-preparation', 'employer-workforce', 'employer-cta',
         ])->pluck('content', 'slug');
 
-        return view('frontend.information_sessions', compact('sections'));
+        return view('frontend.employer', compact('sections'));
+    }
+
+    public function testimonials()
+    {
+        $sections = PageSection::whereIn('slug', [
+            'testimonials-hero',
+        ])->pluck('content', 'slug');
+
+        $candidateTestimonials = Testimonial::where('status', 1)->candidate()->get();
+        $employerTestimonials = Testimonial::where('status', 1)->employer()->get();
+
+        return view('frontend.testimonials', compact('sections', 'candidateTestimonials', 'employerTestimonials'));
     }
 
     public function contact()

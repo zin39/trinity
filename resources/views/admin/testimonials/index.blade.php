@@ -20,6 +20,7 @@
             <thead>
                 <tr class="bg-primary">
                     <th>Name</th>
+                    <th>Type</th>
                     <th>Status</th>
                     <th class="text-right">Action</th>
                 </tr>
@@ -29,6 +30,7 @@
                     @foreach($testimonials as $key => $value)
                         <tr>
                             <td>{{ $value->name }}</td>
+                            <td>{{ ucfirst($value->type ?? 'candidate') }}</td>
                             <td>
                                 <span class="badge {{ $value->status ? 'badge-success' : 'badge-danger' }}">{{ $value->status ? 'Enabled' : 'Disabled' }}</span>
                             </td>

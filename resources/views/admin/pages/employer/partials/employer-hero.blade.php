@@ -1,13 +1,13 @@
 @php
-    $section = optional(isset($sections['services-cta']) ? json_decode($sections['services-cta']) : null);
-    $slug = 'services-cta';
+    $section = optional(isset($sections['employer-hero']) ? json_decode($sections['employer-hero']) : null);
+    $slug = 'employer-hero';
 @endphp
 <div class="card">
     <div class="card-body">
-        <form method="POST" action="{{ route('admin.pages.savepage') }}">
+        <form method="POST" enctype="multipart/form-data" action="{{ route('admin.pages.savepage') }}">
             @csrf
             <input type="hidden" name="slug" value="{{ $slug }}">
-            <input type="hidden" name="route" value="services">
+            <input type="hidden" name="route" value="employer">
             <div class="form-group row mb-3">
                 <label class="col-form-label col-lg-3">Heading:</label>
                 <div class="col-lg-9">
@@ -15,21 +15,21 @@
                 </div>
             </div>
             <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">Body Text:</label>
+                <label class="col-form-label col-lg-3">Subheading:</label>
                 <div class="col-lg-9">
-                    <textarea name="{{ $slug }}[body]" class="form-control" rows="3">{{ old($slug.'.body', $section->body) }}</textarea>
+                    <textarea name="{{ $slug }}[subheading]" class="form-control" rows="3">{{ old($slug.'.subheading', $section->subheading) }}</textarea>
                 </div>
             </div>
             <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">Button Text:</label>
+                <label class="col-form-label col-lg-3">CTA Text:</label>
                 <div class="col-lg-9">
-                    <input type="text" name="{{ $slug }}[button_text]" class="form-control" value="{{ old($slug.'.button_text', $section->button_text) }}">
+                    <input type="text" name="{{ $slug }}[cta_text]" class="form-control" value="{{ old($slug.'.cta_text', $section->cta_text) }}">
                 </div>
             </div>
             <div class="form-group row mb-3">
-                <label class="col-form-label col-lg-3">Button Link:</label>
+                <label class="col-form-label col-lg-3">CTA Link:</label>
                 <div class="col-lg-9">
-                    <input type="text" name="{{ $slug }}[button_link]" class="form-control" value="{{ old($slug.'.button_link', $section->button_link) }}">
+                    <input type="text" name="{{ $slug }}[cta_link]" class="form-control" value="{{ old($slug.'.cta_link', $section->cta_link) }}">
                 </div>
             </div>
             <div class="text-right">

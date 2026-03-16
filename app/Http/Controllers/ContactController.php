@@ -13,7 +13,9 @@ class ContactController extends Controller
             'first_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone' => 'nullable|string|max:50',
-            'area_of_enquiry' => 'nullable|string|max:255',
+            'country' => 'nullable|string|max:255',
+            'organisation' => 'nullable|string|max:255',
+            'enquiry_type' => 'nullable|string|in:candidate,employer',
             'comments' => 'nullable|string|max:5000',
         ]);
 
@@ -21,7 +23,9 @@ class ContactController extends Controller
             'first_name' => $validated['first_name'],
             'email' => $validated['email'],
             'phone_number' => $validated['phone'] ?? null,
-            'area_of_enquiry' => $validated['area_of_enquiry'] ?? null,
+            'country' => $validated['country'] ?? null,
+            'organisation' => $validated['organisation'] ?? null,
+            'enquiry_type' => $validated['enquiry_type'] ?? null,
             'comments' => $validated['comments'] ?? null,
         ]);
 
