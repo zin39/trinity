@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(PageSeeder::class);
         $this->call(PageSectionSeeder::class);
+        $this->call(TestimonialSeeder::class);
 
         // Create default admin user
         Admin::firstOrCreate(

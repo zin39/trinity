@@ -14,10 +14,10 @@ class PageSectionSeeder extends Seeder
             'home-hero' => json_encode([
                 'candidate_heading' => 'Your Career Journey Starts Here',
                 'candidate_cta' => 'Explore Candidate Pathways',
-                'candidate_image' => '',
+                'candidate_image' => 'uploads/page/hero-candidate.jpg',
                 'employer_heading' => 'Build Your Global Workforce',
                 'employer_cta' => 'Explore Employer Solutions',
-                'employer_image' => '',
+                'employer_image' => 'uploads/page/hero-employer.jpg',
             ]),
             'home-about-short' => json_encode([
                 'heading' => 'About Karissa Subedi Career Consultancy Services',

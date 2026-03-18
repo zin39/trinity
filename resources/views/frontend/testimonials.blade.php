@@ -28,7 +28,7 @@
             <div class="testimonial-card fade-in-section">
                 <div class="testimonial-photo">
                     @if($testimonial->image)
-                        <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" alt="{{ $testimonial->name }}">
+                        <img src="{{ asset($testimonial->image) }}" alt="{{ $testimonial->name }}">
                     @else
                         <div class="testimonial-placeholder">
                             <i class="fas fa-user"></i>
@@ -60,7 +60,7 @@
             <div class="testimonial-card fade-in-section">
                 <div class="testimonial-photo">
                     @if($testimonial->image)
-                        <img src="{{ asset('uploads/testimonial/' . $testimonial->image) }}" alt="{{ $testimonial->name }}">
+                        <img src="{{ asset($testimonial->image) }}" alt="{{ $testimonial->name }}">
                     @else
                         <div class="testimonial-placeholder">
                             <i class="fas fa-building"></i>
