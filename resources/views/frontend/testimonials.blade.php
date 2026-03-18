@@ -36,7 +36,7 @@
                     @endif
                 </div>
                 <div class="testimonial-body">
-                    <p class="testimonial-quote">&ldquo;{{ $testimonial->message }}&rdquo;</p>
+                    <p class="testimonial-quote">&ldquo;{{ strip_tags($testimonial->message) }}&rdquo;</p>
                     <h6 class="testimonial-name">{{ $testimonial->name }}</h6>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                     @endif
                 </div>
                 <div class="testimonial-body">
-                    <p class="testimonial-quote">&ldquo;{{ $testimonial->message }}&rdquo;</p>
+                    <p class="testimonial-quote">&ldquo;{{ strip_tags($testimonial->message) }}&rdquo;</p>
                     <h6 class="testimonial-name">{{ $testimonial->name }}</h6>
                 </div>
             </div>

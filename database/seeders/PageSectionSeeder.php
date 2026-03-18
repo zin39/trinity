@@ -29,6 +29,7 @@ class PageSectionSeeder extends Seeder
             // ── About ─────────────────────────────────
             'about-main' => json_encode([
                 'heading' => 'About Karissa Subedi Career Consultancy Services',
+                'hero_image' => 'uploads/page/hero-about.jpg',
                 'body' => 'Karissa Subedi Career Consultancy Services was established with a vision to bridge the gap between international talent and Australian employers, providing professional, ethical, and personalised career consultancy services.
 
 We believe that every career journey is unique. Our approach centres on understanding each client\'s goals, strengths, and aspirations to deliver tailored pathways that create lasting impact for both candidates and employers.
@@ -154,6 +155,7 @@ Whether you need a single specialist or are planning a large-scale international
             // ── Contact ───────────────────────────────
             'contact-main' => json_encode([
                 'heading' => 'Contact Us',
+                'hero_image' => 'uploads/page/hero-contact.jpg',
                 'intro' => 'Whether you are a candidate exploring career pathways or an employer seeking international talent, we would be pleased to hear from you. Get in touch to discuss how we can help.',
             ]),
             'contact-details' => json_encode([
