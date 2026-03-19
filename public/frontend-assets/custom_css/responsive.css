@@ -7,7 +7,7 @@
 /* ── Small (≥576px) ─────────────────────────── */
 @media (min-width: 576px) {
     .navbar-brand .navbar-logo {
-        height: 40px;
+        height: 50px;
     }
 
     .hero-content h1 {
@@ -297,7 +297,7 @@
     }
 
     .footer-brand .footer-logo-mark img {
-        height: 44px;
+        height: 56px;
     }
 
     .footer-brand .footer-company-name {
@@ -349,7 +349,7 @@
     }
 
     .navbar-brand .navbar-logo {
-        height: 44px;
+        height: 56px;
     }
 
     .navbar-nav-links {
