@@ -1290,6 +1290,9 @@ textarea.form-control-custom {
 
 .site-footer {
     background: var(--color-deep-brown);
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(200,164,106,0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(200,164,106,0.03) 0%, transparent 60%);
     padding: 0;
     position: relative;
 }
@@ -1323,17 +1326,16 @@ textarea.form-control-custom {
 /* Logo section centered at top */
 .footer-brand {
     text-align: center;
-    padding: 48px 0 32px;
-    border-bottom: 1px solid rgba(200,164,106,0.15);
-    margin-bottom: 32px;
+    padding: 52px 0 28px;
+    margin-bottom: 36px;
 }
 
 .footer-brand .footer-logo-mark {
-    margin: 0 auto 1rem;
+    margin: 0 auto 0.75rem;
 }
 
 .footer-brand .footer-logo-mark img {
-    height: 60px;
+    height: 52px;
     width: auto;
     display: inline-block;
     object-fit: contain;
@@ -1346,7 +1348,15 @@ textarea.form-control-custom {
     font-style: italic;
     line-height: 1.6;
     margin-bottom: 0;
-    opacity: 0.8;
+    opacity: 0.7;
+}
+
+.footer-brand-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--color-premium-gold);
+    margin: 20px auto 0;
+    opacity: 0.35;
 }
 
 .site-footer .row > [class*="col-"] {
@@ -1460,16 +1470,17 @@ textarea.form-control-custom {
 .footer-gold-divider {
     width: 100%;
     height: 1px;
-    background: rgba(200,164,106,0.2);
+    background: linear-gradient(90deg, transparent, rgba(200,164,106,0.3), transparent);
     margin-top: 16px;
 }
 
 .footer-bottom {
-    padding: 16px 0;
+    padding: 20px 0;
+    background: rgba(0,0,0,0.12);
 }
 
 .footer-copyright {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.45);
     font-size: 0.75rem;
     margin-bottom: 0;
     text-align: center;
