@@ -7,7 +7,7 @@
     <div class="navbar-inner">
         <!-- Brand -->
         <a href="{{ route('home') }}" class="navbar-brand">
-            <img src="{{ asset($setting->company_logo ?? 'frontend-assets/img/thiswebsite_logo.png') }}" alt="Karissa Subedi Career Consultancy Services" class="navbar-logo">
+            <img src="{{ asset('frontend-assets/img/thiswebsite_logo_navbar.svg') }}" alt="Karissa Subedi Career Consultancy Services" class="navbar-logo">
         </a>
 
         <!-- Desktop Nav -->

@@ -289,7 +289,7 @@ img {
 }
 
 .navbar-brand .navbar-logo {
-    height: 52px;
+    height: 56px;
     width: auto;
     display: block;
     transition: var(--transition);
