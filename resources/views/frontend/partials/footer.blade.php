@@ -7,7 +7,7 @@
     <div class="container">
         <div class="footer-brand">
             <div class="footer-logo-mark">
-                <img src="{{ asset($setting->company_logo ?? 'frontend-assets/img/logo.jpeg') }}" alt="Karissa Subedi Career Consultancy Services">
+                <img src="{{ asset($setting->company_logo ?? 'frontend-assets/img/thiswebsite_logo.png') }}" alt="Karissa Subedi Career Consultancy Services">
             </div>
             <p class="footer-tagline">Opening Career Opportunities Worldwide</p>
         </div>
