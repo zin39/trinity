@@ -7,7 +7,7 @@
 /* ── Small (≥576px) ─────────────────────────── */
 @media (min-width: 576px) {
     .navbar-brand .navbar-logo {
-        height: 64px;
+        height: 48px;
     }
 
     .hero-content h1 {
@@ -340,16 +340,16 @@
 /* ── Large (≥992px) ─────────────────────────── */
 @media (min-width: 992px) {
     .navbar-inner {
-        height: 88px;
+        height: 72px;
         padding: 0 24px;
     }
 
     .page-content {
-        padding-top: 88px;
+        padding-top: 72px;
     }
 
     .navbar-brand .navbar-logo {
-        height: 76px;
+        height: 56px;
     }
 
     .navbar-nav-links {
